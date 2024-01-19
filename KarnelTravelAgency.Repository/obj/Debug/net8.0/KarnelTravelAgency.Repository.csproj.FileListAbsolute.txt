@@ -1,0 +1,16 @@
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\bin\Debug\net8.0\KarnelTravelAgency.Repository.deps.json
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\bin\Debug\net8.0\KarnelTravelAgency.Repository.dll
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\bin\Debug\net8.0\KarnelTravelAgency.Repository.pdb
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\bin\Debug\net8.0\KarnelTravelAgency.Core.dll
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\bin\Debug\net8.0\KarnelTravelAgency.Core.pdb
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.csproj.AssemblyReference.cache
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.AssemblyInfoInputs.cache
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.AssemblyInfo.cs
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.csproj.CoreCompileInputs.cache
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.sourcelink.json
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.csproj.CopyComplete
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.dll
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\refint\KarnelTravelAgency.Repository.dll
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.pdb
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\ref\KarnelTravelAgency.Repository.dll

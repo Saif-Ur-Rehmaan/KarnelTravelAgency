@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+	
+
+  <ItemGroup>
+    <ProjectReference Include="..\KarnelTravelAgency.Core\KarnelTravelAgency.Core.csproj" />
+    <ProjectReference Include="..\KarnelTravelAgency.Repository\KarnelTravelAgency.Repository.csproj" />
+  </ItemGroup>
+	
+
+  <ItemGroup>
+    <Folder Include="Areas\Person\Controllers\" />
+    <Folder Include="Areas\Person\Data\" />
+    <Folder Include="Areas\Person\Models\" />
+    <Folder Include="Areas\Residence\Controllers\" />
+    <Folder Include="Areas\Residence\Data\" />
+    <Folder Include="Areas\Residence\Models\" />
+    <Folder Include="Areas\Restaurant\Controllers\" />
+    <Folder Include="Areas\Restaurant\Data\" />
+    <Folder Include="Areas\Restaurant\Models\" />
+    <Folder Include="Areas\Transport\Controllers\" />
+    <Folder Include="Areas\Transport\Data\" />
+    <Folder Include="Areas\Transport\Models\" />
+  </ItemGroup>
+	
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

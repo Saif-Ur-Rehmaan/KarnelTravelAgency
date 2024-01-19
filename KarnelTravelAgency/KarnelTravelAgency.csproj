@@ -14,16 +14,13 @@
 	
 
   <ItemGroup>
-    <Folder Include="Areas\Person\Controllers\" />
     <Folder Include="Areas\Person\Data\" />
     <Folder Include="Areas\Person\Models\" />
-    <Folder Include="Areas\Residence\Controllers\" />
     <Folder Include="Areas\Residence\Data\" />
     <Folder Include="Areas\Residence\Models\" />
     <Folder Include="Areas\Restaurant\Controllers\" />
     <Folder Include="Areas\Restaurant\Data\" />
     <Folder Include="Areas\Restaurant\Models\" />
-    <Folder Include="Areas\Transport\Controllers\" />
     <Folder Include="Areas\Transport\Data\" />
     <Folder Include="Areas\Transport\Models\" />
   </ItemGroup>

@@ -10,8 +10,4 @@
     <ProjectReference Include="..\KarnelTravelAgency.Core\KarnelTravelAgency.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Person\RepoPerson\" />
-  </ItemGroup>
-
 </Project>

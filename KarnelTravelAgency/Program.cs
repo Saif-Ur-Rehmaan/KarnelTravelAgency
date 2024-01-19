@@ -28,8 +28,41 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//------------------ RoutingConfiguration For Areas-------------//
+
+//Default Route Configuration
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+//Areas Route Configuration
+app.UseEndpoints(endpoints =>
+{
+    // Register area routes first, each with their desired area name
+    _=endpoints.MapAreaControllerRoute(
+            name: "PersonArea",
+            areaName: "Person",
+            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    _ = endpoints.MapAreaControllerRoute(
+            name: "TransportArea",
+            areaName: "Travel",
+            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    _ = endpoints.MapAreaControllerRoute(
+            name: "RestaurantArea",
+            areaName: "Blog",
+            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    _ = endpoints.MapAreaControllerRoute(
+            name: "ResidenceArea",
+            areaName: "Admin",
+            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    _ = endpoints.MapAreaControllerRoute(
+            name: "AdminArea",
+            areaName: "Admin",
+            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+  
+});
+//------------------ RoutingConfiguration For Areas-------------//
+
 
 app.Run();

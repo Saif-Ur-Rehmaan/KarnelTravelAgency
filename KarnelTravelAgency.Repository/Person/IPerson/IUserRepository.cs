@@ -7,12 +7,12 @@ using KarnelTravelAgency.Core;
 
 namespace KarnelTravelAgency.Repository.Interfaces
 {
-    public interface IUserRepository
+    public interface UserRepository
     {
-        IQueryable<User> GetAll();
-        Task<User> GetByIdAsync(int id);
-        void Add(User user);
-        void Update(User user);
-        void Delete(User user);
+         IQueryable<User>   GetAll();
+         Task<User> GetByIdAsync(int id);
+         void Add(User user);
+         void Update(User user);
+         void Delete(User user);
     }
 }

@@ -124,12 +124,12 @@ namespace KarnelTravelAgency.Controllers
 
         [Route("/")]        
         [Route("/Home")]        
-        public IActionResult Index()
+        public IActionResult Index2()
         {
             return View();
         }
         [Route("/Home2")]        
-        public IActionResult Index2()
+        public IActionResult Index()
         {
             return View();
         }
@@ -141,6 +141,28 @@ namespace KarnelTravelAgency.Controllers
         
         [Route("/Gallery")]        
         public IActionResult Gallery()
+        {
+            return View();
+        }
+
+        [Route("/Destinations")]
+        public IActionResult Destination()
+        {
+            return View();
+        }
+        [Route("/Destination/Details")]
+        public IActionResult DestinationDetails()
+        {
+            return View();
+        }
+        [Route("/Tour")]
+        public IActionResult Tour()
+        {
+            return View();
+        }
+
+        [Route("/Tour/Details")]
+        public IActionResult TourDetails()
         {
             return View();
         }
@@ -166,7 +188,7 @@ namespace KarnelTravelAgency.Controllers
             return View();
         }
         
-        [Route("/About/TeamMemberDetail")]        
+        [Route("/About/TeamMemberDetail/{MemBerName?}")]        
         public IActionResult TeamMemberDetail(string MemBerName)
         {
             if (!string.IsNullOrEmpty(MemBerName))

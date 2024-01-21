@@ -3,6 +3,7 @@
 namespace KarnelTravelAgency.Areas.Transport.Controllers
 {
     [Area("Transport")]
+    
     public class HomeController : Controller
     {
         [Route("/Transportation")]
@@ -11,13 +12,9 @@ namespace KarnelTravelAgency.Areas.Transport.Controllers
             return View();
         }
 
-        [Route("/Transportation/Tour/Details")]
-        public IActionResult TourDetails()
-        {
-            return View();
-        }
-        [Route("/Transportation/Tour")]
-        public IActionResult Tour()
+    
+        [Route("/Flights")]
+        public IActionResult Flights()
         {
             return View();
         }

@@ -5,20 +5,17 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
     [Area("Residence")]
     public class HomeController : Controller
     {
-        [Route("/Residence")]
-        public IActionResult Index()
+        
+        [Route("/Hotels")]
+        public IActionResult Hotels()
         {
             return View();
         }
-        [Route("/Residence/Destinations")]
-        public IActionResult Destination()
+        [Route("/Resorts")]
+        public IActionResult Resorts()
         {
             return View();
         }
-        [Route("/Residence/Destination/Details")]
-        public IActionResult DestinationDetails()
-        {
-            return View();
-        }
+   
     }
 }

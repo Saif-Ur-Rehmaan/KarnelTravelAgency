@@ -24,6 +24,8 @@
         <link rel="stylesheet" href="~/css/app.min.css">
         <link rel="stylesheet" href="~/css/fontawesome.min.css">
         <link rel="stylesheet" href="~/css/style.css">
+        @RenderSection("LinkStyle", required: false)
+
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700;800;900&amp;family=Playfair+Display:wght@400;500;600;700;800;900&amp;family=Roboto:wght@100;300;400;500;700&amp;display=swap"
@@ -151,14 +153,14 @@
                             <a href="#">Destination</a>
                             <ul class="sub-menu">
                                 <li><a href="/Transportation">Destination</a></li>
-                                <li><a href="/Residence/Destination/Details">Destination Details</a></li>
+                                <li><a href="/Destination/Details">Destination Details</a></li>
                             </ul>
                         </li>
                         <li class="menu-item-has-children">
                             <a href="#">Tour Types</a>
                             <ul class="sub-menu">
-                                <li><a href="/Transportation/Tour">Tour</a></li>
-                                <li><a href="/Transportation/Tour/Details">Tour Details</a></li>
+                                <li><a href="/Tour">Tour</a></li>
+                                <li><a href="/Tour/Details">Tour Details</a></li>
                             </ul>
                         </li>
                         <li class="menu-item-has-children">
@@ -202,7 +204,9 @@
                             <div class="header-links">
                                 <ul>
                                     <li class="d-none d-lg-inline-block">
-                                        <i class="far fa-user"></i><a href="/Contact">Login / Register</a>
+                                        <i class="far fa-user"></i>
+                                        <a href="/Login">Login </a>/ 
+                                        <a href="/Register">Register</a>/ 
                                     </li>
                                     <li>
                                         <div class="header-social">
@@ -234,32 +238,28 @@
                                             <a href="/">Home</a>
                                         </li>
                                         <li>
-                                            <a href="/Residence">Stays </a>
+                                            <a>Bookings</a>
+                                            <ul class="sub-menu">
+												<li><a href="/Flights">Flights Booking</a></li>
+												<li><a href="/Transportation">Viechle Booking</a></li>
+												<li><a href="/Restaurants">Resturants Booking</a> </li>
+												<li><a href="/Hotels">Hotel Booking</a> </li>
+                                                <li><a href="/Resorts">Resort Booking</a> </li>
+                                            </ul>
                                         </li>
                                         <li>
-                                            <a href="/Transportation">Car Rentals </a>
+                                            <a href ="/Blogs">Blogs</a>
                                         </li>
                                         <li>
-                                            <a href="/Restaurants">Resturants</a>
+                                            <a href="/About">About Us</a>
                                         </li>
                                         <li>
                                             <a>Pages</a>
                                             <ul class="sub-menu">
-                                                <li><a href="">Search Page</a></li><!--MissingPage-->
-                                                <li><a href="">Login Page</a></li><!--MissingPage-->
-                                                <li><a href="">Signup Page</a></li><!--MissingPage-->
-                                                <li><a href="/Blogs">Blogs</a></li>
-                                                <li><a href="/Blogs/BlogDetails">BlogDetails</a></li>
-                                                <li><a href="/Contact">Contact Us Page</a></li>
-                                                <li><a href="/About">About Us</a></li>
+                                                <li><a href="">Search Page</a></li><!--MissingPage--> 
                                                 <li><a href="/Gallery">Gallery</a></li>
                                                 <li><a href="/Home2">Home 2</a></li>
-                                                <li><a href="/ErrorPage">Error 404</a></li>
-                                                <li><a href="/Residence/Destinations">Destinations</a></li>
-                                                <li><a href="/Residence/Destination/Details">Destinations details</a></li>
-                                                <li><a href="/Transportation/Tour">Tour</a></li>
-                                                <li><a href="/Transportation/Tour/Details">Tour details</a></li>
-                                               
+                                                <li><a href="/ErrorPage">Error 404</a></li> 
                                             </ul>
                                         </li>
                                         <li><a href="/Contact">Contact Us</a></li>
@@ -287,7 +287,7 @@
             @RenderBody()
     
      
-    <footer class="footer-wrapper footer-layout1">
+    <footer class="mx-0 min-vw-100 footer-wrapper footer-layout1">
         <div class="widget-area">
             <div class="container">
                 <div class="row justify-content-between">
@@ -314,7 +314,7 @@
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
                                     <li><a href="/About">About Us</a></li>
-                                    <li><a href="/Transportation/Tour">Tour</a></li>
+                                    <li><a href="/Tour">Tour</a></li>
                                     <li><a href="/Transportation">Destinations</a></li>
                                     <li><a href="/Blogs">Blog</a></li>
                                     <li><a href="/Contact">Contact Us</a></li>

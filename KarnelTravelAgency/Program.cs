@@ -1,4 +1,5 @@
 using KarnelTravelAgency.Core;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,39 +31,39 @@ app.UseAuthorization();
 
 //------------------ RoutingConfiguration For Areas-------------//
 
-//Default Route Configuration
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 //Areas Route Configuration
+
+app.MapControllerRoute(
+           name: "default",
+           pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.UseEndpoints(endpoints =>
 {
     // Register area routes first, each with their desired area name
-    _=endpoints.MapAreaControllerRoute(
+    _ = endpoints.MapAreaControllerRoute(
             name: "PersonArea",
             areaName: "Person",
             pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
     _ = endpoints.MapAreaControllerRoute(
             name: "TransportArea",
-            areaName: "Travel",
+            areaName: "Transport",
             pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
     _ = endpoints.MapAreaControllerRoute(
             name: "RestaurantArea",
-            areaName: "Blog",
+            areaName: "Restaurant",
             pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
     _ = endpoints.MapAreaControllerRoute(
             name: "ResidenceArea",
-            areaName: "Admin",
+            areaName: "Residence",
             pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
     _ = endpoints.MapAreaControllerRoute(
             name: "AdminArea",
             areaName: "Admin",
             pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-
-  
 });
-//------------------ RoutingConfiguration For Areas-------------//
 
+//------------------ RoutingConfiguration For Areas-------------//
 
 app.Run();

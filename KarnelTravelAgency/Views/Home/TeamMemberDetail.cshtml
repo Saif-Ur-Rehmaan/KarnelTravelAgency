@@ -1,6 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Travon - Tour and Hotel Booking HTML Template - Contact Us";
+    ViewData["Title"] = "Travon - Tour and Hotel Booking HTML Template - Team Details";
 }
+
 @section MetaTags {
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,70 +11,77 @@
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="~/img/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 }
-
 
 <div class="breadcumb-wrapper" data-bg-src="~/img/bg/breadcumb-bg.jpg">
     <div class="container">
         <div class="breadcumb-content">
-            <h1 class="breadcumb-title">Contact Us</h1>
+            <h1 class="breadcumb-title">Team Details</h1>
             <ul class="breadcumb-menu">
                 <li><a href="/">Home</a></li>
-                <li>Contact Us</li>
+                <li>@ViewBag.MemberName</li>
             </ul>
         </div>
     </div>
 </div>
-<div class="space">
+<section class="space">
+                    
     <div class="container">
-        <div class="row gy-40">
-            <div class="col-xl-5">
-                <div class="contact-info-wrap">
-                    <div class="shape-img"><img src="~/img/shape/contact_shape.png" alt="shape"></div>
-                    <h3 class="border-title2">Contact Info</h3>
-                    <div class="contact-info-box">
-                        <div class="contact-info">
-                            <h4 class="contact-info__title">Contact Number:</h4>
-                            <div class="contact-info__icon"><i class="fal fa-phone"></i></div>
-                            <div class="media-body">
-                                <span class="contact-info__text">
-                                    <a href="tel:+65485965789">(+65) - 48596 - 5789</a> <a href="tel:+65485965789">+65-48596-5789</a>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <h4 class="contact-info__title">Mail Address:</h4>
-                            <div class="contact-info__icon bg-theme"><i class="fal fa-envelope"></i></div>
-                            <div class="media-body">
-                                <span class="contact-info__text">
-                                    <a href="mailto:info@travon.com">info@travon.com</a> <a href="mailto:info.example@gmail.com">info.example@gmail.com</a>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="contact-info">
-                            <h4 class="contact-info__title">Office Address:</h4>
-                            <div class="contact-info__icon bg-title"><i class="fal fa-location-dot"></i></div>
-                            <div class="media-body">
-                                <span class="contact-info__text">
-                                    Burnsville, MN 55337
-                                    Streat,<br>United States
-                                </span>
-                            </div>
-                        </div>
+        <div class="about-card">
+            <div class="row align-items-center">
+                <div class="col-xl-6">
+                    <div class="about-card__img">
+                        <img class="w-100" src="~/@ViewBag.MemberImage" />
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-7">
-                <div class="contact-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2sAngfuzsoft!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd"
-                            allowfullscreen="" loading="lazy"></iframe>
+                <div class="col-xl-6">
+                    <div class="about-card__box">
+                        <div class="about-card__top">
+                            <div>
+                                <h2 class="about-card__title">@ViewBag.MemberName</h2><span class="about-card__desig">@ViewBag.MemberRole</span>
+                            </div>
+                            <div class="ot-social">
+                                <a target="_blank" href="https://facebook.com/">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a> <a target="_blank"
+                                        href="https://twitter.com/"><i class="fab fa-twitter"></i></a> <a target="_blank" href="https://instagram.com/">
+                                    <i class="fab fa-instagram"></i>
+                                </a> <a target="_blank"
+                                        href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <h4 class="about-card__subtitle">Biography</h4>
+                          
+                        <p class="mb-30">
+                            @ViewBag.MemberAbout
+                        </p>
+                        <div class="about-info-wrap">
+                            <p class="about-info">
+                                <i class="fal fa-calendar-days"></i><strong>Born on:</strong>@ViewBag.MemberDOB
+                            </p>
+                            <p class="about-info">
+                                <i class="fal fa-city"></i><strong>lives in:</strong>@ViewBag.MemberLives
+                            </p>
+                            <p class="about-info">
+                                <i class="fal fa-envelope"></i><strong>Email:</strong><a href="mailto:michelm@travon.com">@ViewBag.MemberEmail</a>
+
+                            </p>
+                            <p class="about-info">
+                                <i class="fal fa-phone"></i><strong>Phone:</strong><a href="tel:@ViewBag.MemberPhone">@ViewBag.MemberPhone</a>
+                            </p>
+                            <p class="about-info">
+                                Education             <i class="fal fa-school"></i><strong>Education:</strong>@ViewBag.MemberEducation
+                            </p>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+                     
+</section>
 <div class="space-bottom" data-bg-src="~/img/bg/contact_bg_1.html">
     <div class="container">
         <form action="https://www.adivaha.com/themeforest-travon/mail.php" method="POST"

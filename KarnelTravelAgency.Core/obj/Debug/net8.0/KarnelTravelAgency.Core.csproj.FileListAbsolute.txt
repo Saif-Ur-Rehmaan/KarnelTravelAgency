@@ -1,0 +1,29 @@
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\bin\Debug\net8.0\KarnelTravelAgency.Core.deps.json
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\bin\Debug\net8.0\KarnelTravelAgency.Core.runtimeconfig.json
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\bin\Debug\net8.0\KarnelTravelAgency.Core.dll
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\bin\Debug\net8.0\KarnelTravelAgency.Core.pdb
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.csproj.AssemblyReference.cache
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.AssemblyInfoInputs.cache
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.AssemblyInfo.cs
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.csproj.CoreCompileInputs.cache
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.sourcelink.json
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.dll
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\refint\KarnelTravelAgency.Core.dll
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.pdb
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.genruntimeconfig.cache
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\ref\KarnelTravelAgency.Core.dll
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\bin\Debug\net8.0\KarnelTravelAgency.Core.deps.json
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\bin\Debug\net8.0\KarnelTravelAgency.Core.runtimeconfig.json
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\bin\Debug\net8.0\KarnelTravelAgency.Core.dll
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\bin\Debug\net8.0\KarnelTravelAgency.Core.pdb
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.csproj.AssemblyReference.cache
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.AssemblyInfoInputs.cache
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.AssemblyInfo.cs
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.csproj.CoreCompileInputs.cache
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.dll
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\refint\KarnelTravelAgency.Core.dll
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.pdb
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\KarnelTravelAgency.Core.genruntimeconfig.cache
+C:\Users\MUHMMAD TAUQIR\source\repos\KarnelTravelAgency\KarnelTravelAgency.Core\obj\Debug\net8.0\ref\KarnelTravelAgency.Core.dll

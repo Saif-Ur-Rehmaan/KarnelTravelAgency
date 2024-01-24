@@ -13,7 +13,7 @@ namespace KarnelTravelAgency.Areas.Person.Controllers
             return View();
         }
         [Route("/Login")]
-        public IActionResult Login()
+        public IActionResult LoginUser()
         {
             return View();
         }

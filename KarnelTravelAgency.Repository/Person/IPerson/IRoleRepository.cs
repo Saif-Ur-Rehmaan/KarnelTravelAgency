@@ -7,7 +7,7 @@ using KarnelTravelAgency.Core;
 
 namespace KarnelTravelAgency.Repository.Interfaces
 {
-    public interface RoleRepository
+    public interface IRoleRepository
     {
         IQueryable<Role> GetAll();
         Task<Role> GetByIdAsync(int id);

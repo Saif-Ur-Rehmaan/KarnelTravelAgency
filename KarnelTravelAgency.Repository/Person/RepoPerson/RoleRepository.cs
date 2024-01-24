@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using KarnelTravelAgency.Core;
 using KarnelTravelAgency.Repository.Interfaces;
-using Microsoft.EntityFrameworkCore;
 
-namespace KarnelTravelAgency.Repository.Person.RepoPerson
+
+namespace KarnelTravelAgency.Repository.Repo
 {
-    internal class RoleRepository(ApplicationDbContext _context) : IRoleRepository
+    public class RoleRepository(ApplicationDbContext _context) : IRoleRepository
+
     {
         private ApplicationDbContext context { get; set; } = _context;
         public void Add(Role role)
-        {
-
+        { 
             context.Roles.Add(role);
             context.SaveChanges();
         }

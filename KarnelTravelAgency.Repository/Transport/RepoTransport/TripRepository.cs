@@ -8,35 +8,34 @@ using KarnelTravelAgency.Repository.Interfaces;
 
 namespace KarnelTravelAgency.Repository.Repo
 {
-    public class GuestRepository(ApplicationDbContext _context) : IGuestRepository
+    public class TripRepository(ApplicationDbContext _context) : ITripRepository
     {
         private ApplicationDbContext context { get; set; } = _context;
-
-        public void Add(Guest guest)
+        public void Add(Trip trip)
         {
-            context.Guests.Add(guest);
+            context.Trips.Add(trip);
             context.SaveChanges();
         }
 
-        public void Delete(Guest guest)
+        public void Delete(Trip trip)
         {
-            context.Guests.Remove(guest);
+            context.Trips.Remove(trip); 
             context.SaveChanges();
         }
 
-        public IQueryable<Guest> GetAll()
+        public IQueryable<Trip> GetAll()
         {
-            return context.Guests.AsQueryable();
+            return context.Trips.AsQueryable();
         }
 
-        public async Task<Guest> GetByIdAsync(int id)
+        public async Task<Trip> GetByIdAsync(int id)
         {
-            return await context.Guests.FindAsync(id);
+            return await context.Trips.FindAsync(id);
         }
 
-        public void Update(Guest guest)
+        public void Update(Trip trip)
         {
-            context.Guests.Update(guest);
+            context.Trips.Update(trip);
             context.SaveChanges();
         }
     }

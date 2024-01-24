@@ -7,7 +7,7 @@ using KarnelTravelAgency.Core;
 
 namespace KarnelTravelAgency.Repository.Interfaces
 {
-    public interface GuestRepository
+    public interface IGuestRepository
     {
         IQueryable<Guest> GetAll();
         Task<Guest> GetByIdAsync(int id);

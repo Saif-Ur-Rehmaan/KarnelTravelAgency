@@ -9,10 +9,10 @@ namespace KarnelTravelAgency.Repository.Interfaces
 {
     public interface IRestaurantRepository
     {
-        IQueryable<Restaurant> GetAll();
-        Task<Restaurant> GetByIdAsync(int id);
-        void Add(Restaurant restaurant);
-        void Update(Restaurant restaurant);
-        void Delete(Restaurant restaurant);
+        IQueryable<KarnelTravelAgency.Core.Restaurant> GetAll();
+        Task<KarnelTravelAgency.Core.Restaurant> GetByIdAsync(int id);
+        void Add(KarnelTravelAgency.Core.Restaurant restaurant);
+        void Update(KarnelTravelAgency.Core.Restaurant restaurant);
+        void Delete(KarnelTravelAgency.Core.Restaurant restaurant);
     }
 }

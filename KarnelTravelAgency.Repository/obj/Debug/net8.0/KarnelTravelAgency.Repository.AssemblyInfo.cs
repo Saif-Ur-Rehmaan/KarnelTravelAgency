@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KarnelTravelAgency.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23f3a3e842b998387541c57709504062cd8d0ae5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("KarnelTravelAgency.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KarnelTravelAgency.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

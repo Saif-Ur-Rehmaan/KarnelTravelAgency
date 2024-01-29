@@ -7,6 +7,7 @@
     <title>@ViewData["Title"]</title>
  
         <!-- common links in all 14 files -->
+        @RenderSection("LinkStyle", required: false)
         <link rel="apple-touch-icon" sizes="57x57" href="~/img/favicons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="~/img/favicons/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="~/img/favicons/apple-icon-72x72.png">
@@ -24,7 +25,6 @@
         <link rel="stylesheet" href="~/css/app.min.css">
         <link rel="stylesheet" href="~/css/fontawesome.min.css">
         <link rel="stylesheet" href="~/css/style.css">
-        @RenderSection("LinkStyle", required: false)
 
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>

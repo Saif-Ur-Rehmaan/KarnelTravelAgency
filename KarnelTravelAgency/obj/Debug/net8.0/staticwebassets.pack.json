@@ -69,6 +69,46 @@
       "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-thin-100.ttf"
     },
     {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\fonts\\icomoon\\Read Me.txt",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\Read Me.txt"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.css"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.js"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\fonts\\icomoon\\selection.json",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\selection.json"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\fonts\\icomoon\\style.css",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\SVGS\\undraw_file_sync_ot38.svg",
+      "PackagePath": "staticwebassets\\img\\SVGS\\undraw_file_sync_ot38.svg"
+    },
+    {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\bg\\bg_map_1.png",
       "PackagePath": "staticwebassets\\img\\bg\\bg_map_1.png"
     },
@@ -773,8 +813,20 @@
       "PackagePath": "staticwebassets\\js\\app.min.js"
     },
     {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
+    },
+    {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
     },
     {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\js\\vendor\\jquery-3.6.0.min.js",

@@ -23,6 +23,12 @@
     <Folder Include="Areas\Transport\Models\" />
   </ItemGroup>
 	
+
+  <ItemGroup>
+    <None Include="wwwroot\img\shape\plane_shape_1.svg" />
+    <None Include="wwwroot\img\shape\plane_shape_2.svg" />
+  </ItemGroup>
+	
 	
 
   <ItemGroup>

@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Hotels | Book last-minute hotels &amp; more | Booking.com";
 }
+ 
+
 @section LinkStyle{
     <link rel="stylesheet" id="main-css-preload"
           href="https://cf.bstatic.com/static/css/main_cloudfront_sd.iq_ltr/304bf0a6b80d8d5c92ad68e080281ecf5cea78aa.css"
@@ -22,6 +24,85 @@
     <link rel="stylesheet" type="text/css"
           href="https://cf.bstatic.com/static/css/incentives_cloudfront_sd.iq_ltr/f1558a6e9832a4eb8cfe1d3d14db176bd3564335.css"
           media="screen">
+    <style>
+
+        ::selection {
+            color: #fff;
+            background: #ff654a;
+        }
+
+        .wrapper {
+            max-width: 450px;
+            margin: 150px auto;
+        }
+
+            .wrapper .search-input {
+                background: #fff;
+                width: 100%;
+                border-radius: 5px;
+                position: relative;
+                box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+            }
+
+        .search-input input {
+            height: 55px;
+            width: 100%;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            padding: 0 60px 0 20px;
+            font-size: 18px;
+            box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-input.active input {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .search-input .autocom-box {
+            padding: 0;
+            opacity: 0;
+            pointer-events: none;
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
+        .search-input.active .autocom-box {
+            padding: 10px 8px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .autocom-box li {
+            list-style: none;
+            padding: 8px 12px;
+            display: none;
+            width: 100%;
+            cursor: default;
+            border-radius: 3px;
+        }
+
+        .search-input.active .autocom-box li {
+            display: block;
+        }
+
+        .autocom-box li:hover {
+            background: #efefef;
+        }
+
+        .search-input .icon {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 55px;
+            width: 55px;
+            text-align: center;
+            line-height: 55px;
+            font-size: 20px;
+            color: #e4ff4b;
+            cursor: pointer;
+        }
+    </style>
   
 }  
 <main class="min-vw-100">
@@ -35,528 +116,69 @@
                     <div class="lp-hero__searchbox xpi__searchbox " id="indexsearch">
                         <h1 class="sb-searchbox__title">
                             <span class="sb-searchbox__title-text">
-                                Find the perfect hotel on Travon.com
+                                Find Your Ideal Hotel with Karnel Travel Agency
                             </span>
                         </h1>
                         <h2 class="sb-searchbox__subtitle-text">
                             From budget hotels to luxury rooms and everything in between
                         </h2>
-                        <div class="sb-searchbox__outer" data-sb-outer="">
-                            <form id="frm" method="get" action="https://www.booking.com/searchresults.html" role="search" class="sb-searchbox sb-searchbox--painted sb-searchbox--xp js--sb-searchbox " >
+                        <div class="sb-searchbox__outer container py-3 rounded-5 my-3" data-sb-outer" style="background-color: #fff; border: 1px solid #eee; border-radius: 5px;">
+                            <form class="row g-3 px-2 gap-2 position-relative" action="/BookHotel" method="post">
 
-                                <div class="xp__fieldset js--sb-fieldset accommodation " data-view="accommodation">
-                                    <div  class="xp__input-group xp__search" data-destination-input="">
-                                        <div data-component="search/destination/input" data-sb-id="main" data-gpf="1" data-required="1" data-flags="" data-open-focus="" data-minlength="1" data-focus-on-typing="1">
-                                            <div class="c-autocomplete sb-destination region_second_line">
-                                                <label class="sb-destination-label-sr">
-                                                    <span class="bui-u-sr-only">Type your destination</span>
-                                                    <input type="text" name="ss" id="ss" class="c-autocomplete__input sb-searchbox__input sb-destination__input" placeholder="Where are you going?" value="" autocomplete="off" data-component="search/destination/input-placeholder" data-sb-id="main" data-input="" aria-autocomplete="both" aria-label="Type your destination">
-                                                </label>
-                                                <ul data-list="" class="c-autocomplete__list sb-autocomplete__list" role="listbox" aria-label="List of suggested destinations "></ul>
-                                                <div class="sb-a11y-announcement invisible_spoken" aria-live="polite" aria-atomic="true">
-                                                </div>
-                                            </div>
-                                            <div class="fe_banner fe_banner__accessible fe_banner__red  " id="destination__error" role="alert">
-                                                <div class="fe_banner__message">
-                                                    <span class="invisible_spoken">Error: </span>
-                                                    Enter a destination to start searching.
-                                                </div>
-                                            </div>
+                                    <div class="col-3 mx-0 px-0">
+                                        <label for="location" class="mb-0" style="color: #333;">Location</label>
+                                          <div class="search-input ">
+                                            <a href="" target="_blank" hidden></a>
+                                            <input class="searchInp" type="text" placeholder="Type to search..">
+                                            <div class="autocom-box position-absolute shadow rounded" style="min-width:256px; background:white;">
+                                            <!-- here list are inserted from javascript -->
+                                            </div> 
+                                          </div>
+                              
+                                    </div>
+                                    <div class="col-2 mx-0 px-0">
+                                        <label for="arrivalTime" class="mb-0" style="color: #333;">Arrival Time</label>
+                                        <input type="date" min="" id="arrivalTime" name="arrivalTime" class="arrivalTime form-control bg-orange-100 text-dark" required="" style="border: 1px solid #eee; border-radius: 5px;">
+                                    </div>
+                                    <div class="col-2 mx-0 px-0">
+                                        <label for="departureTime" class="mb-0" style="color: #333;">Departure Time</label>
+                                        <input type="date" id="departureTime" name="departureTime" class="form-control arrivalTime bg-orange-100 text-dark" required="" style="border: 1px solid #eee; border-radius: 5px;">
+                                    </div>
+                                    <script>
+                                        const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
+                                        document.getElementsByClassName('arrivalTime').min = today; // Set the input's min attribute to today's date
+                                    </script>
+                                <div class="col-3 mx-0 px-0">
+                                    <label for="location" class="mb-0" style="color: #333;">Persons</label>
+                                    <div class="search-input ">
+                                        <a href="" target="_blank" hidden></a>
+                                        <input class="searchInp" type="text" placeholder="Type to search..">
+                                        <div class="autocom-box position-absolute shadow rounded" style="min-width:256px; background:white;">
+                                            <!-- here list are inserted from javascript -->
                                         </div>
                                     </div>
-                                    <div data-visible="accommodation,flights,rentalcars" class="xp__dates xp__group">
-                                        <div class="xp__dates-inner">
-                                            <div data-component="search/dates/dates-errors" data-view-id="accommodation" data-sb-id="main" role="alert" data-dates-errors="">
-                                            </div>
-                                            <div data-visible="accommodation,flights,rentalcars" class="xp__input-group xp__date-time">
-                                                <div class="xp__dates-inner xp__dates__checkin">
-                                                    <div data-visible="accommodation,flights,rentalcars" class="xp__group xp__date c2-wrapper-s-hidden">
-                                                        <div class="sb-date-field b-datepicker" data-component="search/dates/date-field-select" data-sb-id="main" data-mode="checkin" data-calendar2-type="checkin" data-calendar2-title="Check-in">
-                                                            <div class="
-sb-searchbox__input
-sb-date-field__field
- -empty
-sb-date__field-svg_icon
-" data-field="">
-                                                                <span class="sb-date-field__icon sb-date-field__icon-btn bk-svg-wrapper calendar-restructure-sb" aria-hidden="true">
-                                                                    <svg aria-hidden="true" class="bk-icon -experiments-calendar sb-date-picker_icon-svg" fill="#BDBDBD" focusable="false" height="20" role="presentation" width="20" viewBox="0 0 128 128">
-                                                                        <path d="m112 16h-16v-8h-8v8h-48v-8h-8v8h-16c-4.4 0-8 3.9-8 8.7v86.6c0 4.8 3.6 8.7 8 8.7h96c4.4 0 8-3.9 8-8.7v-86.6c0-4.8-3.6-8.7-8-8.7zm0 95.3a1.1 1.1 0 0 1 -.2.7h-95.6a1.1 1.1 0 0 1 -.2-.7v-71.3h96zm-68-43.3h-12v-12h12zm0 28h-12v-12h12zm26-28h-12v-12h12zm0 28h-12v-12h12zm26 0h-12v-12h12zm0-28h-12v-12h12z" fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                    <i class="
-sb-date-field__icon-text
-sb-date-field__icon-text-wide
-" data-icon-day="" data-placeholder="+">
-                                                                        +
-                                                                    </i>
-                                                                </span>
-                                                                <div class="sb-date-field__controls sb-date-field__controls__ie-fix" data-controls="" data-calendar2-cant-touch-this="">
-                                                                    <div class="sb-date-field__select -month-year js-date-field__part" data-type="month-year">
-                                                                        <div class="sb-date-field__select-value" aria-hidden="true">
-                                                                            <span class="js-date-field__value" data-placeholder="
-Check-in month
-">
-                                                                            </span>
-                                                                            <i class="sb-date-field__select-icon bicon-downchevron"></i>
-                                                                        </div>
-                                                                        <select class="sb-date-field__select-field js-date-field__select" aria-label="
-Check-in month
-" data-no-old-calendar="1">
-                                                                        </select>
 
-                                                                    </div>
-                                                                    <div class="sb-date-field__select -day js-date-field__part" data-type="date">
-                                                                        <div class="sb-date-field__select-value" aria-hidden="true">
-                                                                            <span class="js-date-field__value" data-placeholder="
-Check-in day
-">
-                                                                            </span>
-                                                                            <i class="sb-date-field__select-icon bicon-downchevron"></i>
-                                                                        </div>
-                                                                        <select class="sb-date-field__select-field js-date-field__select" name="checkin_monthday" data-selected="" aria-label="
-Check-in day
-" data-no-old-calendar="1">
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="sb-date-field__display" data-placeholder="Check-in" data-date-format="short_date_with_weekday_without_year" data-display="" aria-hidden="true">
-                                                                    Check-in
-                                                                </div>
-                                                                <i class="sb-date-field__chevron bicon-downchevron" aria-hidden="true"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-visible="accommodation,flights,rentalcars" class="xp__input-group xp__date-time">
-                                                <div class="xp__dates-inner xp__dates__checkout">
-                                                    <div data-visible="accommodation,flights,rentalcars" class="xp__group xp__date c2-wrapper-s-hidden">
-                                                        <div class="sb-date-field b-datepicker" data-component="search/dates/date-field-select" data-sb-id="main" data-mode="checkout" data-calendar2-type="checkout" data-calendar2-title="Check-out">
-                                                            <div class="
-sb-searchbox__input
-sb-date-field__field
- -empty
-sb-date__field-svg_icon
-" data-field="">
-                                                                <span class="sb-date-field__icon sb-date-field__icon-btn bk-svg-wrapper calendar-restructure-sb" aria-hidden="true">
-                                                                    <svg aria-hidden="true" class="bk-icon -experiments-calendar sb-date-picker_icon-svg" fill="#BDBDBD" focusable="false" height="20" role="presentation" width="20" viewBox="0 0 128 128">
-                                                                        <path d="m112 16h-16v-8h-8v8h-48v-8h-8v8h-16c-4.4 0-8 3.9-8 8.7v86.6c0 4.8 3.6 8.7 8 8.7h96c4.4 0 8-3.9 8-8.7v-86.6c0-4.8-3.6-8.7-8-8.7zm0 95.3a1.1 1.1 0 0 1 -.2.7h-95.6a1.1 1.1 0 0 1 -.2-.7v-71.3h96zm-68-43.3h-12v-12h12zm0 28h-12v-12h12zm26-28h-12v-12h12zm0 28h-12v-12h12zm26 0h-12v-12h12zm0-28h-12v-12h12z" fill-rule="evenodd"></path>
-                                                                    </svg>
-                                                                    <i class="
-sb-date-field__icon-text
-sb-date-field__icon-text-wide
-" data-icon-day="" data-placeholder="+">
-                                                                        +
-                                                                    </i>
-                                                                </span>
-                                                                <div class="sb-date-field__controls sb-date-field__controls__ie-fix" data-controls="" data-calendar2-cant-touch-this="">
-                                                                    <div class="sb-date-field__select -month-year js-date-field__part" data-type="month-year">
-                                                                        <div class="sb-date-field__select-value" aria-hidden="true">
-                                                                            <span class="js-date-field__value" data-placeholder="
-Check-out month
-">
-                                                                            </span>
-                                                                            <i class="sb-date-field__select-icon bicon-downchevron"></i>
-                                                                        </div>
-                                                                        <select class="sb-date-field__select-field js-date-field__select" aria-label="
-Check-out month
-" data-no-old-calendar="1">
-                                                                        </select>
-
-                                                                    </div>
-                                                                    <div class="sb-date-field__select -day js-date-field__part" data-type="date">
-                                                                        <div class="sb-date-field__select-value" aria-hidden="true">
-                                                                            <span class="js-date-field__value" data-placeholder="
-Check-out day
-">
-                                                                            </span>
-                                                                            <i class="sb-date-field__select-icon bicon-downchevron"></i>
-                                                                        </div>
-                                                                        <select class="sb-date-field__select-field js-date-field__select" name="checkout_monthday" data-selected="" aria-label="
-Check-out day
-" data-no-old-calendar="1">
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="sb-date-field__display" data-placeholder="Check-out" data-date-format="short_date_with_weekday_without_year" data-display="" aria-hidden="true">
-                                                                    Check-out
-                                                                </div>
-                                                                <i class="sb-date-field__chevron bicon-downchevron" aria-hidden="true"></i>
-                                                                <span class="bui-text bui-text--variant-emphasized_2 calendar-extended-plusminus-www" data-calendar-extended-date=""></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="xp-calendar " data-component="search/dates/single-calendar" data-sb-id="main" data-auto-open-on-load="1" data-keep-cal-open="1" data-keep-cal-open-on-date-select="1" data-long-term-flexible-dates="1">
-                                            <nav class="bui-tab xp-calendar-tabs bui-calendar  carousel-extended-dates-calendar-www " data-bui-component="Tab">
-                                                <ul class="bui-tab__nav" role="tablist" data-bui-ref="tab-items">
-                                                    <li class="bui-tab__item" role="presentation" data-bui-ref="tab-item">
-                                                        <button type="button" class="bui-tab__link bui-tab__link--selected" data-bui-ref="tab-button" data-tab-id="calendar" role="tab" aria-selected="true">
-                                                            <span class="bui-tab__text" data-bui-ref="tab-text">Calendar</span>
-                                                        </button>
-                                                    </li>
-                                                    <li class="bui-tab__item" role="presentation" data-bui-ref="tab-item">
-                                                        <button type="button" class="bui-tab__link" data-bui-ref="tab-button" data-tab-id="flexible" role="tab" aria-selected="false">
-                                                            <span class="bui-tab__text" data-bui-ref="tab-text">I'm flexible</span>
-                                                        </button>
-                                                    </li>
-                                                </ul>
-                                                <div class="bui-tab__content bui-tab__content--selected xp-calendar-tab__calendar" role="tabpanel" data-bui-ref="tab-content" data-tab-id="calendar">
-                                                    <div class="bui-calendar__main b-a11y-calendar-contrasts">
-                                                        <div class="bui-calendar__control bui-calendar__control--prev" data-bui-ref="calendar-prev">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="bui-calendar__control bui-calendar__control--next" data-bui-ref="calendar-next">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="bui-calendar__content" data-bui-ref="calendar-content"></div>
-                                                        <div class="bui-calendar__display" data-bui-ref="calendar-selected-display"></div>
-                                                        <div role="region" class="bui-carousel bui-carousel--small carousel-extended-dates" data-bui-component="Carousel" data-component="searchbox/calendar-extended-dates" data-short-term-flex-dates="">
-                                                            <ul class="bui-carousel__inner carousel-extended-dates__inner" data-bui-ref="carousel-container">
-                                                                <li class="bui-carousel__item" data-bui-ref="carousel-item">
-                                                                    <label class="bui-input-checkbutton">
-                                                                        <input type="checkbox" class="bui-input-checkbutton__input" name="flex_window" data-flex-dates-default="" value="0">
-                                                                        <span class="bui-input-checkbutton__item">
-                                                                            <div class="bui-text bui-text--variant-emphasized_2">Exact dates</div>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                                <li class="bui-carousel__item" data-bui-ref="carousel-item">
-                                                                    <label class="bui-input-checkbutton">
-                                                                        <input type="checkbox" class="bui-input-checkbutton__input" name="flex_window" value="1">
-                                                                        <span class="bui-input-checkbutton__item">
-                                                                            <svg class="bk-icon -streamline-plus_minus bui-input-checkbutton__check" height="14" width="14" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                                                                <path d="M21.14 22.94a1 1 0 0 1-1 1H3.86a1 1 0 1 1 0-2h16.28a1 1 0 0 1 1 1ZM4 10h7v7a1 1 0 0 0 2 0v-7h7a1 1 0 0 0 0-2h-7V1a1 1 0 0 0-2 0v7H4a1 1 0 0 0 0 2Z"></path>
-                                                                            </svg>
-                                                                            <div class="bui-text bui-text--variant-emphasized_2">1 day</div>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                                <li class="bui-carousel__item" data-bui-ref="carousel-item">
-                                                                    <label class="bui-input-checkbutton">
-                                                                        <input type="checkbox" class="bui-input-checkbutton__input" name="flex_window" value="2">
-                                                                        <span class="bui-input-checkbutton__item">
-                                                                            <svg class="bk-icon -streamline-plus_minus bui-input-checkbutton__check" height="14" width="14" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                                                                <path d="M21.14 22.94a1 1 0 0 1-1 1H3.86a1 1 0 1 1 0-2h16.28a1 1 0 0 1 1 1ZM4 10h7v7a1 1 0 0 0 2 0v-7h7a1 1 0 0 0 0-2h-7V1a1 1 0 0 0-2 0v7H4a1 1 0 0 0 0 2Z"></path>
-                                                                            </svg>
-                                                                            <div class="bui-text bui-text--variant-emphasized_2">2 days</div>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                                <li class="bui-carousel__item" data-bui-ref="carousel-item">
-                                                                    <label class="bui-input-checkbutton">
-                                                                        <input type="checkbox" class="bui-input-checkbutton__input" name="flex_window" value="3">
-                                                                        <span class="bui-input-checkbutton__item">
-                                                                            <svg class="bk-icon -streamline-plus_minus bui-input-checkbutton__check" height="14" width="14" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                                                                <path d="M21.14 22.94a1 1 0 0 1-1 1H3.86a1 1 0 1 1 0-2h16.28a1 1 0 0 1 1 1ZM4 10h7v7a1 1 0 0 0 2 0v-7h7a1 1 0 0 0 0-2h-7V1a1 1 0 0 0-2 0v7H4a1 1 0 0 0 0 2Z"></path>
-                                                                            </svg>
-                                                                            <div class="bui-text bui-text--variant-emphasized_2">3 days</div>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                                <li class="bui-carousel__item" data-bui-ref="carousel-item">
-                                                                    <label class="bui-input-checkbutton">
-                                                                        <input type="checkbox" class="bui-input-checkbutton__input" name="flex_window" value="7">
-                                                                        <span class="bui-input-checkbutton__item">
-                                                                            <svg class="bk-icon -streamline-plus_minus bui-input-checkbutton__check" height="14" width="14" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                                                                <path d="M21.14 22.94a1 1 0 0 1-1 1H3.86a1 1 0 1 1 0-2h16.28a1 1 0 0 1 1 1ZM4 10h7v7a1 1 0 0 0 2 0v-7h7a1 1 0 0 0 0-2h-7V1a1 1 0 0 0-2 0v7H4a1 1 0 0 0 0 2Z"></path>
-                                                                            </svg>
-                                                                            <div class="bui-text bui-text--variant-emphasized_2">7 days</div>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="bui-tab__content" role="tabpanel" data-bui-ref="tab-content" data-tab-id="flexible">
-                                                    <div class="flexible-dates-container">
-                                                        <div class="flexible-dates-section">
-                                                            <div class="bui-title bui-title--strong_1">
-                                                                <strong class="bui-title__text">
-                                                                    How long do you want to stay?
-                                                                </strong>
-                                                            </div>
-                                                            <div class="bui-group bui-group--large flexible-dates-section-content flexible-dates-section-los" data-flex-dates-los-container="">
-                                                                <label class="bui-radio">
-                                                                    <input type="radio" class="bui-radio__input" aria-describedby="radio-group-inline" value="1" data-start-day="5" data-los="1">
-                                                                    <span class="bui-radio__label">A weekend</span>
-                                                                </label>
-                                                                <label class="bui-radio">
-                                                                    <input type="radio" class="bui-radio__input" aria-describedby="radio-group-inline" value="2" data-start-day="1" data-los="5">
-                                                                    <span class="bui-radio__label">A week</span>
-                                                                </label>
-                                                                <label class="bui-radio">
-                                                                    <input type="radio" class="bui-radio__input" aria-describedby="radio-group-inline" value="4" data-start-day="6" data-los="28">
-                                                                    <span class="bui-radio__label">A month</span>
-                                                                </label>
-                                                                <label class="bui-radio">
-                                                                    <input type="radio" class="bui-radio__input" aria-describedby="radio-group-inline" value="3" data-start-day="1" data-los="1">
-                                                                    <span class="bui-radio__label">Other</span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="flexible-dates-los-custom" data-flex-dates-los-custom="">
-                                                                <div class="bui-form__group">
-                                                                    <div class="bui-input-text__content">
-                                                                        <div class="bui-input-text__field">
-                                                                            <input data-custom-los="" type="number" min="1" max="" value="1" class="bui-input-text__control" aria-describedby="flexible-dates-nights-input-suffix">
-                                                                            <div class="bui-input-text__decorator"></div>
-                                                                        </div>
-                                                                        <div class="bui-input-text__addon" id="flexible-dates-nights-input-suffix" data-flex-dates-los-custom-suffix="">
-                                                                            night
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="bui-form__group">
-                                                                    <div class="bui-input-select">
-                                                                        <select class="bui-form__control" data-custom-start-day="" autocomplete="off">
-                                                                            <option value="1">From Monday</option>
-                                                                            <option value="2">From Tuesday</option>
-                                                                            <option value="3">From Wednesday</option>
-                                                                            <option value="4">From Thursday</option>
-                                                                            <option value="5">From Friday</option>
-                                                                            <option value="6">From Saturday</option>
-                                                                            <option value="7">From Sunday</option>
-                                                                        </select>
-                                                                        <svg class="bk-icon -streamline-arrow_menu bui-input-select__icon" height="16" width="16" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                                                            <path d="M12 20.09a1.24 1.24 0 0 1-.88-.36L6 14.61a.75.75 0 1 1 1.06-1.06L12 18.49l4.94-4.94A.75.75 0 0 1 18 14.61l-5.12 5.12a1.24 1.24 0 0 1-.88.36zm6-9.46a.75.75 0 0 0 0-1.06l-5.12-5.11a1.24 1.24 0 0 0-1.754-.006l-.006.006L6 9.57a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0L12 5.7l4.94 4.93a.73.73 0 0 0 .53.22c.2 0 .39-.078.53-.22z"></path>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="flexible-dates-section">
-                                                            <div class="bui-title bui-title--strong_1">
-                                                                <strong class="bui-title__text">
-                                                                    When do you want to go?
-                                                                </strong>
-                                                            </div>
-                                                            <div class="bui-text bui-text--variant-body_2 flexible-dates-up-to-hint">
-                                                                Select up to
-                                                                3 months
-                                                            </div>
-                                                            <div class="flexible-dates-section-content" data-flex-dates-months-container=""></div>
-                                                        </div>
-                                                        <div class="flexible-dates-footer">
-                                                            <span date-flex-footer-caption=""></span>
-                                                            <button class="bui-button bui-button--primary flexible-dates-footer-cta" type="button" date-flex-footer-done-button="">
-                                                                <span class="bui-button__text">
-                                                                    Select dates
-                                                                </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <svg class="bk-icon -streamline-calendar" height="24" style="display:none;" width="24" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                                        <path d="M22.502 13.5v8.25a.75.75 0 0 1-.75.75h-19.5a.75.75 0 0 1-.75-.75V5.25a.75.75 0 0 1 .75-.75h19.5a.75.75 0 0 1 .75.75v8.25zm1.5 0V5.25A2.25 2.25 0 0 0 21.752 3h-19.5a2.25 2.25 0 0 0-2.25 2.25v16.5A2.25 2.25 0 0 0 2.252 24h19.5a2.25 2.25 0 0 0 2.25-2.25V13.5zm-23.25-3h22.5a.75.75 0 0 0 0-1.5H.752a.75.75 0 0 0 0 1.5zM7.502 6V.75a.75.75 0 0 0-1.5 0V6a.75.75 0 0 0 1.5 0zm10.5 0V.75a.75.75 0 0 0-1.5 0V6a.75.75 0 0 0 1.5 0z"></path>
-                                                    </svg>
-                                                </div>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                    <div data-visible="accommodation,flights" class="xp__input-group xp__guests" data-component="search/group/group-with-modal" data-sb-id="main" tabindex="0">
-                                     
-                                        <label id="xp__guests__toggle" for="xp__guests__input" class="xp__input" data-group-toggle="" role="button" aria-expanded="false" aria-controls="xp__guests__inputs-container">
-                                            <span class="invisible_spoken">Rooms and occupancy</span>
-                                            <span class="xp__guests__count">
-                                                <span data-adults-count="">
-                                                    2 adults
-                                                </span>
-                                                <span data-visible="accommodation">
-                                                    &nbsp;·&nbsp;
-                                                    <span data-children-count="">
-                                                        0 children
-                                                    </span>
-                                                </span>
-                                                <span data-visible="accommodation">
-                                                    &nbsp;·&nbsp;
-                                                    <span data-room-count="">
-                                                        1 room
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </label>
-                                        <input type="checkbox" id="xp__guests__input">
-                                        <div id="xp__guests__inputs-container" class="xp__guests__inputs focussable " data-group-modal="" style="display: none;" role="region" aria-label="Rooms and occupancy">
-                                            <div data-component="search/group/group" data-sb-id="main" data-sb-width="medium" data-sb-bbtool-searchbox="0" data-sb-group-children-hide="0" data-sb-group-children-ages-hide="0" data-sb-group-infants-hide="1" data-sb-group-pets-hide="0" data-sb-group-rooms-hide="0" data-sb-group-block-labels="0" data-sb-group-use_adults_label="0" data-sb-group-always-expanded="0" data-sb-group-use-bui-stepper="1" data-sb-group-bui-steppers-accessible="0" data-fe_sb_group_descriptive_dropdowns="0" data-fe_sb_universal_design="0" data-fe_sb_xpi="1" data-fe_remove_duplicate_ids="0" data-fe_sb_unique_id="" data-sb_reorder_rooms_block="1" data-sb-facelift="0" data-fe_sb_show_children_age_bracket="0" data-fe_sb_mandatory_child_ages="0" data-fe_sb_child_ages_ui_update="0" data-fe_sb_dont_use_default_child_age="0">
-                                                <div class="u-clearfix" data-render="">
-                                                    <div class="sb-group__field sb-group__field-adults">
-                                                        <div class="bui-stepper" data-bui-component="InputStepper">
-                                                            <div class="bui-stepper__title-wrapper">
-                                                                <label class="bui-stepper__title" for="group_adults">Adults</label>
-                                                            </div>
-                                                            <div class="bui-stepper__wrapper">
-                                                                <input type="range" class="bui-stepper__input" data-bui-ref="input-stepper-field" id="group_adults" name="group_adults" min="1" max="30" value="2" data-group-adults-count="">
-                                                                <button class="bui-button bui-button--secondary bui-stepper__subtract-button" data-bui-ref="input-stepper-subtract-button" type="button" aria-hidden="true">
-                                                                    <span class="bui-button__text">-</span>
-                                                                </button>
-                                                                <span class="bui-stepper__display" data-bui-ref="input-stepper-value" aria-hidden="true">2</span>
-                                                                <button class="bui-button bui-button--secondary bui-stepper__add-button" data-bui-ref="input-stepper-add-button" type="button" aria-hidden="true">
-                                                                    <span class="bui-button__text">+</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sb-group__field sb-group-children ">
-                                                        <div class="bui-stepper" data-bui-component="InputStepper">
-                                                            <div class="bui-stepper__title-wrapper">
-                                                                <label class="bui-stepper__title" for="group_children">Children</label>
-                                                            </div>
-                                                            <div class="bui-stepper__wrapper">
-                                                                <input type="range" class="bui-stepper__input" data-bui-ref="input-stepper-field" id="group_children" name="group_children" min="0" max="10" value="0" data-group-children-count="">
-                                                                <button class="bui-button bui-button--secondary bui-stepper__subtract-button" data-bui-ref="input-stepper-subtract-button" type="button" aria-hidden="true" disabled="">
-                                                                    <span class="bui-button__text">-</span>
-                                                                </button>
-                                                                <span class="bui-stepper__display" data-bui-ref="input-stepper-value" aria-hidden="true">0</span>
-                                                                <button class="bui-button bui-button--secondary bui-stepper__add-button" data-bui-ref="input-stepper-add-button" type="button" aria-hidden="true">
-                                                                    <span class="bui-button__text">+</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sb-group__field sb-group__field-rooms">
-                                                        <div class="bui-stepper" data-bui-component="InputStepper">
-                                                            <div class="bui-stepper__title-wrapper">
-                                                                <label class="bui-stepper__title" for="no_rooms">Rooms</label>
-                                                            </div>
-                                                            <div class="bui-stepper__wrapper">
-                                                                <input type="range" class="bui-stepper__input" data-bui-ref="input-stepper-field" id="no_rooms" name="no_rooms" min="1" max="30" value="1" data-group-rooms-count="">
-                                                                <button class="bui-button bui-button--secondary bui-stepper__subtract-button" data-bui-ref="input-stepper-subtract-button" type="button" aria-hidden="true" disabled="">
-                                                                    <span class="bui-button__text">-</span>
-                                                                </button>
-                                                                <span class="bui-stepper__display" data-bui-ref="input-stepper-value" aria-hidden="true">1</span>
-                                                                <button class="bui-button bui-button--secondary bui-stepper__add-button" data-bui-ref="input-stepper-add-button" type="button" aria-hidden="true">
-                                                                    <span class="bui-button__text">+</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="xp__button">
-                                        <div class="sb-searchbox-submit-col -button-messages">
-                                        </div>
-                                        <div class="sb-searchbox-submit-col -submit-button ">
-                                            <button data-sb-id="main" type="submit" class="sb-searchbox__button " data-et-click="     ">
-                                                <span class="js-sb-submit-text ">
-                                                    Search
-                                                </span>
-                                                <span class="sb-submit-helper"></span>
-                                            </button>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div class="bui-checkbox xp__travel-purpose " data-component="search/travel-purpose/checkbox" data-profile-switch-url="" data-visible="accommodation">
-                                    <input class="bui-checkbox__input" type="checkbox" value="business" id="sb_travel_purpose_checkbox" name="sb_travel_purpose">
-                                    <label class="bui-checkbox__label" for="sb_travel_purpose_checkbox">
-                                        I'm traveling for work
-                                    </label>
-                                </div>
-
+                                    <div class="col-auto mx-0 px-0 flex-grow-1 ">
+                                    <div class="row h-100 w-100 p-0 m-0 justify-content-center align-content-end">
+                                        <div class="col-auto p-0 m-0 w-100 h-75">
+                                                <button type="submit" class=" btn btn-primary w-100 h-100" style="background-color: #007a5a; border: 1px solid #007a5a; border-radius: 5px;">Search</button>
+                                            </div>
+                                        </div>
+                                    </div>
                             </form>
                         </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="lp-bui-section-wrap">
+  
 
-
-        <div class="lp-bui-section bui-spacer--largest x2">
-            <div class="lp-bui-section-hotel-index lp-hotel__trending">
-                <header class="bui-segment-header-stacked bui-spacer--largest">
-                    <h2 class="bui-segment-header">Trending hotel destinations</h2>
-                    <h3 class="bui-segment-subheader">
-                        Explore destinations currently popular with other travelers
-                    </h3>
-                </header>
-                <div role="region" class="bui-carousel bui-carousel--large bui-u-bleed@small" data-bui-component="Carousel">
-                    <ul class="bui-carousel__inner" data-bui-ref="carousel-container">
-                        <li class="bui-carousel__item" data-bui-ref="carousel-item">
-                            <div class="bui-card bui-u-bleed@small bui-card--media bui-card--transparent lp-hotel__trending_card">
-                                <div class="bui-card__image-container" onclick="location.href='/searchresults.html?city=-402849&amp;'; return false;">
-                                    <img class="bui-card__image" alt="
-Seville, Spain
-" src="https://cf.bstatic.com/xdata/images/city/max500/645962.jpg?k=2356102edee342d7d86243493004e8c038854fa0ecdaf79b84e85ce609aaa4e2&amp;o=">
-                                </div>
-                                <div class="bui-card__content">
-                                    <header class="bui-card__header">
-                                        <a href="/searchresults.html?city=-402849&amp;" title="
-Seville, Spain
-">
-                                            <h3 class="bui-card__title">
-                                                Seville, Spain
-                                            </h3>
-                                            <h4 class="bui-card__subtitle">
-                                                Avg. price per night for a 3-star hotel: £118
-                                            </h4>
-                                        </a>
-                                    </header>
-                                    <p class="bui-card__text lp-hotel__trending_card_message">
-                                        <svg class="bk-icon -streamline-arrow_trend_up_right" fill="<TMPL_V bui_color_constructive>" height="24" width="24" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                            <path d="M24 12.75V6a.75.75 0 0 0-.75-.75H16.5a.75.75 0 0 0 0 1.5h6.75L22.5 6v6.75a.75.75 0 0 0 1.5 0zm-1.28-7.28l-7.94 7.939a.75.75 0 0 1-1.06 0L10.59 10.28a2.25 2.25 0 0 0-3.181-.001h-.002L.22 17.47a.75.75 0 1 0 1.06 1.06l7.19-7.189a.75.75 0 0 1 1.06 0l3.129 3.128v.001a2.25 2.25 0 0 0 3.182 0l7.94-7.94a.75.75 0 0 0-1.061-1.06z">
-                                            </path>
-                                        </svg>
-                                        Popular with other travelers
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="bui-carousel__item" data-bui-ref="carousel-item">
-                            <div class="bui-card bui-u-bleed@small bui-card--media bui-card--transparent lp-hotel__trending_card">
-                                <div class="bui-card__image-container" onclick="location.href='/searchresults.html?city=-390625&amp;'; return false;">
-                                    <img class="bui-card__image" alt="
-Madrid, Spain
-" src="https://cf.bstatic.com/xdata/images/city/max500/971353.jpg?k=a5b47d2c38469086427837dfe64ab2e6f57ba52f0504359ef4cc02dc4b9b0737&amp;o=">
-                                </div>
-                                <div class="bui-card__content">
-                                    <header class="bui-card__header">
-                                        <a href="/searchresults.html?city=-390625&amp;" title="
-Madrid, Spain
-">
-                                            <h3 class="bui-card__title">
-                                                Madrid, Spain
-                                            </h3>
-                                            <h4 class="bui-card__subtitle">
-                                                Avg. price per night for a 3-star hotel: £147
-                                            </h4>
-                                        </a>
-                                    </header>
-                                    <p class="bui-card__text lp-hotel__trending_card_message">
-                                        <svg class="bk-icon -streamline-arrow_trend_up_right" fill="<TMPL_V bui_color_constructive>" height="24" width="24" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                            <path d="M24 12.75V6a.75.75 0 0 0-.75-.75H16.5a.75.75 0 0 0 0 1.5h6.75L22.5 6v6.75a.75.75 0 0 0 1.5 0zm-1.28-7.28l-7.94 7.939a.75.75 0 0 1-1.06 0L10.59 10.28a2.25 2.25 0 0 0-3.181-.001h-.002L.22 17.47a.75.75 0 1 0 1.06 1.06l7.19-7.189a.75.75 0 0 1 1.06 0l3.129 3.128v.001a2.25 2.25 0 0 0 3.182 0l7.94-7.94a.75.75 0 0 0-1.061-1.06z">
-                                            </path>
-                                        </svg>
-                                        Popular with other travelers
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="bui-carousel__nav">
-                        <button type="button" class="bui-carousel__button" aria-label="Previous" data-bui-ref="carousel-prev">
-                            <svg class="bk-icon -streamline-arrow_nav_left bui-carousel__prev" height="32" width="32" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                <path d="M14.55 18a.74.74 0 0 1-.53-.22l-5-5A1.08 1.08 0 0 1 8.7 12a1.1 1.1 0 0 1 .3-.78l5-5a.75.75 0 0 1 1.06 0 .74.74 0 0 1 0 1.06L10.36 12l4.72 4.72a.74.74 0 0 1 0 1.06.73.73 0 0 1-.53.22zm-4.47-5.72zm0-.57z">
-                                </path>
-                            </svg>
-                        </button>
-                        <button type="button" class="bui-carousel__button" aria-label="Next" data-bui-ref="carousel-next">
-                            <svg class="bk-icon -streamline-arrow_nav_right bui-carousel__next" height="32" width="32" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                <path d="M9.45 6c.2 0 .39.078.53.22l5 5c.208.206.323.487.32.78a1.1 1.1 0 0 1-.32.78l-5 5a.75.75 0 0 1-1.06 0 .74.74 0 0 1 0-1.06L13.64 12 8.92 7.28a.74.74 0 0 1 0-1.06.73.73 0 0 1 .53-.22zm4.47 5.72zm0 .57z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <div class="lp-bui-section bui-spacer--largest x2">
             <div class="lp-bui-section-hotel-index lp-hotel__segments">
                 <header class="bui-segment-header-stacked bui-spacer--medium">
@@ -761,266 +383,8 @@ bk-icon-wrapper
                 </div>
             </div>
         </div>
-        <div class="lp-bui-section bui-spacer--largest x2">
-            <div class="lp-bui-section-hotel-index lp-hotel__faq">
-                <div id="c-lp-faq" class="lp-faq bui-spacer--largest" data-lp-ga-view="city-faq-block:view">
-                    <div class="lp-faq__inner bui-grid bui-grid--bleed">
-                        <div class="bui-grid__column-3">
-                            <div class="lp-faq__intro">
-                                <h3 class="lp-faq__header">
-                                    FAQs about hotels on Booking.com
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="bui-grid__column-9">
-                            <div class="lp-faq__content">
-                                <ul class="bui-accordion bui-u-bleed@small" data-bui-component="Accordion" aria-label="Accordion control" itemscope="" itemtype="https://schema.org/FAQPage">
-                                    <li class="bui-accordion__row bui-accordion__row-slim" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                        <button class="bui-accordion__row-inner" data-bui-ref="accordion-button" aria-controls="content-1" aria-expanded="false" type="button" data-lp-ga-click="city-faq-block:click-question">
-                                            <div class="bui-accordion__row-header">
-                                                <h3 class="bui-accordion__title" itemprop="name">
-                                                    How do I find cheap hotels on Booking.com?
-                                                </h3>
-                                            </div>
-                                            <span role="presentation" class="bui-accordion__icon-container">
-                                                <svg class="bk-icon -iconset-navarrow_down bui-accordion__icon" height="24" role="presentation" width="24" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
-                                                    <path d="M64 88L33.2 57.2a4 4 0 0 1 5.6-5.7L64 76.7l25.2-25.2a4 4 0 0 1 5.6 5.7z"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                        <div id="content-1" class="bui-accordion__content" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-lp-ga-click="city-faq-block:click-answer">
-                                            <div itemprop="text">
-                                                <p>
-                                                    There are a number of ways to find <a class="bui-link" target="_blank" href="/cheap/index.html">cheap hotels</a> on Booking.com. You can filter hotels by price
-                                                    to only show those that match your budget, or sort by price to display the cheapest ones
-                                                    first. If you're a member of our Genius loyalty program, you can also enjoy discounted
-                                                    rates at select hotels and other properties.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="bui-accordion__row bui-accordion__row-slim" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                        <button class="bui-accordion__row-inner" data-bui-ref="accordion-button" aria-controls="content-2" aria-expanded="false" type="button" data-lp-ga-click="city-faq-block:click-question">
-                                            <div class="bui-accordion__row-header">
-                                                <h3 class="bui-accordion__title" itemprop="name">
-                                                    Where can I find hotel deals on Booking.com?
-                                                </h3>
-                                            </div>
-                                            <span role="presentation" class="bui-accordion__icon-container">
-                                                <svg class="bk-icon -iconset-navarrow_down bui-accordion__icon" height="24" role="presentation" width="24" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
-                                                    <path d="M64 88L33.2 57.2a4 4 0 0 1 5.6-5.7L64 76.7l25.2-25.2a4 4 0 0 1 5.6 5.7z"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                        <div id="content-2" class="bui-accordion__content" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-lp-ga-click="city-faq-block:click-answer">
-                                            <div itemprop="text">
-                                                <p>
-                                                    We have a wide range of hotel deals and promotions throughout the year, all of which can
-                                                    be found on our <a class="bui-link" target="_blank" href="/dealspage.html">deals page</a>.
-                                                    If you're a member of our Genius loyalty program, you can also sign in to your account to
-                                                    see discounted rates at select hotels and other properties.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="bui-accordion__row bui-accordion__row-slim" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                        <button class="bui-accordion__row-inner" data-bui-ref="accordion-button" aria-controls="content-3" aria-expanded="false" type="button" data-lp-ga-click="city-faq-block:click-question">
-                                            <div class="bui-accordion__row-header">
-                                                <h3 class="bui-accordion__title" itemprop="name">
-                                                    How many hotels are listed on Booking.com?
-                                                </h3>
-                                            </div>
-                                            <span role="presentation" class="bui-accordion__icon-container">
-                                                <svg class="bk-icon -iconset-navarrow_down bui-accordion__icon" height="24" role="presentation" width="24" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
-                                                    <path d="M64 88L33.2 57.2a4 4 0 0 1 5.6-5.7L64 76.7l25.2-25.2a4 4 0 0 1 5.6 5.7z"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                        <div id="content-3" class="bui-accordion__content" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-lp-ga-click="city-faq-block:click-answer">
-                                            <div itemprop="text">
-                                                <p>
-                                                    There are currently 21,936,990 hotel room listings on Booking.com, so you'll always be
-                                                    able to find the perfect hotel – wherever you're going!
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="bui-accordion__row bui-accordion__row-slim" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                        <button class="bui-accordion__row-inner" data-bui-ref="accordion-button" aria-controls="content-4" aria-expanded="false" type="button" data-lp-ga-click="city-faq-block:click-question">
-                                            <div class="bui-accordion__row-header">
-                                                <h3 class="bui-accordion__title" itemprop="name">
-                                                    How do I search for a hotel on Booking.com?
-                                                </h3>
-                                            </div>
-                                            <span role="presentation" class="bui-accordion__icon-container">
-                                                <svg class="bk-icon -iconset-navarrow_down bui-accordion__icon" height="24" role="presentation" width="24" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
-                                                    <path d="M64 88L33.2 57.2a4 4 0 0 1 5.6-5.7L64 76.7l25.2-25.2a4 4 0 0 1 5.6 5.7z"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                        <div id="content-4" class="bui-accordion__content" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-lp-ga-click="city-faq-block:click-answer">
-                                            <div itemprop="text">
-                                                <p>
-                                                    To search for a hotel on Booking.com, enter your destination, travel dates, and the
-                                                    number of people in your group. Don't know where or when you want to travel? Browse our
-                                                    site to get inspiration and find the perfect hotel that way instead.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="bui-accordion__row bui-accordion__row-slim" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                        <button class="bui-accordion__row-inner" data-bui-ref="accordion-button" aria-controls="content-5" aria-expanded="false" type="button" data-lp-ga-click="city-faq-block:click-question">
-                                            <div class="bui-accordion__row-header">
-                                                <h3 class="bui-accordion__title" itemprop="name">
-                                                    How do I find cheap last-minute hotels on Booking.com?
-                                                </h3>
-                                            </div>
-                                            <span role="presentation" class="bui-accordion__icon-container">
-                                                <svg class="bk-icon -iconset-navarrow_down bui-accordion__icon" height="24" role="presentation" width="24" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
-                                                    <path d="M64 88L33.2 57.2a4 4 0 0 1 5.6-5.7L64 76.7l25.2-25.2a4 4 0 0 1 5.6 5.7z"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                        <div id="content-5" class="bui-accordion__content" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-lp-ga-click="city-faq-block:click-answer">
-                                            <div itemprop="text">
-                                                <p>
-                                                    To look for a cheap last-minute hotel on Booking.com, enter your upcoming dates to search
-                                                    for a hotel, then use the budget filters to find one within your price range.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="bui-accordion__row bui-accordion__row-slim" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                        <button class="bui-accordion__row-inner" data-bui-ref="accordion-button" aria-controls="content-6" aria-expanded="false" type="button" data-lp-ga-click="city-faq-block:click-question">
-                                            <div class="bui-accordion__row-header">
-                                                <h3 class="bui-accordion__title" itemprop="name">
-                                                    Why should I trust Booking.com's hotel reviews?
-                                                </h3>
-                                            </div>
-                                            <span role="presentation" class="bui-accordion__icon-container">
-                                                <svg class="bk-icon -iconset-navarrow_down bui-accordion__icon" height="24" role="presentation" width="24" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
-                                                    <path d="M64 88L33.2 57.2a4 4 0 0 1 5.6-5.7L64 76.7l25.2-25.2a4 4 0 0 1 5.6 5.7z"></path>
-                                                </svg>
-                                            </span>
-                                        </button>
-                                        <div id="content-6" class="bui-accordion__content" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-lp-ga-click="city-faq-block:click-answer">
-                                            <div itemprop="text">
-                                                <p>
-                                                    You can trust Booking.com hotel reviews because guests can only leave a review after they
-                                                    stay at a hotel. This way you get verified reviews written by real Booking.com guests.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lp-bui-section bui-spacer--largest x2">
-            <div class="lp-bui-section-hotel-index lp-hotel__articles">
-                <header class="bui-segment-header-stacked bui-segment-header-exit bui-spacer--largest">
-                    <h2 class="bui-segment-header">Inspiration for finding your ideal hotel</h2>
-                    <h3 class="bui-segment-subheader">Discover special hotels in unique destinations all over the world</h3>
-                </header>
-                <div class="m-section__bleed">
-                    <div class="lp-hotel__articles_items">
-                        <a role="region" aria-label="5 of the world’s quirkiest library hotels" class="lp-hotel__articles_card bui-card bui-u-bleed@small bui-card--media bui-card--media-alt bui-card--media-full" href="/articles/the-world-s-quirkiest-library-hotels.html" title="5 of the world’s quirkiest library hotels">
-                            <div class="bui-card__image-container">
-                                <img class="bui-card__image" alt="5 of the world’s quirkiest library hotels" src="https://cf.bstatic.com/xdata/images/xphoto/540x405/18112290.jpg?k=d7d7b8c1241f9791046857c570b7d120b36858583f2e1e30799edbd956b9ea99&amp;o=">
-                                <header class="bui-card__header">
-                                    <span>
-                                        <svg class="bk-icon -streamline-book" fill="white" height="32" width="32" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                            <path d="M21 22.5H5.25a1.5 1.5 0 0 1-1.5-1.5.75.75 0 0 0-1.5 0 3 3 0 0 0 3 3H21a.75.75 0 0 0 0-1.5zM6 0a3.75 3.75 0 0 0-3.75 3.75V21h1.5a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 0 1.5-1.5V1.5a1.5 1.5 0 0 0-1.5-1.5H6zm0 1.5h14.25V18h-15a3 3 0 0 0-3 3c0 1 1.5 1 1.5 0V3.75A2.25 2.25 0 0 1 6 1.5zm14.25 21.75v-4.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <h3 class="bui-card__title">5 of the world’s quirkiest library hotels</h3>
-                                    <h4 class="bui-card__subtitle">Read more</h4>
-                                </header>
-                            </div>
-                        </a>
-                        <a role="region" aria-label="The Best Nerdy Hotels for a Romantic Weekend" class="lp-hotel__articles_card bui-card bui-u-bleed@small bui-card--media bui-card--media-alt bui-card--media-full" href="/articles/the-best-nerdy-hotels-for-a-romantic-weekend.html" title="The Best Nerdy Hotels for a Romantic Weekend">
-                            <div class="bui-card__image-container">
-                                <img class="bui-card__image" alt="The Best Nerdy Hotels for a Romantic Weekend" src="https://cf.bstatic.com/xdata/images/xphoto/540x405/29345946.jpg?k=cdafa47c516c564c68811c66a57eb241d7ee46b5a0a07d194e278467e6db46f6&amp;o=">
-                                <header class="bui-card__header">
-                                    <span>
-                                        <svg class="bk-icon -streamline-book" fill="white" height="32" width="32" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                            <path d="M21 22.5H5.25a1.5 1.5 0 0 1-1.5-1.5.75.75 0 0 0-1.5 0 3 3 0 0 0 3 3H21a.75.75 0 0 0 0-1.5zM6 0a3.75 3.75 0 0 0-3.75 3.75V21h1.5a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 0 1.5-1.5V1.5a1.5 1.5 0 0 0-1.5-1.5H6zm0 1.5h14.25V18h-15a3 3 0 0 0-3 3c0 1 1.5 1 1.5 0V3.75A2.25 2.25 0 0 1 6 1.5zm14.25 21.75v-4.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <h3 class="bui-card__title">The Best Nerdy Hotels for a Romantic Weekend</h3>
-                                    <h4 class="bui-card__subtitle">Read more</h4>
-                                </header>
-                            </div>
-                        </a>
-                        <a role="region" aria-label="The best Michelin-starred hotel restaurants" class="lp-hotel__articles_card bui-card bui-u-bleed@small bui-card--media bui-card--media-alt bui-card--media-full" href="/articles/michelin-starred-hotel-restaurants.html" title="The best Michelin-starred hotel restaurants">
-                            <div class="bui-card__image-container">
-                                <img class="bui-card__image" alt="The best Michelin-starred hotel restaurants" src="https://cf.bstatic.com/xdata/images/xphoto/540x405/129005191.jpg?k=eb3fed0cd5a1d13cf3ddbb7558adb57c7f8375260e5323bc4fca27f18cc3f9df&amp;o=">
-                                <header class="bui-card__header">
-                                    <span>
-                                        <svg class="bk-icon -streamline-book" fill="white" height="32" width="32" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                            <path d="M21 22.5H5.25a1.5 1.5 0 0 1-1.5-1.5.75.75 0 0 0-1.5 0 3 3 0 0 0 3 3H21a.75.75 0 0 0 0-1.5zM6 0a3.75 3.75 0 0 0-3.75 3.75V21h1.5a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 0 1.5-1.5V1.5a1.5 1.5 0 0 0-1.5-1.5H6zm0 1.5h14.25V18h-15a3 3 0 0 0-3 3c0 1 1.5 1 1.5 0V3.75A2.25 2.25 0 0 1 6 1.5zm14.25 21.75v-4.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <h3 class="bui-card__title">The best Michelin-starred hotel restaurants</h3>
-                                    <h4 class="bui-card__subtitle">Read more</h4>
-                                </header>
-                            </div>
-                        </a>
-                        <a role="region" aria-label="7 chateau hotels in France’s vineyards" class="lp-hotel__articles_card bui-card bui-u-bleed@small bui-card--media bui-card--media-alt bui-card--media-full" href="/articles/chateau-hotels-in-france.html" title="7 chateau hotels in France’s vineyards">
-                            <div class="bui-card__image-container">
-                                <img class="bui-card__image" alt="7 chateau hotels in France’s vineyards" src="https://cf.bstatic.com/xdata/images/xphoto/540x405/139790841.jpg?k=14e384da30076fd7ea81f530718c535128f8a1871db19b0da19a61506c0a4855&amp;o=">
-                                <header class="bui-card__header">
-                                    <span>
-                                        <svg class="bk-icon -streamline-book" fill="white" height="32" width="32" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                            <path d="M21 22.5H5.25a1.5 1.5 0 0 1-1.5-1.5.75.75 0 0 0-1.5 0 3 3 0 0 0 3 3H21a.75.75 0 0 0 0-1.5zM6 0a3.75 3.75 0 0 0-3.75 3.75V21h1.5a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 0 1.5-1.5V1.5a1.5 1.5 0 0 0-1.5-1.5H6zm0 1.5h14.25V18h-15a3 3 0 0 0-3 3c0 1 1.5 1 1.5 0V3.75A2.25 2.25 0 0 1 6 1.5zm14.25 21.75v-4.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <h3 class="bui-card__title">7 chateau hotels in France’s vineyards</h3>
-                                    <h4 class="bui-card__subtitle">Read more</h4>
-                                </header>
-                            </div>
-                        </a>
-                        <a role="region" aria-label="5 snow hotels to visit this winter" class="lp-hotel__articles_card bui-card bui-u-bleed@small bui-card--media bui-card--media-alt bui-card--media-full" href="/articles/snow-hotels-to-visit-this-winter.html" title="5 snow hotels to visit this winter">
-                            <div class="bui-card__image-container">
-                                <img class="bui-card__image" alt="5 snow hotels to visit this winter" src="https://cf.bstatic.com/xdata/images/xphoto/540x405/139936580.jpg?k=7792caf05530561da975691bceaddbf6a78cbc62916ab4eff3c537b461b8661a&amp;o=">
-                                <header class="bui-card__header">
-                                    <span>
-                                        <svg class="bk-icon -streamline-book" fill="white" height="32" width="32" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                            <path d="M21 22.5H5.25a1.5 1.5 0 0 1-1.5-1.5.75.75 0 0 0-1.5 0 3 3 0 0 0 3 3H21a.75.75 0 0 0 0-1.5zM6 0a3.75 3.75 0 0 0-3.75 3.75V21h1.5a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 0 1.5-1.5V1.5a1.5 1.5 0 0 0-1.5-1.5H6zm0 1.5h14.25V18h-15a3 3 0 0 0-3 3c0 1 1.5 1 1.5 0V3.75A2.25 2.25 0 0 1 6 1.5zm14.25 21.75v-4.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <h3 class="bui-card__title">5 snow hotels to visit this winter</h3>
-                                    <h4 class="bui-card__subtitle">Read more</h4>
-                                </header>
-                            </div>
-                        </a>
-                        <a role="region" aria-label=" The World’s 7 Most Eye-Catching Minimalist Hotels" class="lp-hotel__articles_card bui-card bui-u-bleed@small bui-card--media bui-card--media-alt bui-card--media-full" href="/articles/minimalist-hotels.html" title=" The World’s 7 Most Eye-Catching Minimalist Hotels">
-                            <div class="bui-card__image-container">
-                                <img class="bui-card__image" alt=" The World’s 7 Most Eye-Catching Minimalist Hotels" src="https://cf.bstatic.com/xdata/images/xphoto/720x405/33325924.jpg?k=046c26ce423b80cc61393e09b88c4eb8480114381474b66a33773680209417ac&amp;o=">
-                                <header class="bui-card__header">
-                                    <span>
-                                        <svg class="bk-icon -streamline-book" fill="white" height="32" width="32" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
-                                            <path d="M21 22.5H5.25a1.5 1.5 0 0 1-1.5-1.5.75.75 0 0 0-1.5 0 3 3 0 0 0 3 3H21a.75.75 0 0 0 0-1.5zM6 0a3.75 3.75 0 0 0-3.75 3.75V21h1.5a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 0 1.5-1.5V1.5a1.5 1.5 0 0 0-1.5-1.5H6zm0 1.5h14.25V18h-15a3 3 0 0 0-3 3c0 1 1.5 1 1.5 0V3.75A2.25 2.25 0 0 1 6 1.5zm14.25 21.75v-4.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <h3 class="bui-card__title"> The World’s 7 Most Eye-Catching Minimalist Hotels</h3>
-                                    <h4 class="bui-card__subtitle">Read more</h4>
-                                </header>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
+        
         <div class="lp-bui-section bui-spacer--largest x2">
             <div class="lp-bui-section-hotel-index lp-hotel__other_accomodations">
                 <div class="other-property-types">
@@ -1443,111 +807,101 @@ bk-icon-wrapper
                 </div>
             </div>
         </div>
-        <div class="lp-bui-section">
-            <div class="lp-bui-section-hotel-index lp-hotel__branding">
-                <div class="lp-hotel__branding_full_width">
-                    <div class="lp-hotel__branding_inner">
-                        <div class="bui-grid lp-hotel__branding_genius">
-                            <div class="bui-grid__column-6">
-                                <div class="lp-hotel__branding_genius_image">
-                                    <img src="https://r-cf.bstatic.com/static/img/genius/genius_landing_page/artworks/hotel@2x/c57b6f58a8cc0bd3c2d537cca7a21b50b3fddd5f.png">
-                                </div>
-                            </div>
-                            <div class="bui-grid__column-6 lp-hotel__branding_genius_info">
-                                <div class="">
-                                    <h3>Discover the Genius way to travel</h3>
-                                    <p>
-                                        Booking.com's loyalty program is simple. The more you book with us, the more travel rewards
-                                        you'll get. Sign in or create an account to get started.
-                                    </p>
-                                    <a href="https://secure.booking.com/login.html" class="bui-button bui-button--primary bui-button--large">
-                                        <span class="bui-button__text">
-                                            Get started
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bui-grid">
-                            <div class="bui-grid__column-12">
-                                <div class="lp-bui-section__usps">
-                                    <div class="lp-bui-section__usps_inner">
-                                        <div class="bui-grid">
-                                            <div class="bui-grid__column-4">
-                                                <ul class="bui-list bui-list--text bui-list--icon bui-list--divided">
-                                                    <li class="bui-list__item">
-                                                        <span class="bui-list__icon" role="presentation">
-                                                            <svg class="bk-icon -streamline-signal" data-width="24" fill="#FFFFFF" height="24" role="presentation" width="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                                <path d="M22.5 14.25v7.5a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1-.75-.75v-15a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75v7.5zm1.5 0v-7.5a2.25 2.25 0 0 0-2.25-2.25h-1.5A2.25 2.25 0 0 0 18 6.75v15A2.25 2.25 0 0 0 20.25 24h1.5A2.25 2.25 0 0 0 24 21.75v-7.5zm-10.5 3v4.5a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1-.75-.75v-9a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75v4.5zm1.5 0v-4.5a2.25 2.25 0 0 0-2.25-2.25h-1.5A2.25 2.25 0 0 0 9 12.75v9A2.25 2.25 0 0 0 11.25 24h1.5A2.25 2.25 0 0 0 15 21.75v-4.5zm-10.5 3v1.5a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1-.75-.75v-3a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75v1.5zm1.5 0v-1.5a2.25 2.25 0 0 0-2.25-2.25h-1.5A2.25 2.25 0 0 0 0 18.75v3A2.25 2.25 0 0 0 2.25 24h1.5A2.25 2.25 0 0 0 6 21.75v-1.5z">
-                                                                </path>
-                                                            </svg>
-                                                        </span>
-                                                        <div class="bui-list__body">
-                                                            <div class="bui-list__description">
-                                                                <span class="bui-list__description-title">
-                                                                    Wide selection of hotels
-                                                                </span>
-                                                                <span class="bui-list__description-subtitle">
-                                                                    Search, compare, and book hotels all over the world
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="bui-grid__column-4">
-                                                <ul class="bui-list bui-list--text bui-list--icon bui-list--divided">
-                                                    <li class="bui-list__item">
-                                                        <span class="bui-list__icon" role="presentation">
-                                                            <svg class="bk-icon -streamline-speech_bubble" data-width="24" fill="#FFFFFF" height="24" role="presentation" width="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                                <path d="M12.751 0C6.546-.009 1.51 5.014 1.5 11.219a11.235 11.235 0 0 0 1.696 5.952l-.04-.718-3.083 6.475c-.304.637.362 1.303 1 1l6.473-3.084-.718-.04c5.276 3.28 12.213 1.663 15.494-3.614 3.28-5.276 1.663-12.213-3.614-15.494A11.25 11.25 0 0 0 12.748 0zm0 1.5A9.75 9.75 0 1 1 7.62 19.53a.75.75 0 0 0-.718-.04L.428 22.573l1 1 3.082-6.476a.75.75 0 0 0-.04-.718A9.735 9.735 0 0 1 3 11.22c.008-5.377 4.372-9.729 9.749-9.721z">
-                                                                </path>
-                                                            </svg>
-                                                        </span>
-                                                        <div class="bui-list__body">
-                                                            <div class="bui-list__description">
-                                                                <span class="bui-list__description-title">
-                                                                    Verified guest reviews
-                                                                </span>
-                                                                <span class="bui-list__description-subtitle">
-                                                                    Explore millions of verified hotel reviews written by other guests
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="bui-grid__column-4">
-                                                <ul class="bui-list bui-list--text bui-list--icon bui-list--divided">
-                                                    <li class="bui-list__item">
-                                                        <span class="bui-list__icon" role="presentation">
-                                                            <svg class="bk-icon -streamline-headphones" data-width="24" fill="#FFFFFF" height="24" role="presentation" width="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                                <path d="M4.5 17.25h-.75A2.25 2.25 0 0 1 1.5 15v-3a2.25 2.25 0 0 1 2.25-2.25h.75v7.5zm0 1.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5h-.75A3.75 3.75 0 0 0 0 12v3a3.75 3.75 0 0 0 3.75 3.75h.75zm15.75-1.5h-.75v-7.5h.75A2.25 2.25 0 0 1 22.5 12v3a2.25 2.25 0 0 1-2.25 2.25zm0 1.5A3.75 3.75 0 0 0 24 15v-3a3.75 3.75 0 0 0-3.75-3.75h-.75a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h.75zM4.5 9a7.5 7.5 0 1 1 15 0A.75.75 0 0 0 21 9 9 9 0 1 0 3 9a.75.75 0 0 0 1.5 0zM15 22.5h2.25A3.75 3.75 0 0 0 21 18.75V18a.75.75 0 0 0-1.5 0v.75A2.25 2.25 0 0 1 17.25 21H15a.75.75 0 0 0 0 1.5zm-1.5 0H12a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 0 1.5zm0 1.5a2.25 2.25 0 0 0 0-4.5H12a2.25 2.25 0 0 0 0 4.5h1.5z">
-                                                                </path>
-                                                            </svg>
-                                                        </span>
-                                                        <div class="bui-list__body">
-                                                            <div class="bui-list__description">
-                                                                <span class="bui-list__description-title">
-                                                                    24/7 customer support
-                                                                </span>
-                                                                <span class="bui-list__description-subtitle">
-                                                                    Count on Booking.com for help when you need it, wherever you might be
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+     </div>
 </main>
- 
+ @section Scripts{
+    <script defer>
+        // getting all required elements
+        const searchWrapper = document.querySelectorAll(".search-input");
+
+
+        // if user press any key and release
+        for (let i = 0; i<searchWrapper.length;i++) {
+            const inputBox = searchWrapper[i].querySelector(".searchInp");
+            const suggBox = searchWrapper[i].querySelector(".autocom-box");
+            let linkTag = searchWrapper[i].querySelector("a");
+            let webLink;
+                let inputBOX = inputBox;
+                inputBOX.onkeyup = (e) => {
+                let userData = e.target.value; //user enetered data
+                let emptyArray = [];
+                if (userData) {
+
+                    emptyArray = suggestions.filter((data) => {
+                        //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+                        return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+                    });
+                    emptyArray = emptyArray.map((data) => {
+                        // passing return data inside li tag
+                        return data = `<li>${data}</li>`;
+                    });
+                    searchWrapper[i].classList.add("active"); //show autocomplete box
+                    showSuggestions(emptyArray);
+                    let allList = suggBox.querySelectorAll("li");
+              
+                    for (let a = 0; a < allList.length; a++) {
+                        //adding onclick attribute in all li tag
+                        allList[a].setAttribute("onclick",`select(this,${i})`)
+
+                     
+                    }
+                } else {
+                    searchWrapper[i].classList.remove("active"); //hide autocomplete box
+                }
+            }
+            function select(element,i) {
+                let selectData = element.textContent;
+                searchWrapper[i].querySelector(".searchInp").value = selectData;
+
+                searchWrapper[i].classList.remove("active");
+            }
+
+            function showSuggestions(list) {
+                let listData;
+                if (!list.length) {
+                    userValue = inputBox.value;
+                    listData = `<li>${userValue}</li>`;
+                } else {
+                    listData = list.join('');
+                }
+                suggBox.innerHTML = listData;
+            }
+        }
+
+
+
+
+        // You Create new javascript file, File Name  suggestions., and Paste the Code
+
+        let suggestions = [
+            "Channel",
+            "Mr Code Box",
+            "Vs Code",
+            "Instagram",
+            "YouTube",
+            "YouTuber",
+            "YouTube Channel",
+            "Blogger",
+            "Please Like, Share & Subscribe",
+            "Bollywood",
+            "Vlogger",
+            "Vechiles",
+            "Facebook",
+            "Freelancer",
+            "Facebook Page",
+            "Designer",
+            "Developer",
+            "Web Designer",
+            "Web Developer",
+            "Login Form in HTML & CSS",
+            "How to learn HTML & CSS",
+            "How to learn JavaScript",
+            "How to become Freelancer",
+            "How to become Web Designer",
+            "How to start Gaming Channel",
+            "How to start YouTube Channel",
+            "What does HTML stands for?",
+            "What does CSS stands for?",
+        ];
+    </script>
+ }

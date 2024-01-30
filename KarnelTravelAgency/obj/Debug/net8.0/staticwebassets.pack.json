@@ -309,6 +309,10 @@
       "PackagePath": "staticwebassets\\img\\favicons\\ms-icon-144x144.png"
     },
     {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\footer-logo.png",
+      "PackagePath": "staticwebassets\\img\\footer-logo.png"
+    },
+    {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\gallery\\gallery_1_1.jpg",
       "PackagePath": "staticwebassets\\img\\gallery\\gallery_1_1.jpg"
     },
@@ -429,12 +433,136 @@
       "PackagePath": "staticwebassets\\img\\icon\\feature_1_4.svg"
     },
     {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\logo-light.png",
+      "PackagePath": "staticwebassets\\img\\logo-light.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\logo-two.png",
+      "PackagePath": "staticwebassets\\img\\logo-two.png"
+    },
+    {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\logo-white.svg",
       "PackagePath": "staticwebassets\\img\\logo-white.svg"
     },
     {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\logo.svg",
       "PackagePath": "staticwebassets\\img\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\author-1.png",
+      "PackagePath": "staticwebassets\\img\\news\\author-1.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\author-2.png",
+      "PackagePath": "staticwebassets\\img\\news\\author-2.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\author-3.png",
+      "PackagePath": "staticwebassets\\img\\news\\author-3.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\author-5.png",
+      "PackagePath": "staticwebassets\\img\\news\\author-5.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\author.png",
+      "PackagePath": "staticwebassets\\img\\news\\author.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-1.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-2.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-3.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-bg-1.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-bg-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-details-1.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-details-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-details-1.png",
+      "PackagePath": "staticwebassets\\img\\news\\news-details-1.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-details-2.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-details-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-details-2.png",
+      "PackagePath": "staticwebassets\\img\\news\\news-details-2.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-details-3.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-details-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-details-3.png",
+      "PackagePath": "staticwebassets\\img\\news\\news-details-3.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-details-4.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-details-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-details-4.png",
+      "PackagePath": "staticwebassets\\img\\news\\news-details-4.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-details.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-details.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-ins-2.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-ins-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-ins-3.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-ins-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-ins-4.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-ins-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-ins-5.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-ins-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-ins-6.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-ins-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-ins-7.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-ins-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-ins-8.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-ins-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-ins-9.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-ins-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\news\\news-ins.jpg",
+      "PackagePath": "staticwebassets\\img\\news\\news-ins.jpg"
     },
     {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\normal\\about_1_1.jpg",
@@ -505,6 +633,642 @@
       "PackagePath": "staticwebassets\\img\\normal\\video_1.jpg"
     },
     {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-10.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-11.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-12.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-13.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-14.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-15.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-16.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-17.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-18.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-2.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-3.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-4.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-5.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-6.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-7.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-8.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary-9.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\gallary.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\gallary.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-1.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-1.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-1.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-10.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-10.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-10.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-11.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-11.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-11.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-12.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-12.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-12.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-13.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-13.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-13.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-14.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-14.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-14.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-15.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-15.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-16.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-16.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-16.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-17.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-17.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-17.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-18.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-18.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-18.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-19.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-19.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-19.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-2.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-2.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-2.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-20.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-20.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-20.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-21.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-21.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-22.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-23.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-24.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-25.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-26.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-27.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-28.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-29.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-3.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-3.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-3.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-30.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-30.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-31.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-32.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-32.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-33.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-34.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-35.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-35.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-36.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-36.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-37.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-37.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-38.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-38.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-39.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-39.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-4.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-4.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-4.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-40.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-40.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-41.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-41.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-42.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-42.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-43.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-43.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-44.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-44.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-45.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-45.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-46.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-46.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-47.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-47.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-48.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-48.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-49.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-49.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-5.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-5.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-5.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-50.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-50.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-51.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-51.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-52.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-52.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-53.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-53.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-54.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-54.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-55.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-55.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-57.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-57.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-58.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-58.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-59.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-59.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-6.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-6.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-6.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-60.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-60.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-61.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-61.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-62.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-62.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-63.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-63.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-64.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-64.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-69.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-69.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-7.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-7.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-7.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-70.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-70.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-71.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-71.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-72.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-72.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-73.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-73.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-75.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-75.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-76.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-76.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-77.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-77.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-78.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-78.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-79.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-79.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-8.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-8.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-8.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-9.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\image-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\image-9.png",
+      "PackagePath": "staticwebassets\\img\\resource\\image-9.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-10.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-11.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-2.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-3.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-4.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-5.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-6.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-7.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-8.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu-9.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\menu.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\menu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\news-10.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\news-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\news-11.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\news-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\news-12.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\news-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\news-13.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\news-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\news-5.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\news-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\news-6.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\news-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\news-7.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\news-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\news-8.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\news-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\news-9.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\news-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-10.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-11.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-12.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-2.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-3.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-4.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-5.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-6.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-7.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-8.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places-9.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\places.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\places.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-10.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-11.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-12.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-13.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-14.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-15.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-2.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-3.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-4.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-5.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-6.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-7.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-8.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant-9.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\restaurant.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\restaurant.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\room-grid.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\room-grid.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\resource\\video.jpg",
+      "PackagePath": "staticwebassets\\img\\resource\\video.jpg"
+    },
+    {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\shape\\contact_shape.png",
       "PackagePath": "staticwebassets\\img\\shape\\contact_shape.png"
     },
@@ -515,6 +1279,10 @@
     {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\shape\\plane_shape_2.svg",
       "PackagePath": "staticwebassets\\img\\shape\\plane_shape_2.svg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\shape\\shape-3.png",
+      "PackagePath": "staticwebassets\\img\\shape\\shape-3.png"
     },
     {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\team\\team_1_1.jpg",

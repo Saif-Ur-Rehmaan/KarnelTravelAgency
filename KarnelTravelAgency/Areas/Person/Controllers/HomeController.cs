@@ -1,15 +1,24 @@
 ﻿using KarnelTravelAgency.Areas.Person.Models;
+using KarnelTravelAgency.Core;
 using KarnelTravelAgency.Repository.Repo;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace KarnelTravelAgency.Areas.Person.Controllers
 {
     [Area("Person")]
-    public class HomeController : Controller
+   
+    public class HomeController(ApplicationDbContext context) : Controller
     {
-        UserRepository userRepository;
+        private UserRepository userRepository = new(context);
+
       
+        
         [Route("/Register")]
         public IActionResult Register()
         {
@@ -22,13 +31,36 @@ namespace KarnelTravelAgency.Areas.Person.Controllers
         }
         [HttpPost]
         [Route("/Login")]
-        public IActionResult LoginUser(LoginViewModel lgm)
+        public  IActionResult  LoginUser(LoginViewModel loginViewModel)
         {
-            var a=userRepository.GetAll().Where(x => x.UserName == lgm.Username).FirstOrDefault();
+            if (ModelState.IsValid)
+            {
+                var user = userRepository.GetAll()
+                    .Where(x => x.UserName == loginViewModel.Username && x.Password == loginViewModel.Password)
+                    .FirstOrDefault(); // Use FirstOrDefault to get the first user matching the criteria, or null if none
 
-            return Content($"{lgm.Username},{Request.Form["Username"]},{a}");
+                if (user != null)
+                {
+                    // Store user information in session
+                    HttpContext.Session.SetInt32("UserId", user.UserID); // Assuming user has an Id property
+                    HttpContext.Session.SetString("Username", user.UserName);
+                    HttpContext.Session.SetInt32("IsLoggedIn", 1);
+
+                    // Redirect to a secured page or perform any other actions for successful login
+                    return Redirect("/"); // Redirect to the home page, for example
+                }
+                else
+                {
+                    // Handle invalid login
+                    ViewBag.Loginstate = "Invalid username or password.";
+                    return View(loginViewModel);
+                }
+            }
+
+            return View(loginViewModel);
+
         }
- 
+
 
 
 

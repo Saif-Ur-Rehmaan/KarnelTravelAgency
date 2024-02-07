@@ -9,6 +9,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServe
     builder.Configuration.GetConnectionString("KarnelTravelAgency_Saif")
     ));
 
+ 
+
+// Add session support
+builder.Services.AddSession();
 
 var app = builder.Build();
 

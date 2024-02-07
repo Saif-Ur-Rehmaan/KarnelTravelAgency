@@ -12,29 +12,29 @@ namespace KarnelTravelAgency.Repository.Repo
     {
         private ApplicationDbContext context { get; set; } = _context;
 
-        public void Add(Guest guest)
+        public void Add(HotelGuest guest)
         {
             context.Guests.Add(guest);
             context.SaveChanges();
         }
 
-        public void Delete(Guest guest)
+        public void Delete(HotelGuest guest)
         {
             context.Guests.Remove(guest);
             context.SaveChanges();
         }
 
-        public IQueryable<Guest> GetAll()
+        public IQueryable<HotelGuest> GetAll()
         {
             return context.Guests.AsQueryable();
         }
 
-        public async Task<Guest> GetByIdAsync(int id)
+        public async Task<HotelGuest> GetByIdAsync(int id)
         {
             return await context.Guests.FindAsync(id);
         }
 
-        public void Update(Guest guest)
+        public void Update(HotelGuest guest)
         {
             context.Guests.Update(guest);
             context.SaveChanges();

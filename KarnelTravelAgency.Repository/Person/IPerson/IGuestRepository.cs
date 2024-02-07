@@ -9,10 +9,10 @@ namespace KarnelTravelAgency.Repository.Interfaces
 {
     public interface IGuestRepository
     {
-        IQueryable<Guest> GetAll();
-        Task<Guest> GetByIdAsync(int id);
-        void Add(Guest guest);
-        void Update(Guest guest);
-        void Delete(Guest guest);
+        IQueryable<HotelGuest> GetAll();
+        Task<HotelGuest> GetByIdAsync(int id);
+        void Add(HotelGuest guest);
+        void Update(HotelGuest guest);
+        void Delete(HotelGuest guest);
     }
 }

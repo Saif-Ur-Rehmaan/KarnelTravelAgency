@@ -11,6 +11,9 @@ namespace KarnelTravelAgency.Repository.Repo
     public class UserRepository(ApplicationDbContext _context) : IUserRepository
     {
         private ApplicationDbContext context { get; set; } = _context;
+        
+        
+
         public void Add(User user)
         {
             context.Users.Add(user);
@@ -27,6 +30,7 @@ namespace KarnelTravelAgency.Repository.Repo
         {
             return context.Users.AsQueryable();
         }
+     
 
         public async Task<User> GetByIdAsync(int id)
         {

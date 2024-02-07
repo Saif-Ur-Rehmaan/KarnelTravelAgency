@@ -1,4 +1,4 @@
-﻿@model KarnelTravelAgency.Areas.Person.Models.LoginViewModel;
+﻿@model LoginViewModel;
 @{
     ViewData["Title"] = "Travon - Tour and Hotel Booking HTML Template - Login";
 }
@@ -231,20 +231,23 @@ h2 {
                             <h3>Sign In to <strong>Travon</strong></h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
                         </div>
-                        <form  method="Post" >
-                            <div class="form-group first">
-                                <label for="username" >Username</label>
-                                <input type="text" name="Username" class="form-control" id="username">
+                        <form asp-action="LoginUser" asp-controller="Home" method="post">
+                            @if (!string.IsNullOrEmpty(ViewBag.Loginstate))
+                            {
+                                <span class="text-danger">@ViewBag.Loginstate</span>
+                            }
 
+                            <div class="form-group first">
+                                <label asp-for="Username">Username</label>
+                                <input asp-for="Username" class="form-control" id="username" />
+                                <span asp-validation-for="Username" class="text-danger"></span>
                             </div>
                             <div class="form-group last mb-4">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password">
-
+                                <label asp-for="Password">Password</label>
+                                <input asp-for="Password" type="password" class="form-control" id="password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
                             </div>
-
-                            <input type="submit" value="Log In" class="btn text-white btn-block btn-primary">
-
+                            <input type="submit" value="Log In" class="btn text-white btn-block btn-primary" />
                         </form>
                     </div>
                 </div>
@@ -256,10 +259,8 @@ h2 {
 </div>
 
                                 
-@section Scripts{
-    <script src="~/js/jquery-3.3.1.min.js"></script>
-    <script src="~/js/popper.min.js"></script>
-    <script src="~/js/bootstrap.min.js"></script>
+@section Scripts {
+    
     <script >
         $(function () {
             'use strict';

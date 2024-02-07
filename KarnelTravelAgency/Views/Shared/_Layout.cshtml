@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    // Get session value
+    var isLoggedIn = HttpContextAccessor.HttpContext.Session.GetInt32("IsLoggedIn");
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     
@@ -24,6 +31,7 @@
         <link rel="manifest" href="~/img/favicons/manifest.json">
         <link rel="stylesheet" href="~/css/app.min.css">
         <link rel="stylesheet" href="~/css/fontawesome.min.css">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="~/css/style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -203,11 +211,23 @@
                         <div class="col-auto">
                             <div class="header-links">
                                 <ul>
-                                    <li class="d-none d-lg-inline-block">
-                                        <i class="far fa-user"></i>
-                                        <a href="/Login">Login </a>/ 
-                                        <a href="/Register">Register</a>/ 
-                                    </li>
+                                    @if (isLoggedIn==1)
+                                    {
+                                        <li>
+                                            <a class="text-danger" href="/Logout">Logoout</a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li class="d-none d-lg-inline-block">
+                                            <i class="far fa-user"></i>
+                                            <a href="/Login">Login </a>/ 
+                                            <a href="/Register">Register</a>/ 
+                                        </li>
+                                        
+                                    }
+
+                                
                                     <li>
                                         <div class="header-social">
                                             <span class="social-title">Follow Us:</span> <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
@@ -405,6 +425,8 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/popper.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

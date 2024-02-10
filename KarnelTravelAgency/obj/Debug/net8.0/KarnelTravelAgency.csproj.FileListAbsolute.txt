@@ -264,3 +264,4 @@ C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency\
 C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\KarnelTravelAgency.genruntimeconfig.cache
 C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\ref\KarnelTravelAgency.dll
 C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\SaIF\Desktop\C#\mvc\travelagency\KarnelTravelAgency\KarnelTravelAgency\bin\Debug\net8.0\BCrypt.Net.dll

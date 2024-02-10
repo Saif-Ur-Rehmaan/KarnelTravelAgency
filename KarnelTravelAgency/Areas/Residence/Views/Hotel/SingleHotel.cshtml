@@ -1,0 +1,132 @@
+﻿@model Bundle_SingleHotelViewModel
+
+@{
+    ViewData["Title"] = "SingleHotel | Book last-minute hotels &amp; more  ";
+}
+@if (TempData["BookingResult"] != null)
+{
+    @if ((bool)TempData["BookingResult"])
+    {
+        <div class="alert alert-success" role="alert">
+            Booking successful!
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            Booking failed. Please try again. @TempData["errorMsg"].ToString()
+        </div>
+    }
+}
+<div class="container">
+        <h1 class="mt-5">Hotel Name</h1>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="~/@Model.Hotel.HotelImg" class="img-fluid w-100 rounded" alt="Hotel Image">
+            </div>
+            <div class="col-md-6">
+                <h3>Hotel Description</h3>
+                <p>@Model.Hotel.HotelDescription</p>
+                 
+                <h3>Location</h3>
+                <p>@Model.Hotel.HotelLocation</p>
+                <h3>Rating</h3>
+                <p>@Model.Hotel.HotelRating/5</p>
+                <h3>Price</h3>
+          
+                <!-- Add more details like room types, amenities, etc. -->
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <h2>Reviews</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">Great experience! The hotel staff was very friendly and the facilities were excellent.</p>
+                        <p class="card-text"><small class="text-muted">Posted on January 1, 2024</small></p>
+                    </div>
+                </div>
+                <!-- More reviews can be added here -->
+            </div>
+        </div>
+ 
+ 
+
+            <h2>Personal Details For Room Booking</h2>
+
+    <form asp-action="SingleHotelRoomBooking" method="post">
+        <input type="hidden" asp-for="@Model.BookedRoom.RoomId" id="roomId" />
+        <input type="hidden" asp-for="@Model.BookedRoom.HotelID" />
+
+        <div class="form-group">
+            <label asp-for="@Model.BookedRoom.CheckInDate">Check-in Date:</label>
+            <input asp-for="@Model.BookedRoom.CheckInDate" class="form-control" />
+            <span asp-validation-for="@Model.BookedRoom.CheckInDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.BookedRoom.CheckOutDate">Check-out Date:</label>
+            <input asp-for="@Model.BookedRoom.CheckOutDate" class="form-control" />
+            <span asp-validation-for="@Model.BookedRoom.CheckOutDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.BookedRoom.FirstName">First Name:</label>
+            <input asp-for="@Model.BookedRoom.FirstName" class="form-control" />
+            <span asp-validation-for="@Model.BookedRoom.FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.BookedRoom.LastName">Last Name:</label>
+            <input asp-for="@Model.BookedRoom.LastName" class="form-control" />
+            <span asp-validation-for="@Model.BookedRoom.LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Email">Email:</label>
+            <input asp-for="@Model.BookedRoom.Email" class="form-control" />
+            <span asp-validation-for="@Model.BookedRoom.Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Phone">Phone:</label>
+            <input asp-for="@Model.BookedRoom.Phone" class="form-control" />
+            <span asp-validation-for="@Model.BookedRoom.Phone" class="text-danger"></span>
+        </div>
+        <button type="submit" class="hidden btn btn-primary" id="submitOfBookRoomForm">Submit</button>
+    </form>
+                <div class="container">
+                    <h1>Hotel Room List</h1>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        <!-- Sample room card -->
+                        <!--looping through Rooms-->
+                        @foreach (var room in Model.RoomsOfHotels)
+                        {
+                            <div class="col">
+                                <div class="card h-100">
+                                    <form method="POST" action="/SingleHotelRoomBooking" class="card-body"> 
+                         
+
+                                        <h5 class="card-title">Room @room.RoomNumber</h5>
+                                        <p class="card-text">Type: @room.RoomType</p>
+                                        <p class="card-text">Capacity: @room.Capacity</p>
+                                        <p class="card-text">Price: $@room.Price</p>
+                                        <button  onclick="roomId(@room.RoomID)" class="btn btn-primary">Book Now</button>
+                                    </form>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+              
+          
+     
+    </div> 
+
+ @section Scripts{
+     <script>
+        function roomId(id) {
+            let inp = document.getElementById("roomId");
+            let submitbnt = document.getElementById("submitOfBookRoomForm");
+            inp.value = id; // Fixed typo here
+            submitbnt.click();
+        }
+     </script>
+ }

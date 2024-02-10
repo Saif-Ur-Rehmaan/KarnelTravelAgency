@@ -1,0 +1,422 @@
+﻿ @model List<HotelsViewModel>
+@{
+    ViewData["Title"] = "Hotels | Book last-minute hotels &amp; more | Booking.com";
+}
+ 
+
+@section LinkStyle{
+  
+  
+}  
+<main class="min-vw-100"> 
+    @* Show All Hotels here *@
+    <div class="container-fluid my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10 p-0">
+                <div class="row jus">
+                    <div class="col-auto  d-xl-block d-none">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-10 ">
+                <div class="row gap-4 flex-row">
+                    <!-- side bar -->
+                    <div class="col-3  mt-5  pt-5   d-xl-block d-none">
+                        <!-- filters -->
+                        <div class="row flex-column">
+                            <div class="col-auto p-0 mb-4">
+                                <h1 class="fs-2 fw-500">Filters</h1>
+                            </div>
+                            <div class="col p-5" style=" background-color: #f5f5f5;">
+
+                                <h2 class="fs-5 fw-bolder ">Categories</h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Technology
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Business
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Arts
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Health
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Technology
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Business
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Arts
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Health
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Technology
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Business
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Arts
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Health
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Technology
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Business
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Arts
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Health
+                                    </li>
+                                    <!-- Add more categories as needed -->
+                                </ul>
+
+                                <h2 class="fs-5 fw-bolder mt-4">Watch Time</h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Under 1
+                                        Hour
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 1-3
+                                        Hours
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 3-5
+                                        Hours
+                                    </li>
+
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 1-3
+                                        Hours
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 3-5
+                                        Hours
+                                    </li>
+                                    <!-- Add more options as needed -->
+                                </ul>
+
+                                <h2 class="fs-5 fw-bolder mt-4">Rating</h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 1
+                                        Star
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 2
+                                        Stars
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 3
+                                        Stars
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 2
+                                        Stars
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 3
+                                        Stars
+                                    </li>
+                                    <!-- Add more ratings as needed -->
+                                </ul>
+
+                                <h2 class="fs-5 fw-bolder mt-4">Rating</h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Basic
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Intermediate
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
+                                        Advanced
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- results -->
+                    <div class="col">
+                        <div class="row flex-column align-items-center align-items-xl-start ">
+
+                            <div class="col-12 col-sm-10 col-xl-12 my-3">
+                                <div class="row flex-column gap-3">
+                                    <div class="col">
+                                        <h1>Search Results</h1>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row gap-2 justify-content-sm-between justify-content-center">
+                                            <div class="col-xl col-12">
+                                                <div class="form-outline" data-mdb-input-init>
+                                                    <input type="search" id="form1" class="form-control  shadow py-4"
+                                                           placeholder="Mobile App Development Courses" aria-label="Search" />
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="row align-items-center justify-content-center flex-nowrap">
+                                                    <div class="col-auto">
+                                                        Sort by
+                                                    </div>
+                                                    <div class="col">
+                                                        <select class="form-select  shadow  pr-5  w-100 py-3"
+                                                                aria-label="Default select example">
+                                                            <option selected>Rating</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- hamburger -->
+                                            <div class="col-auto d-xl-none  ">
+                                                <div class="row flex-row justify-content-between align-items-center">
+                                                    <div class="col-auto fw-bold fs-3">Filter :</div>
+                                                    <div class="col">
+                                                        <button class="navbar-toggler p-3 border" type="button"
+                                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                                                                aria-controls="offcanvasExample">
+                                                            <img src="assets/images/icons/filter.png"
+                                                                 style="max-width: 30px;" alt="">
+                                                        </button>
+
+                                                        <div class="offcanvas offcanvas-start" tabindex="-1"
+                                                             id="offcanvasExample" aria-labelledby="SlidingSideBarForMobile">
+                                                            <div class="offcanvas-header">
+                                                                <h5 class="offcanvas-title" id="SlidingSideBarForMobile">
+                                                                    <a href="index.php" class="nav-link " href="#">
+                                                                        <img src="assets/images/logo.png" alt=""
+                                                                             class="img-fluid">
+                                                                    </a>
+
+                                                                </h5>
+                                                                <button type="button" class="btn-close text-reset"
+                                                                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="offcanvas-body text-start">
+
+
+                                                                <div class="row flex-column">
+                                                                    <div class="col-auto p-0">
+                                                                        <h1 class="fs-1 fw-500">Filters</h1>
+                                                                    </div>
+                                                                    <div class="col p-5"
+                                                                         style=" background-color: #f5f5f5;">
+
+                                                                        <h2 class="fs-5 fw-bolder ">Categories</h2>
+                                                                        <ul class="list-group">
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp;
+                                                                                Technology
+                                                                            </li>
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp;
+                                                                                Business
+                                                                            </li>
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp;
+                                                                                Arts
+                                                                            </li>
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp;
+                                                                                Health
+                                                                            </li>
+                                                                            <!-- Add more categories as needed -->
+                                                                        </ul>
+
+                                                                        <h2 class="fs-5 fw-bolder mt-4">Watch Time</h2>
+                                                                        <ul class="list-group">
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp;
+                                                                                Under 1
+                                                                                Hour
+                                                                            </li>
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp; 1-3
+                                                                                Hours
+                                                                            </li>
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp; 3-5
+                                                                                Hours
+                                                                            </li>
+                                                                            <!-- Add more options as needed -->
+                                                                        </ul>
+
+                                                                        <h2 class="fs-5 fw-bolder mt-4">Rating</h2>
+                                                                        <ul class="list-group">
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp; 1
+                                                                                Star
+                                                                            </li>
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp; 2
+                                                                                Stars
+                                                                            </li>
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp; 3
+                                                                                Stars
+                                                                            </li>
+                                                                            <!-- Add more ratings as needed -->
+                                                                        </ul>
+
+                                                                        <h2 class="fs-5 fw-bolder mt-4">Rating</h2>
+                                                                        <ul class="list-group">
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp;
+                                                                                Basic
+                                                                            </li>
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp;
+                                                                                Intermediate
+                                                                            </li>
+                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value=""
+                                                                                       id="defaultCheck1"> &nbsp;
+                                                                                Advanced
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+
+                                <div class="row gap-2 position-relative">
+                                    <div class="col-12     ">
+                                        <div class="row gap-4 flex-column justify-content-center ">
+                                            @foreach (var hotel in  Model)
+                                            {
+                                                <a class="col" href="/SingleHotel/@hotel.Hotelid">
+                                                <div class="card w-100 shadow Rounded-17  HoverEff-purpleBorder overflow-hidden">
+                                                    <div class="row flex-row flex-nowrap">
+                                                        <div class="col-3">
+                                                            <img src="~/@hotel.HotelImg" class="card-img-top" alt="...">
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="card-body">
+                                                        <h5 class="card-title fw-bold mb-3 text-dark ">
+                                                        @hotel.HotelName
+                                                        </h5>
+
+                                                        <div class="row gap-3">
+                                                            <div class="col-12">
+                                                                <div class="row justify-content-start">
+                                                                    <div class="col-auto ">
+                                                                        <small class="text-purple fs-12px">
+                                                                          Rating
+                                                                        </small>
+                                                                    </div>
+                                                                    <div class="col-auto text-gold">
+                                                                       @hotel.Rating
+                                                                    </div>
+                                                                </div>
+                                                            </div> 
+                                                            <div class="col-12">
+                                                               <button  class="See Details"></button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                                
+                                            }
+                                            
+                                    
+                                        
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ 
+
+   
+  
+</main>
+ @section Scripts{ 
+   
+ }

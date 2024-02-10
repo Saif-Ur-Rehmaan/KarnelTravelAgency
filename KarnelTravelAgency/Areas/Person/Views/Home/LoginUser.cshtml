@@ -1,7 +1,9 @@
 ﻿@model LoginViewModel;
 @{
     ViewData["Title"] = "Travon - Tour and Hotel Booking HTML Template - Login";
+    
 }
+
 @section MetaTags {
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -216,6 +218,12 @@ h2 {
     </style>
 }
 
+@if (!string.IsNullOrEmpty((string)TempData["LoginFirstThenBook"]))
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["LoginFirstThenBook"].ToString()
+    </div>
+}
 
 
 <div class="content">

@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\fonts\\icomoon\\style.css"
     },
     {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\Hotel\\hotel.jpg",
+      "PackagePath": "staticwebassets\\img\\Hotel\\hotel.jpg"
+    },
+    {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\SVGS\\undraw_file_sync_ot38.svg",
       "PackagePath": "staticwebassets\\img\\SVGS\\undraw_file_sync_ot38.svg"
     },

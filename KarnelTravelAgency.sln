@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarnelTravelAgency", "KarnelTravelAgency\KarnelTravelAgency.csproj", "{6890AD14-D863-4733-883E-C80F2B14C24E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KarnelTravelAgency", "KarnelTravelAgency\KarnelTravelAgency.csproj", "{6890AD14-D863-4733-883E-C80F2B14C24E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarnelTravelAgency.Core", "KarnelTravelAgency.Core\KarnelTravelAgency.Core.csproj", "{2A0A39AD-739D-4735-ACD2-0AAC1628758D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KarnelTravelAgency.Core", "KarnelTravelAgency.Core\KarnelTravelAgency.Core.csproj", "{2A0A39AD-739D-4735-ACD2-0AAC1628758D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarnelTravelAgency.Repository", "KarnelTravelAgency.Repository\KarnelTravelAgency.Repository.csproj", "{A0ACD63E-9A9F-4F79-9406-C1D66CAA5744}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KarnelTravelAgency.Repository", "KarnelTravelAgency.Repository\KarnelTravelAgency.Repository.csproj", "{A0ACD63E-9A9F-4F79-9406-C1D66CAA5744}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

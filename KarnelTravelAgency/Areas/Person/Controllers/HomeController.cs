@@ -1,4 +1,5 @@
 ﻿using KarnelTravelAgency.Areas.Person.Models;
+using KarnelTravelAgency.Components;
 using KarnelTravelAgency.Core;
 using KarnelTravelAgency.Repository.Repo;
 using Microsoft.AspNetCore.Authorization;
@@ -16,14 +17,58 @@ namespace KarnelTravelAgency.Areas.Person.Controllers
     public class HomeController(ApplicationDbContext context) : Controller
     {
         private UserRepository userRepository = new(context);
-
-      
+        private ContactRepo ContactRepo = new(context);
         
+
         [Route("/Register")]
         public IActionResult Register()
         {
+          
+            return View();
+        }
+        [HttpPost] 
+        [Route("/Register")]
+        public IActionResult Register(RegisterViewModel RVM)
+        {
+            if (ModelState.IsValid)
+            {
+                var userFromDb = userRepository.GetAll()
+                   .Where(x => x.UserName == RVM.Username)
+                   .FirstOrDefault();
+                if (userFromDb == null)
+                {
+                    var encPass = PasswordHelper.HashPassword(RVM.Password);
+                   User user = new()
+                    {
+                        UserName = RVM.Username,
+                        Password =  encPass,
+                        RoleID = 2
+                    };
+                    try
+                    {
+                        userRepository.Add(user);
+                        ViewBag.IsAdded = "Registerd SuccessFully";
+                    }
+                    catch (Exception)
+                    {
+                        ViewBag.Error = "An Error Occur While Registring";
+
+                    }
+
+                }
+                else
+                {
+                    ViewBag.Error = "UserName Already Exist";
+                    return View(RVM);
+                }
+
+                return View();
+            }
+
             return View();
         } 
+        
+        
         [Route("/Login")]
         public IActionResult LoginUser()
         {
@@ -31,37 +76,43 @@ namespace KarnelTravelAgency.Areas.Person.Controllers
         }
         [HttpPost]
         [Route("/Login")]
-        public  IActionResult  LoginUser(LoginViewModel loginViewModel)
+        public IActionResult LoginUser(LoginViewModel loginViewModel)
         {
             if (ModelState.IsValid)
             {
+                // Retrieve user from the database based on the username
                 var user = userRepository.GetAll()
-                    .Where(x => x.UserName == loginViewModel.Username && x.Password == loginViewModel.Password)
-                    .FirstOrDefault(); // Use FirstOrDefault to get the first user matching the criteria, or null if none
+                    .FirstOrDefault(x => x.UserName == loginViewModel.Username);
 
                 if (user != null)
                 {
-                    // Store user information in session
-                    HttpContext.Session.SetInt32("UserId", user.UserID); // Assuming user has an Id property
-                    HttpContext.Session.SetString("Username", user.UserName);
-                    HttpContext.Session.SetInt32("IsLoggedIn", 1);
+                    // Verify the password using bcrypt
+                    if (PasswordHelper.VerifyPassword(loginViewModel.Password, user.Password))
+                    {
+                        // Store user information in session
+                        HttpContext.Session.SetInt32("UserId", user.UserID); // Assuming user has an Id property
+                        HttpContext.Session.SetString("Username", user.UserName);
+                        HttpContext.Session.SetInt32("IsLoggedIn", 1);
 
-                    // Redirect to a secured page or perform any other actions for successful login
-                    return Redirect("/"); // Redirect to the home page, for example
+                        // Redirect to a HomePage
+                        return Redirect("/"); // Redirect to the home page, for example
+                    }
                 }
-                else
-                {
-                    // Handle invalid login
-                    ViewBag.Loginstate = "Invalid username or password.";
-                    return View(loginViewModel);
-                }
+
+                // Handle invalid login
+                ViewBag.Loginstate = "Invalid username or password.";
+                return View(loginViewModel);
             }
 
             return View(loginViewModel);
-
         }
 
-
+        [Route("/logout")]
+        public IActionResult LogoutUser()
+        {
+            HttpContext.Session.Clear();
+            return Redirect("/");
+        }
 
 
         [Route("/Contact")]
@@ -69,5 +120,41 @@ namespace KarnelTravelAgency.Areas.Person.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [Route("/Contact")]
+        public IActionResult Contact(ContactViewModel CVM)
+        {
+            //validating  form
+            if (ModelState.IsValid)
+            {
+                //try to add msg in db in contact table
+                try
+                {
+                    var message = new Contact()
+                    {
+                        UserName = CVM.UserName,
+                        Email = CVM.Email,
+                        phoneNumber = CVM.phoneNumber,
+                        topic = CVM.topic,
+                        MessageOnTopic = CVM.MessageOnTopic
+                    };
+                    ContactRepo.Add(message);//addng data in db
+                    ViewBag.Success = "Message successFullly Send";
+                    return View();
+
+                }
+                catch (Exception e)
+                {
+                    ViewBag.Error = "An Error Ovvur While Adding Data "+e.Message.ToString();
+                    return View();
+                }
+
+            }
+
+            return View();
+        }
     }
+
+
+
 }

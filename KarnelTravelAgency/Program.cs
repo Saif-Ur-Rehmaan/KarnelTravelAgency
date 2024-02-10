@@ -5,14 +5,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(
-    builder.Configuration.GetConnectionString("KarnelTravelAgency_Saif")
-    ));
 
- 
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
+    builder.Configuration.GetConnectionString("KarnelTravelAgency_Saif")
+));
 
 // Add session support
 builder.Services.AddSession();
+
+// Register HttpContextAccessor
+builder.Services.AddHttpContextAccessor();
+
 
 var app = builder.Build();
 
@@ -30,6 +33,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 
@@ -69,5 +74,6 @@ app.UseEndpoints(endpoints =>
 });
 
 //------------------ RoutingConfiguration For Areas-------------//
+
 
 app.Run();

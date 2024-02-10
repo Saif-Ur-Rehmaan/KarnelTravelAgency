@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rApkTuunIXZ9nZ7Vgf7ImBRigCIIruhkdKfdE9dmuBk=",
+  "Hash": "sPvZu8PA7Edt6O7Ffr4FjinvP0qrIQqRoVYW9uGCx20=",
   "Source": "KarnelTravelAgency",
   "BasePath": "_content/KarnelTravelAgency",
   "Mode": "Default",
@@ -1915,6 +1915,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\hero\\tree_2.svg"
+    },
+    {
+      "Identity": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\Hotel\\hotel.jpg",
+      "SourceId": "KarnelTravelAgency",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\",
+      "BasePath": "_content/KarnelTravelAgency",
+      "RelativePath": "img/Hotel/hotel.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Hotel\\hotel.jpg"
     },
     {
       "Identity": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\icon\\about_media_1.svg",

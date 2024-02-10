@@ -16,6 +16,7 @@
   <ItemGroup>
     <Folder Include="Areas\Person\Data\" />
     <Folder Include="Areas\Residence\Data\" />
+    <Folder Include="Areas\Residence\Models\ResortViewModels\" />
     <Folder Include="Areas\Restaurant\Data\" />
     <Folder Include="Areas\Restaurant\Models\" />
     <Folder Include="Areas\Transport\Data\" />

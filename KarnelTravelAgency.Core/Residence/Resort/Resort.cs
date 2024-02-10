@@ -14,6 +14,7 @@ namespace KarnelTravelAgency.Core
         public string ResortName { get; set; }
         public string Location { get; set; }
         public decimal Rating { get; set; }
+        public string ResortImg { get; set; }
     }
 
 }

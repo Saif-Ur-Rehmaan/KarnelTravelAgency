@@ -70,7 +70,7 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
 
         [HttpPost]
         [Route("/SingleHotelRoomBooking")]
-        public IActionResult SingleHotel(BookRoomVewModel  RBM)
+        public IActionResult SingleHotel(Bundle_SingleHotelViewModel  bm)
         {
             int? userIdNullable = HttpContext.Session.GetInt32("UserId");
             int userId = userIdNullable.HasValue ? userIdNullable.Value : default(int); // Assigns default value (0) if userIdNullable is null
@@ -81,68 +81,105 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
             }
             else
             {
-                        var HotelId = RBM.HotelID;
-                        var hotel = HotelRepo.GetAll()
-                         .Where(x => x.HotelID == HotelId)
-                         .FirstOrDefault();
-                        //getting all rooms of hotel of id HotelId
-                        var rooms = (new RoomRepository(context)).GetAll().Where(x => x.HotelID == HotelId).ToList();
-                        var Hotel = new SingleHotelViewModel()
-                        {
-                            hotelId = hotel.HotelID,
-                            HotelName = hotel.HotelName,
-                            HotelImg = hotel.HotelImg,
-                            HotelLocation = hotel.Location,
-                            HotelDescription = "hotel description",
-                            HotelRooms = rooms,
-                            HotelRating = hotel.Rating
-                        };
-                        //bundling 3 models in 1 model
-                        Bundle_SingleHotelViewModel bundle_singleHotel = new()
-                        {
-                            Hotel = Hotel,
-                            RoomsOfHotels = rooms
-                        };
+                var RBM = bm.BookedRoom;
+                int HotelID = bm.Hotel.hotelId;
+                int RoomID = RBM.RoomID;
+                DateTime CheckInDate = RBM.CheckInDate;
+                DateTime CheckOutDate = RBM.CheckOutDate;
+                
+                /* returning data*/ 
+                var hotel = HotelRepo.GetAll().Where(x => x.HotelID == HotelID).FirstOrDefault();//get hotel
+                var roomList = (new RoomRepository(context)).GetAll().Where(x => x.HotelID == HotelID).ToList();//get rooms avalible in hotel
+                var SingleHotelViewModel = new SingleHotelViewModel()
+                {
+                    hotelId = hotel.HotelID,
+                    HotelName = hotel.HotelName,
+                    HotelImg = hotel.HotelImg,
+                    HotelLocation = hotel.Location,
+                    HotelDescription = "hotel description",
+                    HotelRooms = roomList,
+                    HotelRating = hotel.Rating
+                };
+                Bundle_SingleHotelViewModel Data = new()
+                {
+                    Hotel = SingleHotelViewModel,
+                    RoomsOfHotels = roomList
+                };
+                /* returning data*/
 
-                        if (ModelState.IsValid)
-                        {
+             
 
-                            Reservation newHotelReservation = new()
-                            {
-                                HotelID = RBM.HotelID,
-                                RoomID = RBM.RoomId,
-                                Guest = new()
+
+                // Add the new guest to the database
+                try
+                {
+                    // Check if the room is already reserved for the given date range
+                    var isGuestReserved = (new ReservationRepository(context)).GetAll().Any(x =>
+                        x.HotelID == HotelID &&
+                        x.RoomID == RoomID &&
+                        // Compare dates without considering time
+                        x.CheckInDate.Date <= RBM.CheckOutDate.Date && // Check if existing reservation check-in date is before or same as new reservation check-out date
+                        x.CheckOutDate.Date >= RBM.CheckInDate.Date   // Check if existing reservation check-out date is after or same as new reservation check-in date
+                    );
+                    if (!isGuestReserved)
                                 {
-                                    GuestID = userId,
-                                    Email = "example@gmail.com",
-                                    FirstName="ex1",
-                                    LastName="last",
-                                    Phone="12426378467"
-                                },
-                                CheckInDate =RBM.CheckInDate,
-                                CheckOutDate = RBM.CheckOutDate
-                            };
+                                    // Create a new Guest object with the guest details
+                                    Guest newGuest = new Guest()
+                                    {
+                                        FirstName = RBM.FirstName,
+                                        LastName = RBM.LastName,
+                                        Email = RBM.Email,
+                                        Phone = RBM.Phone
+                                    };
+                                    (new GuestRepository(context)).Add(newGuest);
+                                    // creating new reservation
+                                    Reservation newHotelReservation = new Reservation()
+                                    {
+                                        HotelID = HotelID,
+                                        RoomID = RoomID,
+                                        GuestID = newGuest.GuestID, // Assign the generated GuestID
+                                        CheckInDate = CheckInDate,
+                                        CheckOutDate = CheckOutDate,
+                                        Guest = newGuest ,// Assign the newly created Guest object
+                                        Hotel=(HotelRepo.GetAll().Where(x=>x.HotelID==HotelID).First()),
+                                        Room = (new RoomRepository(context).GetAll().Where(x=>x.RoomID==RoomID).First())
+                                    };
+                                    //inserting reservation in db
+                                    try
+                                    {
+                                        //tryin to insert new reservation in db
+                                        (new ReservationRepository(context)).Add(newHotelReservation);
+                                        TempData["BookingResult"] = true;//indicates that data added successfully
 
-                            ReservationRepository HotelResRepo = new(context);
-                            try
-                            {
-                                HotelResRepo.Add(newHotelReservation);
-                                TempData["BookingResult"] = true;
-                            }
-                            catch (Exception ex)
-                            {
-                                TempData["BookingResult"] = false;
-                                TempData["errorMsg"] = ex.Message.ToString();
-                            }
-                            return View(bundle_singleHotel);
-                        }
-                        else
-                        {
-                                TempData["BookingResult"] = false;
-                                TempData["errorMsg"] = "model not valid";
-                            return View(bundle_singleHotel);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        TempData["BookingResult"] = false;//indicates that error occur while data inserting
+                                        TempData["errorMsg"] = ex.Message.ToString();//to show error on Front end
+                                    }
 
-                        }
+                                    return View(Data);
+
+                    }
+                    else
+                    {
+                        TempData["BookingResult"] = false;//indicates that room is reserved
+                        TempData["errorMsg"] = "the room is Already Reserved try Booking different in different time period";//to show error on Front end
+                        return View(Data);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    TempData["BookingResult"] = false;//indicates that error occur while data inserting
+                    TempData["errorMsg"] = "TheRoom Is Already Reserved For the given Time period"+ex.Message.ToString();//to show error on Front end
+                    return View(Data);
+                }
+
+               
+
+                
+
 
             }
         }

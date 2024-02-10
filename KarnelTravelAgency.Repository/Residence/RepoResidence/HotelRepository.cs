@@ -32,6 +32,7 @@ namespace KarnelTravelAgency.Repository.Repo
         {
             return await context.Hotels.FindAsync(id);
         }
+        public Hotel GetById(int id) => context.Hotels.Find(id);
 
         public void Update(Hotel hotel)
         {

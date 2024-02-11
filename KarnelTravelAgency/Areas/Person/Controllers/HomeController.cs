@@ -23,7 +23,14 @@ namespace KarnelTravelAgency.Areas.Person.Controllers
         [Route("/Register")]
         public IActionResult Register()
         {
-          
+            int? userIdNullable = HttpContext.Session.GetInt32("UserId");
+            int userId = userIdNullable.HasValue ? userIdNullable.Value : default(int); // Assigns default value (0) if userIdNullable is null
+            if (userId != 0)
+            {
+                TempData["AlreadyLoggedIn"] = "Already Registered";
+                return Redirect("/");
+            }
+
             return View();
         }
         [HttpPost] 
@@ -72,6 +79,14 @@ namespace KarnelTravelAgency.Areas.Person.Controllers
         [Route("/Login")]
         public IActionResult LoginUser()
         {
+            int? userIdNullable = HttpContext.Session.GetInt32("UserId");
+            int userId = userIdNullable.HasValue ? userIdNullable.Value : default(int); // Assigns default value (0) if userIdNullable is null
+            if (userId != 0)
+            {
+                TempData["AlreadyLoggedIn"] = "Already Logged in";
+                return Redirect("/");
+            }
+
             return View(new LoginViewModel());
         }
         [HttpPost]

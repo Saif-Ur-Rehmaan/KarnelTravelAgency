@@ -1,0 +1,92 @@
+﻿ @model Bundle_SingleRestaurantView
+
+@{
+    ViewBag.Title = "Single Restaurant View";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Path to your layout file
+}
+@if (TempData["BookingResult"] != null)
+{
+    @if ((bool)TempData["BookingResult"])
+    {
+        <div class="alert alert-success" role="alert">
+            Booking successful!
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            Booking failed. Please try again. @TempData["errorMsg"].ToString()
+        </div>
+    }
+}
+
+<div class="container">
+    <h1>@Model.Restaurant.RestaurantName</h1>
+    <p>Location: @Model.Restaurant.Location</p>
+    <p>Cuisine Type: @Model.Restaurant.CuisineType</p>
+    <p>Rating: @Model.Restaurant.Rating</p>
+
+    <h2>Menu Items</h2>
+    <ul>
+        @foreach (var menuItem in Model.MenuItemsOfRestaurant)
+        {
+            <li>@menuItem.ItemName - @menuItem.Category - $@menuItem.Price</li>
+        }
+    </ul>
+
+    <h2>Restaurant Tables</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Table Number</th>
+                <th>Capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var table in Model.RestaurantTables)
+            {
+                <tr>
+                    <td>@table.TableNumber</td>
+                    <td>@table.Capacity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h2>Book a Table</h2>
+    <form method="post" action="/SingleRestaurant" method="post">
+        <input type="hidden" asp-for="@Model.Restaurant.RestaurantID" value="@Model.Restaurant.RestaurantID"/>
+        <div class="mb-3">
+            <label asp-for="@Model.reservation.TableID" class="form-label">Select Table</label>
+            <select asp-for="@Model.reservation.TableID" asp-items="@(new SelectList(Model.RestaurantTables, "TableID", "TableNumber"))" class="form-select"></select>
+            <span asp-validation-for="@Model.reservation.TableID" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.reservation.ReservationDateTime" class="form-label">Reservation Date and Time</label>
+            <input asp-for="@Model.reservation.ReservationDateTime" class="form-control" />
+            <span asp-validation-for="@Model.reservation.ReservationDateTime" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.Customer.FirstName" class="form-label">First Name</label>
+            <input asp-for="@Model.Customer.FirstName" class="form-control" />
+            <span asp-validation-for="@Model.Customer.FirstName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.Customer.LastName" class="form-label">Last Name</label>
+            <input asp-for="@Model.Customer.LastName" class="form-control" />
+            <span asp-validation-for="@Model.Customer.LastName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.Customer.Email" class="form-label">Email</label>
+            <input asp-for="@Model.Customer.Email" class="form-control" />
+            <span asp-validation-for="@Model.Customer.Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.Customer.Phone" class="form-label">Phone</label>
+            <input asp-for="@Model.Customer.Phone" class="form-control" />
+            <span asp-validation-for="@Model.Customer.Phone" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Book Table</button>
+    </form>
+
+</div>

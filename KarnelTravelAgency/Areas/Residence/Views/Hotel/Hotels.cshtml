@@ -8,6 +8,58 @@
   
   
 }  
+
+<div class="search-sec mt-5">
+    <div class="container">
+        <div class="search-box">
+            <form action="https://www.adivaha.com/themeforest-travon/mail.php" method="POST" class="tour-search">
+                <div class="form-group">
+                    <select name="destination" id="destinationSelect"
+                            class="form-select nice-select">
+                        <option value="" disabled="disabled" selected="selected" hidden>Destination</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Amsterdam">Amsterdam</option>
+                        <option value="Budapest City">Budapest City</option>
+                    </select> <i class="fas fa-location-dot"></i>
+                </div>
+                <div class="form-group">
+                    <select name="destination" id="tourType" class="form-select nice-select">
+                        <option value="" disabled="disabled" selected="selected" hidden>Activities</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Hiking">Hiking</option>
+                        <option value="Air Ballon">Air Ballon</option>
+                        <option value="Peak Climbing">Peak Climbing</option>
+                    </select> <i class="fas fa-person-hiking"></i>
+                </div>
+                <div class="form-group">
+                    <select name="destination" id="durationselect"
+                            class="form-select nice-select">
+                        <option value="" disabled="disabled" selected="selected" hidden>Duration</option>
+                        <option value="0 - 3 Days">0 - 3 Days</option>
+                        <option value="0 - 7 Days">0 - 7 Days</option>
+                        <option value="3 - 8 Days">3 - 8 Days</option>
+                        <option value="7 - 12 Days">7 - 12 Days</option>
+                    </select> <i class="fas fa-calendar-days"></i>
+                </div>
+                <div class="form-group">
+                    <select name="destination" id="budgetSelect"
+                            class="form-select nice-select">
+                        <option value="" disabled="disabled" selected="selected" hidden>Budget</option>
+                        <option value="100$ - 300$">100$ - 300$</option>
+                        <option value="300$ - 700$">300$ - 700$</option>
+                        <option value="700 - 1000$">700 - 1000$</option>
+                        <option value="1000$ - 1500$">1000$ - 1500$</option>
+                    </select> <i class="far fa-circle-dollar"></i>
+                </div>
+                <div class="form-btn"><button class="ot-btn">Search</button></div>
+                <p class="form-messages mb-0 mt-3"></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 <main class="min-vw-100"> 
     @* Show All Hotels here *@
     <div class="container-fluid my-5">
@@ -417,6 +469,7 @@
    
   
 </main>
+
  @section Scripts{ 
    
  }

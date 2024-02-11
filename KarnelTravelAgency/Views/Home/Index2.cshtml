@@ -14,7 +14,12 @@
     <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 }
-
+@if (!string.IsNullOrEmpty((string)TempData["AlreadyLoggedIn"]))
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["AlreadyLoggedIn"].ToString()
+    </div>
+} 
 <div class="ot-hero-wrapper hero-2">
     <div class="ot-hero-slide">
         <div class="ot-hero-bg" data-bg-src="./img/hero/hero_bg_2_1.jpg"></div>

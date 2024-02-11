@@ -5,6 +5,21 @@
 }
 
 
+@if (TempData["BookingResult"] != null)
+{
+    @if ((bool)TempData["BookingResult"])
+    {
+        <div class="alert alert-success" role="alert">
+            Booking successful!
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            Booking failed. Please try again. @TempData["errorMsg"].ToString()
+        </div>
+    }
+}
 <div class="container">
     <h2>@ViewData["Title"]</h2>
     <dl class="row">
@@ -38,8 +53,9 @@
 
         <dt class="col-sm-3">Airline ICAO Code:</dt>
         <dd class="col-sm-9">@Model.AirlineICAOCode</dd>
-        <form action="/Details">
-        <input />    
+        <form action="/Details" method="post">
+            <input type="hidden" asp-for="@Model.FlightID" value="@Model.FlightID" />
+            <button type="submit">Book Flight Now</button>
         </form>
     </dl>
 </div>

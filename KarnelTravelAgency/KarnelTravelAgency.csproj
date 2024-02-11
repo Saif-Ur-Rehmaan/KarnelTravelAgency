@@ -19,7 +19,6 @@
     <Folder Include="Areas\Residence\Models\ResortViewModels\" />
     <Folder Include="Areas\Restaurant\Data\" />
     <Folder Include="Areas\Transport\Data\" />
-    <Folder Include="Areas\Transport\Models\" />
   </ItemGroup>
 	
 

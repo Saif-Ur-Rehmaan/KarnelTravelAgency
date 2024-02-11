@@ -1,0 +1,42 @@
+﻿@model List<FlightViewModel>
+
+@{
+    ViewData["Title"] = "Flight List";
+}
+
+
+<div class="container">
+<h2>@ViewData["Title"]</h2>
+
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Flight ID</th>
+            <th>Airline ID</th>
+            <th>Flight Number</th>
+            <th>Departure Airport Code</th>
+            <th>Arrival Airport Code</th>
+            <th>Departure Date Time</th>
+            <th>Arrival Date Time</th>
+            <th></th> <!-- Add an empty column for the button -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var flight in Model)
+        {
+            <tr>
+                <td>@flight.FlightID</td>
+                <td>@flight.AirlineID</td>
+                <td>@flight.FlightNumber</td>
+                <td>@flight.DepartureAirportCode</td>
+                <td>@flight.ArrivalAirportCode</td>
+                <td>@flight.DepartureDateTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                <td>@flight.ArrivalDateTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                <td>
+                    <a href="/Details/@flight.FlightID" class="btn btn-primary">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

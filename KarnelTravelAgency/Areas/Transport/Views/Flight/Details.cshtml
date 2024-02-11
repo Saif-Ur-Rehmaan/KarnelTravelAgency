@@ -1,0 +1,45 @@
+﻿@model SingleFlightViewModel
+
+@{
+    ViewData["Title"] = "Flight Details";
+}
+
+
+<div class="container">
+    <h2>@ViewData["Title"]</h2>
+    <dl class="row">
+        <dt class="col-sm-3">Flight ID:</dt>
+        <dd class="col-sm-9">@Model.FlightID</dd>
+
+        <dt class="col-sm-3">Airline ID:</dt>
+        <dd class="col-sm-9">@Model.AirlineID</dd>
+
+        <dt class="col-sm-3">Flight Number:</dt>
+        <dd class="col-sm-9">@Model.FlightNumber</dd>
+
+        <dt class="col-sm-3">Departure Airport Code:</dt>
+        <dd class="col-sm-9">@Model.DepartureAirportCode</dd>
+
+        <dt class="col-sm-3">Arrival Airport Code:</dt>
+        <dd class="col-sm-9">@Model.ArrivalAirportCode</dd>
+
+        <dt class="col-sm-3">Departure Date Time:</dt>
+        <dd class="col-sm-9">@Model.DepartureDateTime.ToString("yyyy-MM-dd HH:mm:ss")</dd>
+
+        <dt class="col-sm-3">Arrival Date Time:</dt>
+        <dd class="col-sm-9">@Model.ArrivalDateTime.ToString("yyyy-MM-dd HH:mm:ss")</dd>
+
+        
+        <dt class="col-sm-3">Airline Name:</dt>
+        <dd class="col-sm-9">@Model.AirlineName</dd>
+
+        <dt class="col-sm-3">Airline IATA Code:</dt>
+        <dd class="col-sm-9">@Model.AirlineIATACode</dd>
+
+        <dt class="col-sm-3">Airline ICAO Code:</dt>
+        <dd class="col-sm-9">@Model.AirlineICAOCode</dd>
+        <form action="/Details">
+        <input />    
+        </form>
+    </dl>
+</div>

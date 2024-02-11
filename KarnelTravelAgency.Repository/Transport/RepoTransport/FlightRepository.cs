@@ -8,31 +8,35 @@ using System.Threading.Tasks;
 
 namespace KarnelTravelAgency.Repository.Repo
 {
-    internal class FlightRepository(ApplicationDbContext _context) : IFlightRepository
+    public class FlightRepository(ApplicationDbContext _context) : IFlightRepository
     {
         public void Add(Flight flight)
         {
-            throw new NotImplementedException();
+            _context.Flights.Add(flight);
+            _context.SaveChanges();
         }
 
         public void Delete(Flight flight)
         {
-            throw new NotImplementedException();
+            _context.Flights.Remove(flight);
+            _context.SaveChanges();
+            
         }
 
         public IQueryable<Flight> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Flights.AsQueryable();
         }
 
-        public Task<Flight> GetByIdAsync(int id)
+        public async Task<Flight> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return _context.Flights.Find(id);
         }
 
         public void Update(Flight flight)
         {
-            throw new NotImplementedException();
+            _context.Flights.Update(flight);
+            _context.SaveChanges();
         }
     }
 }

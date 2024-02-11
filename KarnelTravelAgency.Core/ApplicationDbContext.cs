@@ -59,7 +59,14 @@ namespace KarnelTravelAgency.Core
         public DbSet<PackageActivity> PackageActivities { get; set; }
         public DbSet<PackageMeal> PackageMeals { get; set; }
 
-        // Add DbSet properties for the remaining models
 
+        public DbSet<Airline> Airline  { get; set; }
+        public DbSet<BookedFlights> BookedFlights { get; set; }
+        public DbSet<Flight> Flight{ get; set; }
+        public DbSet<Route> Route { get; set; }
+
+        public DbSet<TransportCompany> TransportCompany { get; set; }
+        public DbSet<Trip> Trip{ get; set; }
+        public DbSet<Vehicle> Vehicle { get; set; }
     }
 }

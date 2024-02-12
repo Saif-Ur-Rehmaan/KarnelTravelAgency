@@ -1,127 +1,17 @@
 using System.Diagnostics;
+using Azure;
+using KarnelTravelAgency.Core;
 using KarnelTravelAgency.Models;
+using KarnelTravelAgency.Repository.Repo;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace KarnelTravelAgency.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(ApplicationDbContext context) : Controller
     {
-        private Dictionary<string, Dictionary<string, string>> memberDetails = new Dictionary<string, Dictionary<string, string>>
-    {
-        {
-            "Michel Richard", new Dictionary<string, string>
-            {
-                { "Name", "Michel Richard" },
-                { "Role", "Switzerland Guide" },
-                { "Image", "img/team/team_1_2.jpg" },
-                { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
-                { "DOB", "May 23, 1987" },
-                { "Lives", "Switzerland" },
-                { "Email", "michelm@travon.com" },
-                { "Phone", "+163 2254 3654" },
-                { "Education", "University of Boxon" }
-            }
-        },
-        {
-            "Mishel Marsh", new Dictionary<string, string>
-            {
-                { "Name", "Mishel Marsh" },
-                { "Role", "Switzerland Guide" },
-                { "Image", "img/team/team_1_1.jpg" },
-                { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
-                { "DOB", "May 23, 1987" },
-                { "Lives", "Switzerland" },
-                { "Email", "mishelm@travon.com" },
-                { "Phone", "+163 2254 3654" },
-                { "Education", "University of Boxon" }
-            }
-        },
-        {
-            "Famhida Ruko", new Dictionary<string, string>
-            {
-                { "Name", "Famhida Ruko" },
-                { "Role", "Switzerland Guide" },
-                { "Image", "img/team/team_1_2.jpg" },
-                { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
-                { "DOB", "May 23, 1987" },
-                { "Lives", "Switzerland" },
-                { "Email", "famhida@travon.com" },
-                { "Phone", "+163 2254 3654" },
-                { "Education", "University of Boxon" }
-            }
-        },
-        {
-            "Alex Anfantino", new Dictionary<string, string>
-            {
-                { "Name", "Alex Anfantino" },
-                { "Role", "Switzerland Guide" },
-                { "Image", "img/team/team_1_4.jpg" },
-                { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
-                { "DOB", "May 23, 1987" },
-                { "Lives", "Switzerland" },
-                { "Email", "alex@travon.com" },
-                { "Phone", "+163 2254 3654" },
-                { "Education", "University of Boxon" }
-            }
-        },
-        {
-            "Joseph Carter", new Dictionary<string, string>
-            {
-                { "Name", "Joseph Carter" },
-                { "Role", "Switzerland Guide" },
-                { "Image", "img/team/team_1_5.jpg" },
-                { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
-                { "DOB", "May 23, 1987" },
-                { "Lives", "Switzerland" },
-                { "Email", "joseph@travon.com" },
-                { "Phone", "+163 2254 3654" },
-                { "Education", "University of Boxon" }
-            }
-        },
-        {
-            "David Danial", new Dictionary<string, string>
-            {
-                { "Name", "David Danial" },
-                { "Role", "Switzerland Guide" },
-                { "Image", "img/team/team_1_6.jpg" },
-                { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
-                { "DOB", "May 23, 1987" },
-                { "Lives", "Switzerland" },
-                { "Email", "david@travon.com" },
-                { "Phone", "+163 2254 3654" },
-                { "Education", "University of Boxon" }
-            }
-        },
-        {
-            "Joseph Kariban", new Dictionary<string, string>
-            {
-                { "Name", "Joseph Kariban" },
-                { "Role", "Switzerland Guide" },
-                { "Image", "img/team/team_1_7.jpg" },
-                { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
-                { "DOB", "May 23, 1987" },
-                { "Lives", "Switzerland" },
-                { "Email", "josephk@travon.com" },
-                { "Phone", "+163 2254 3654" },
-                { "Education", "University of Boxon" }
-            }
-        },
-        {
-            "Laniart Carter", new Dictionary<string, string>
-            {
-                { "Name", "Laniart Carter" },
-                { "Role", "Switzerland Guide" },
-                { "Image", "img/team/team_1_8.jpg" },
-                { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
-                { "DOB", "May 23, 1987" },
-                { "Lives", "Switzerland" },
-                { "Email", "laniart@travon.com" },
-                { "Phone", "+163 2254 3654" },
-                { "Education", "University of Boxon" }
-            }
-        }
-    };
-
+        
         [Route("/")]        
         [Route("/Home")]        
         public IActionResult Index2()
@@ -145,82 +35,94 @@ namespace KarnelTravelAgency.Controllers
             return View();
         }
 
-        [Route("/Destinations")]
-        public IActionResult Destination()
+        [HttpPost]
+        [Route("/Newsletter")]
+        public IActionResult AddNewsLetter()
         {
-            return View();
-        }
-        [Route("/Destination/Details")]
-        public IActionResult DestinationDetails()
-        {
-            return View();
-        }
-        [Route("/Tour")]
-        public IActionResult Tour()
-        {
-            return View();
-        }
-
-        [Route("/Tour/Details")]
-        public IActionResult TourDetails()
-        {
-            return View();
-        }
-        [Route("/Blogs")]        
-        public IActionResult AllBlogs()
-        {
-            return View();
-        }
-        [Route("/Blogs/BlogDetails")]        
-        public IActionResult BlogDetails()
-        {
-            return View();
-        }
-        [Route("/About")]        
-        public IActionResult AboutUs()
-        {
-            return View();
-        }
-
-        [Route("/About/Team")]        
-        public IActionResult Team()
-        {
-            return View();
-        }
-        
-        [Route("/About/TeamMemberDetail/{MemBerName?}")]        
-        public IActionResult TeamMemberDetail(string MemBerName)
-        {
-            if (!string.IsNullOrEmpty(MemBerName))
+            try
             {
-                
-                var selectedMember = this.memberDetails.FirstOrDefault(member => member.Key == MemBerName);
+                string mail = Request.Form["Email"];
 
-                if (selectedMember.Key != null)
+                new NewslettersSubscriptionRepo(context).Add(new NewslettersSubscription()
                 {
+                    Email = mail
+                }) ;
+                TempData["NewsLetterSubmittionState"] = true;
 
-                    ViewBag.MemberName = selectedMember.Value["Name"];
-                    ViewBag.MemberRole = selectedMember.Value["Role"];
-                    ViewBag.MemberImage = selectedMember.Value["Image"];
-                    ViewBag.MemberAbout = selectedMember.Value["About"];
-                    ViewBag.MemberDOB = selectedMember.Value["DOB"];
-                    ViewBag.MemberLives = selectedMember.Value["Lives"];
-                    ViewBag.MemberEmail = selectedMember.Value["Email"];
-                    ViewBag.MemberPhone = selectedMember.Value["Phone"];
-                    ViewBag.MemberEducation = selectedMember.Value["Education"];
-                }
-                else
-                {
-                    return Redirect("/about/team");
-                }
-                return View();
             }
-            else
+            catch (Exception ex)
             {
-                return Redirect("/about/team");
+                TempData["NewsLetterSubmittionState"] = true;
+                TempData["ErrorMsg"] = ex.Message;
+
             }
- 
-     
+            return Redirect("/");
+
+        }
+
+
+        [HttpPost]
+        [Route("/Search")]
+        public IActionResult Search()
+        {
+            var Action = Request.Form["Action"];
+            var Location = Request.Form["Location"]; 
+            var MaximumPrice = Request.Form["MaximumPrice"];
+
+            // Construct query string
+            var queryString = $"?Location={Location}&MaximumPrice={MaximumPrice}";
+
+            switch (Action)
+            {
+                case "Hotel":
+                    return Redirect($"/SearchHotel{queryString}");
+                case "Resort":
+                    return Redirect($"/SearchResort{queryString}");
+                case "Flight":
+                    return Redirect($"/SearchFlight{queryString}");
+                     
+                case "Restaurant":
+                    return Redirect($"/SearchRestaurant{queryString}");
+                default:
+                    TempData["NoDataAvalible"] = "Select Action First";
+                    return Redirect("/");
+            }          
+             
+        }
+
+
+        [HttpPost]
+        [Route("LookingFor")]
+        public IActionResult WhatAreYouLookingFor()
+        {
+            var Query = Request.Form["Query"].ToString().Split(" ");
+            bool found = false;
+
+            foreach (var word in Query)
+            {
+                if (word.ToLower() == "hotel")
+                {
+                    return Redirect("/Hotels");
+                }
+                else if (word.ToLower() == "resort")
+                {
+                    return Redirect("/Resorts");
+                }
+                else if (word.ToLower() == "flight")
+                {
+                    return Redirect("/Flights");
+                }
+                else if (word.ToLower() == "restaurant")
+                {
+                    return Redirect("/Restaurants");
+                }
+            }
+
+            // If none of the keywords were found in any of the words, set TempData and redirect
+            TempData["NoDataAvalible"] = "No Action Available For the Search";
+            return Redirect("/");
+
+
         }
     }
 }

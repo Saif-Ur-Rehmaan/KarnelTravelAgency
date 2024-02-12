@@ -1,0 +1,131 @@
+﻿@{
+    ViewData["Title"] = "Travon - Tour and Hotel Booking HTML Template - Team Details";
+}
+
+@section MetaTags {
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="author" content="Adivaha">
+    <meta name="description" content="Travon - Tour and Hotel Booking HTML Template">
+    <meta name="keywords" content="Travon - Tour and Hotel Booking HTML Template">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+}
+
+<div class="breadcumb-wrapper" data-bg-src="~/img/bg/breadcumb-bg.jpg">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title">Team Details</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="/">Home</a></li>
+                <li>@ViewBag.MemberName</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="space">
+                    
+    <div class="container">
+        <div class="about-card">
+            <div class="row align-items-center">
+                <div class="col-xl-6">
+                    <div class="about-card__img">
+                        <img class="w-100" src="~/@ViewBag.MemberImage" />
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="about-card__box">
+                        <div class="about-card__top">
+                            <div>
+                                <h2 class="about-card__title">@ViewBag.MemberName</h2><span class="about-card__desig">@ViewBag.MemberRole</span>
+                            </div>
+                            <div class="ot-social">
+                                <a target="_blank" href="https://facebook.com/">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a> <a target="_blank"
+                                        href="https://twitter.com/"><i class="fab fa-twitter"></i></a> <a target="_blank" href="https://instagram.com/">
+                                    <i class="fab fa-instagram"></i>
+                                </a> <a target="_blank"
+                                        href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <h4 class="about-card__subtitle">Biography</h4>
+                          
+                        <p class="mb-30">
+                            @ViewBag.MemberAbout
+                        </p>
+                        <div class="about-info-wrap">
+                            <p class="about-info">
+                                <i class="fal fa-calendar-days"></i><strong>Born on:</strong>@ViewBag.MemberDOB
+                            </p>
+                            <p class="about-info">
+                                <i class="fal fa-city"></i><strong>lives in:</strong>@ViewBag.MemberLives
+                            </p>
+                            <p class="about-info">
+                                <i class="fal fa-envelope"></i><strong>Email:</strong><a href="mailto:michelm@travon.com">@ViewBag.MemberEmail</a>
+
+                            </p>
+                            <p class="about-info">
+                                <i class="fal fa-phone"></i><strong>Phone:</strong><a href="tel:@ViewBag.MemberPhone">@ViewBag.MemberPhone</a>
+                            </p>
+                            <p class="about-info">
+                                Education             <i class="fal fa-school"></i><strong>Education:</strong>@ViewBag.MemberEducation
+                            </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                     
+</section>
+@* <div class="space-bottom" data-bg-src="~/img/bg/contact_bg_1.html">
+    <div class="container">
+        <form action="https://www.adivaha.com/themeforest-travon/mail.php" method="POST"
+              class="contact-form ajax-contact">
+            <h3 class="form-title">Make An Appointment</h3>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control style3" name="name"
+                           id="name" placeholder="Your Name"> <i class="fal fa-user"></i>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="email" class="form-control style3" name="email"
+                           id="email" placeholder="Email Address"> <i class="fal fa-envelope"></i>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="tel" class="form-control style3" name="number"
+                           id="number" placeholder="Phone Number"> <i class="fal fa-phone"></i>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control style3" name="subject"
+                           id="subject" placeholder="Queary Topic"> <i class="fal fa-file-invoice"></i>
+                </div>
+                <div class="form-group col-12">
+                    <textarea name="message" id="message" cols="30" rows="3"
+                              class="form-control style3" placeholder="Your Message"></textarea> <i class="fal fa-pencil"></i>
+                </div>
+                <div class="form-btn col-12"><button class="ot-btn">Send Message Now</button></div>
+            </div>
+            <p class="form-messages mb-0 mt-3"></p>
+        </form>
+    </div>
+</div> *@
+<section class="" data-pos-for=".footer-wrapper" data-sec-pos="bottom-half">
+    <div class="container">
+        <div class="newsletter-wrap" data-bg-src="~/img/bg/subscribe_bg_1.svg">
+            <h2 class="sec-title text-white mb-2">Get Special Offers And More From Travon</h2>
+            <p class="text-white fs-md mb-4">Sign up now and get the best deals straight in your inbox!</p>
+            <form action="/Newsletter" method="post" class="newsletter-form">
+                <input class="form-control" name="Email" type="email"
+                       placeholder="Enter Email Address" required=""> <button type="submit"
+                                                                              class="ot-btn">
+                    SUBCRIBE
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

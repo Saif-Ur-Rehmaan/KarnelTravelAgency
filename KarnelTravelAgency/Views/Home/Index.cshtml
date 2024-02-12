@@ -1092,13 +1092,11 @@
         <div class="newsletter-wrap" data-bg-src="~/img/bg/subscribe_bg_1.svg">
             <h2 class="sec-title text-white mb-2">Get Special Offers And More From Travon</h2>
             <p class="text-white fs-md mb-4">Sign up now and get the best deals straight in your inbox!</p>
-            <form class="newsletter-form">
-                <div class="form-group">
-                    <input class="form-control" type="email" placeholder="Email Address"
-                           required=""> <i class="fal fa-envelope"></i>
-                </div><button type="submit"
-                              class="ot-btn">
-                    Subscribe
+            <form action="/Newsletter" method="post" class="newsletter-form">
+                <input class="form-control" name="Email" type="email"
+                       placeholder="Enter Email Address" required=""> <button type="submit"
+                                                                              class="ot-btn">
+                    SUBCRIBE
                 </button>
             </form>
         </div>

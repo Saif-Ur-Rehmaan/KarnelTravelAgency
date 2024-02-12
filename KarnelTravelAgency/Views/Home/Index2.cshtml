@@ -14,12 +14,33 @@
     <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 }
-@if (!string.IsNullOrEmpty((string)TempData["AlreadyLoggedIn"]))
+@if (!string.IsNullOrEmpty(TempData["AlreadyLoggedIn"] as string))
 {
     <div class="alert alert-danger" role="alert">
         @TempData["AlreadyLoggedIn"].ToString()
     </div>
-} 
+}
+@if (!string.IsNullOrEmpty(TempData["NoDataAvalible"] as string))
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["NoDataAvalible"].ToString()
+    </div>
+}
+
+@if (TempData["NewsLetterSubmittionState"] != null && (bool)TempData["NewsLetterSubmittionState"])
+{
+    <div class="alert alert-success" role="alert">
+        Subscribed Successfully
+    </div>
+}
+
+@if (TempData["NewsLetterSubmittionState"] != null && !(bool)TempData["NewsLetterSubmittionState"])
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMsg"].ToString()
+    </div>
+}
+
 <div class="ot-hero-wrapper hero-2">
     <div class="ot-hero-slide">
         <div class="ot-hero-bg" data-bg-src="./img/hero/hero_bg_2_1.jpg"></div>
@@ -51,49 +72,28 @@
 <div class="search-sec">
     <div class="container">
         <div class="search-box">
-            <form action="https://www.adivaha.com/themeforest-travon/mail.php" method="POST" class="tour-search">
+            <form action="/Search" method="POST" class="tour-search" onsubmit="return validateForm()">
                 <div class="form-group">
-                    <select name="destination" id="destinationSelect"
-                            class="form-select nice-select">
-                        <option value="" disabled="disabled" selected="selected" hidden>Destination</option>
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="Barcelona">Barcelona</option>
-                        <option value="Amsterdam">Amsterdam</option>
-                        <option value="Budapest City">Budapest City</option>
-                    </select> <i class="fas fa-location-dot"></i>
+                    <input type="text" class="form-control" placeholder="Location" name="Location" required />
                 </div>
                 <div class="form-group">
-                    <select name="destination" id="tourType" class="form-select nice-select">
-                        <option value="" disabled="disabled" selected="selected" hidden>Activities</option>
-                        <option value="Travel">Travel</option>
-                        <option value="Hiking">Hiking</option>
-                        <option value="Air Ballon">Air Ballon</option>
-                        <option value="Peak Climbing">Peak Climbing</option>
-                    </select> <i class="fas fa-person-hiking"></i>
+                    <select name="Action"  id="tourType" class="form-select nice-select" required>
+                        <option value="0" disabled="disabled" selected="selected" hidden>Action</option>
+                        <option value="Hotel">Hotel</option>
+                        <option value="Resort">Resort</option>
+                        <option value="Flight">Flight</option>
+                        <option value="Restaurant">Restaurant</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <select name="destination" id="durationselect"
-                            class="form-select nice-select">
-                        <option value="" disabled="disabled" selected="selected" hidden>Duration</option>
-                        <option value="0 - 3 Days">0 - 3 Days</option>
-                        <option value="0 - 7 Days">0 - 7 Days</option>
-                        <option value="3 - 8 Days">3 - 8 Days</option>
-                        <option value="7 - 12 Days">7 - 12 Days</option>
-                    </select> <i class="fas fa-calendar-days"></i>
-                </div>
-                <div class="form-group">
-                    <select name="destination" id="budgetSelect"
-                            class="form-select nice-select">
-                        <option value="" disabled="disabled" selected="selected" hidden>Budget</option>
-                        <option value="100$ - 300$">100$ - 300$</option>
-                        <option value="300$ - 700$">300$ - 700$</option>
-                        <option value="700 - 1000$">700 - 1000$</option>
-                        <option value="1000$ - 1500$">1000$ - 1500$</option>
-                    </select> <i class="far fa-circle-dollar"></i>
+                    <input type="text" name="MaximumPrice" required placeholder="Price" class="form-control" />
                 </div>
                 <div class="form-btn"><button class="ot-btn">Search</button></div>
                 <p class="form-messages mb-0 mt-3"></p>
             </form>
+
+            
+
         </div>
     </div>
 </div>
@@ -865,8 +865,8 @@
             <div class="subscribe-content">
                 <h2 class="sec-title">Get Special Offers And More From Travon</h2>
                 <p class="subscribe-text">Sign up now and get the best deals straight in your inbox!</p>
-                <form class="newsletter-form">
-                    <input class="form-control" type="email"
+                <form action="/Newsletter" method="post" class="newsletter-form">
+                    <input class="form-control" name="Email" type="email"
                            placeholder="Enter Email Address" required=""> <button type="submit"
                                                                                   class="ot-btn">
                         SUBCRIBE

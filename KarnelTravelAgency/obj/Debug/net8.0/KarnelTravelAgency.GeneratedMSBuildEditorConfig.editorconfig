@@ -110,24 +110,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhbnNwb3J0XFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/AboutUs.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/About/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQWJvdXRVcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/AllBlogs.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxCbG9ncy5jc2h0bWw=
+[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/About/Team.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcVGVhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/BlogDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nRGV0YWlscy5jc2h0bWw=
+[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/About/TeamMemberDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcVGVhbU1lbWJlckRldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/Destination.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXN0aW5hdGlvbi5jc2h0bWw=
+[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Blog/AllBlogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xBbGxCbG9ncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/DestinationDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXN0aW5hdGlvbkRldGFpbHMuY3NodG1s
+[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Blog/BlogDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Destination/Destination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGluYXRpb25cRGVzdGluYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Destination/DestinationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGluYXRpb25cRGVzdGluYXRpb25EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/ErrorPage.cshtml]
@@ -150,28 +158,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/Team.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWFtLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/TeamMemberDetail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWFtTWVtYmVyRGV0YWlsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/Tour.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUb3VyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Home/TourDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUb3VyRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Tour/Tour.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91clxUb3VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/Tour/TourDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91clxUb3VyRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SaIF/Desktop/C\#/mvc/travelagency/KarnelTravelAgency/KarnelTravelAgency/Views/_ViewImports.cshtml]

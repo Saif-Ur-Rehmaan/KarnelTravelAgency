@@ -183,5 +183,48 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
 
             }
         }
+
+        [Route("/SearchHotel")]
+        public IActionResult SearchHotel()
+        {
+            var Location = Request.Query["Location"];
+            var MaximumPrice = decimal.Parse(Request.Query["MaximumPrice"]);
+
+       
+
+            var AllHotels = (from hotel in context.Hotels 
+                            join room in context.Rooms 
+                            on  hotel.HotelID equals room.HotelID
+                            where 
+                                hotel.Location.Contains(Location) &&
+                                room.Price <= MaximumPrice
+                            select hotel
+                            ).ToList();
+
+
+            List<HotelsViewModel> allHotels = new List<HotelsViewModel>();
+            foreach (var hotel in AllHotels)
+            {
+                allHotels.Add(new HotelsViewModel()
+                {
+                    Hotelid = hotel.HotelID,
+                    HotelImg = hotel.HotelImg,
+                    HotelName = hotel.HotelName,
+                    Location = hotel.Location,
+                    Rating = hotel.Rating
+                });
+            }
+            if (allHotels.Any())
+            {
+                return View("Hotels",allHotels);
+            }
+            else
+            {
+                TempData["NoDataAvalible"] = "no data Avalible For the given Location and price range";
+                return Redirect("/");
+
+            }
+        }
+    
     }
 }

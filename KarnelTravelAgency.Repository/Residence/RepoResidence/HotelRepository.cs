@@ -17,7 +17,7 @@ namespace KarnelTravelAgency.Repository.Repo
             context.SaveChanges();
         }
 
-        public void Delete(Hotel hotel)
+        public  void Delete(Hotel hotel)
         {
             context.Hotels.Remove(hotel);
             context.SaveChanges();

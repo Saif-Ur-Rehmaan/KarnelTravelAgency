@@ -10,12 +10,12 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
     [Area("Residence")]
     public class HotelController(ApplicationDbContext context) : Controller
     {
-        HotelRepository HotelRepo = new(context);
+        private HotelRepository HotelRepo = new(context);
         [Route("/Hotels")]
         public IActionResult Hotels()
         {
             List<HotelsViewModel> allHotels = new List<HotelsViewModel>();
-
+         
             var AllHotels = HotelRepo.GetAll().ToList();
             foreach (var hotel in AllHotels)
             {

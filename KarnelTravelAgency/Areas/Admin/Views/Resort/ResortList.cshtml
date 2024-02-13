@@ -1,0 +1,41 @@
+﻿@model List<ResortViewModel>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <div class="row justify-content-between">
+                <div class="col-auto">Resort List</div>
+                <div class="col-auto"><a href="/Resort/Create" class="btn btn-outline-primary px-3 py-2">Create</a></div>
+            </div>
+        </h4>
+        <h6 class="card-subtitle">Add class <code>.table</code></h6>
+        <div class="table-responsive">
+            <table class="table user-table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0">#</th>
+                        <th class="border-top-0">ResortlImg</th>
+                        <th class="border-top-0">ResortName</th>
+                        <th class="border-top-0">Location</th>
+                        <th class="border-top-0">Rating</th>
+                        <th class="border-top-0">Edit</th>
+                        <th class="border-top-0">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Resort in Model)
+                    {
+                        <tr>
+                            <td>@Resort.ResortID</td>
+                            <td><img src="~/@Resort.ResortImg" style="width:50px; border-radius:50%;" /></td>
+                            <td>@Resort.ResortName</td>
+                            <td>@Resort.Location</td>
+                            <td>@Resort.Rating</td>
+                            <td><a href="/Resort/Edit/@Resort.ResortID" class="btn btn-success">Edit</a></td>
+                            <td><a href="/Resort/Delete/@Resort.ResortID" class="btn btn-danger">Delete</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

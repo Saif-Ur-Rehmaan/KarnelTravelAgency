@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OujJbGc9+kygQWn0j0iUwQP5PcTG4o4LCdyywupLTo62qRmNVll5Wwz+Vxr/rl70rDIu0xlxcV576/gmARd8Uw==",
+  "dgSpecHash": "M7u35rhgv+bPRSmKrYxY5oVC91X8d7ez7Pgk3WAa7s6neelgWxwoTAQN8gxd92w5g9unuDuNlzcIBnRaoMYGfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency\\KarnelTravelAgency.csproj",
+  "projectFilePath": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\KarnelTravelAgency.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SaIF\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\SaIF\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

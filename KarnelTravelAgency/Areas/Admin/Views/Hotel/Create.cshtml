@@ -1,0 +1,40 @@
+﻿@model HotelCreateViewModel
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <div class="row justify-content-between">
+                <div class="col-auto">Hotel Create</div>
+                <div class="col-auto"><a href="/Hotel/Create" class="btn btn-outline-primary px-3 py-2">Create</a></div>
+            </div>
+        </h4>
+        <h6 class="card-subtitle">Add class <code>.table</code></h6>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8">
+                <form method="post" action="/Hotel/Create" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label asp-for="@Model.HotelName"  class="form-label">Hotel Name</label>
+                        <input asp-for="@Model.HotelName" type="text" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.HotelName"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.Location"  class="form-label">Hotel Location</label>
+                        <input asp-for="@Model.Location" type="text" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.Location"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.Rating"  class="form-label">Hotel Rating</label>
+                        <input asp-for="@Model.Rating" type="text" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.Rating"></span>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <label asp-for="@Model.ImageFile" class="input-group-text" for="inputGroupFile01">Upload</label>
+                        <input type="file" asp-for="@Model.ImageFile" class="form-control" id="inputGroupFile01">
+                        <span class="text-danger" asp-validation-for="@Model.ImageFile"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

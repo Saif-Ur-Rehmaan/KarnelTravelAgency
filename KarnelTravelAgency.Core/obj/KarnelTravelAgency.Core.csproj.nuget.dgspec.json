@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency.Core\\KarnelTravelAgency.Core.csproj": {}
+    "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency.Core\\KarnelTravelAgency.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency.Core\\KarnelTravelAgency.Core.csproj": {
+    "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency.Core\\KarnelTravelAgency.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency.Core\\KarnelTravelAgency.Core.csproj",
+        "projectUniqueName": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency.Core\\KarnelTravelAgency.Core.csproj",
         "projectName": "KarnelTravelAgency.Core",
-        "projectPath": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency.Core\\KarnelTravelAgency.Core.csproj",
+        "projectPath": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency.Core\\KarnelTravelAgency.Core.csproj",
         "packagesPath": "C:\\Users\\SaIF\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\travelagency\\KarnelTravelAgency\\KarnelTravelAgency.Core\\obj\\",
+        "outputPath": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

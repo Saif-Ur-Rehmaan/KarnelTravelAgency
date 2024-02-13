@@ -1,0 +1,43 @@
+﻿@model List<RestaurantViewModel>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <div class="row justify-content-between">
+                <div class="col-auto">Restaurant List</div>
+                <div class="col-auto"><a href="/Restaurant/Create" class="btn btn-outline-primary px-3 py-2">Create</a></div>
+            </div>
+        </h4>
+        <h6 class="card-subtitle">Add class <code>.table</code></h6>
+        <div class="table-responsive">
+            <table class="table user-table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0">#</th>
+                        <th class="border-top-0">RestaurantName</th>
+                        <th class="border-top-0">Location</th>
+                        <th class="border-top-0">CuisineType</th>
+                        <th class="border-top-0">Rating</th>
+                        <th class="border-top-0">Edit</th>
+                        <th class="border-top-0">Delete</th>
+
+                         
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Restaurant in Model)
+                    {
+                        <tr>
+                            <td>@Restaurant.RestaurantID</td>
+                            <td>@Restaurant.RestaurantName</td>
+                            <td>@Restaurant.Location</td>
+                            <td>@Restaurant.CuisineType</td>
+                            <td>@Restaurant.Rating</td>
+                            <td><a href="/Restaurant/Edit/@Restaurant.RestaurantID" class="btn btn-success">Edit</a></td>
+                            <td><a href="/Restaurant/Delete/@Restaurant.RestaurantID" class="btn btn-danger">Delete</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

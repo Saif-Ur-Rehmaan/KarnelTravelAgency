@@ -1,0 +1,46 @@
+﻿@model List<FlightViewModel>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <div class="row justify-content-between">
+                <div class="col-auto">Flight List</div>
+                <div class="col-auto"><a href="/Flight/Create" class="btn btn-outline-primary px-3 py-2">Create</a></div>
+            </div>
+        </h4>
+        <h6 class="card-subtitle">Add class <code>.table</code></h6>
+        <div class="table-responsive">
+            <table class="table user-table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0">FlightID</th>
+                        <th class="border-top-0">AirlineID </th>
+                        <th class="border-top-0">FlightNumber</th>
+                        <th class="border-top-0">DepartureAirportCode</th>
+                        <th class="border-top-0">ArrivalAirportCode</th>
+                        <th class="border-top-0">DepartureDateTime</th>
+                        <th class="border-top-0">ArrivalDateTime</th>
+                        <th class="border-top-0">Edit</th>
+                        <th class="border-top-0">Delete</th>
+ 
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Flight in Model)
+                    {
+                        <tr>
+                            <td>@Flight.FlightID</td>
+                            <td>@Flight.AirlineID</td>
+                            <td>@Flight.FlightNumber</td>
+                            <td>@Flight.DepartureAirportCode</td>
+                            <td>@Flight.ArrivalAirportCode</td>
+                            <td>@Flight.DepartureDateTime</td>
+                            <td>@Flight.ArrivalDateTime</td>
+                            <td><a href="/Flight/Edit/@Flight.FlightID" class="btn btn-success">Edit</a></td>
+                            <td><a href="/Flight/Delete/@Flight.FlightID" class="btn btn-danger">Delete</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

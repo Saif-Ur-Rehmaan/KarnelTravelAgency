@@ -109,6 +109,30 @@
       "PackagePath": "staticwebassets\\fonts\\icomoon\\style.css"
     },
     {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\Resort\\8887f7aa-7efe-4a52-ba91-8ed5749ecedf_Screenshot 2023-11-14 003221.png",
+      "PackagePath": "staticwebassets\\img\\Resort\\8887f7aa-7efe-4a52-ba91-8ed5749ecedf_Screenshot 2023-11-14 003221.png"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\Resort\\r1.jpg",
+      "PackagePath": "staticwebassets\\img\\Resort\\r1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\Resort\\r2.jpg",
+      "PackagePath": "staticwebassets\\img\\Resort\\r2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\Resort\\r3.jpg",
+      "PackagePath": "staticwebassets\\img\\Resort\\r3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\Resort\\r4.jpg",
+      "PackagePath": "staticwebassets\\img\\Resort\\r4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\Resort\\r5.jpg",
+      "PackagePath": "staticwebassets\\img\\Resort\\r5.jpg"
+    },
+    {
       "Id": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\wwwroot\\img\\SVGS\\undraw_file_sync_ot38.svg",
       "PackagePath": "staticwebassets\\img\\SVGS\\undraw_file_sync_ot38.svg"
     },

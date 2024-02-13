@@ -1,19 +1,5 @@
 ﻿@model List<HotelViewModel>
-@if (!string.IsNullOrEmpty((string)TempData["StateMsg"]))
-{
-    @if ((bool)TempData["State"])
-    {
-        <div class="alert alert-success" role="alert">
-            @TempData["StateMsg"].ToString()
-        </div>
-    }
-    else
-    {
-        <div class="alert alert-danger" role="alert">
-            @TempData["StateMsg"].ToString()
-        </div>
-    }
-}
+
 <div class="card">
     <div class="card-body">
         <h4 class="card-title">

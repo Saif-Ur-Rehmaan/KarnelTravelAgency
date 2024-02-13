@@ -42,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG90ZWxcSG90ZWxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/SaIF/Desktop/C\#/mvc/KarnelTravelAgency/KarnelTravelAgency/Areas/Admin/Views/Resort/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzb3J0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SaIF/Desktop/C\#/mvc/KarnelTravelAgency/KarnelTravelAgency/Areas/Admin/Views/Resort/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzb3J0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/SaIF/Desktop/C\#/mvc/KarnelTravelAgency/KarnelTravelAgency/Areas/Admin/Views/Resort/ResortList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzb3J0XFJlc29ydExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

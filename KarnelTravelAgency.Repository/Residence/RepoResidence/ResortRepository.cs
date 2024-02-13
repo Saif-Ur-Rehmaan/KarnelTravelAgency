@@ -16,10 +16,15 @@ namespace KarnelTravelAgency.Repository.Repo
             context.Resorts.Add(resort);
             context.SaveChanges();
         }
+        public void Update(Resort resort)
+        {
+            context.Resorts.Update(resort);
+            context.SaveChanges();
+        }
 
         public void Delete(Resort resort)
         {
-            context.Resorts.Remove(resort); 
+            context.Resorts.Remove(resort);
             context.SaveChanges();
         }
 
@@ -32,11 +37,8 @@ namespace KarnelTravelAgency.Repository.Repo
         {
             return await context.Resorts.FindAsync(id);
         }
-
-        public void Update(Resort resort)
-        {
-            context.Resorts.Update(resort); 
-            context.SaveChanges();
+        public Resort GetById(int id)=>context.Resorts.Find(id);  
         }
-    }
+
+             
 }

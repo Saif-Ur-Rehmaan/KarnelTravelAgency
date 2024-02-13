@@ -54,6 +54,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzb3J0XFJlc29ydExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/SaIF/Desktop/C\#/mvc/KarnelTravelAgency/KarnelTravelAgency/Areas/Admin/Views/Restaurant/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzdGF1cmFudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SaIF/Desktop/C\#/mvc/KarnelTravelAgency/KarnelTravelAgency/Areas/Admin/Views/Restaurant/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzdGF1cmFudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/SaIF/Desktop/C\#/mvc/KarnelTravelAgency/KarnelTravelAgency/Areas/Admin/Views/Restaurant/Restaurants.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzdGF1cmFudFxSZXN0YXVyYW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -32,6 +32,8 @@ namespace KarnelTravelAgency.Repository.Repo
         {
             return await context.Restaurants.FindAsync(id);
         }
+        public Core.Restaurant GetById(int id)=>context.Restaurants.Find(id);
+        
 
         public void Update(Core.Restaurant restaurant)
         {

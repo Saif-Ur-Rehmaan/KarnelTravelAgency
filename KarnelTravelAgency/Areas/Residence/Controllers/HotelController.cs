@@ -3,6 +3,7 @@ using KarnelTravelAgency.Areas.Residence.Models;
 using KarnelTravelAgency.Core;
 using KarnelTravelAgency.Repository.Repo;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace KarnelTravelAgency.Areas.Residence.Controllers
 {
@@ -57,9 +58,9 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
                 Bundle_SingleHotelViewModel bundle_singleHotel = new()
                 {
                     Hotel = Hotel,
-                    RoomsOfHotels = rooms                    
+                    RoomsOfHotels = rooms
                 };
-                
+
                 return View(bundle_singleHotel);
             }
             else
@@ -70,7 +71,7 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
 
         [HttpPost]
         [Route("/SingleHotelRoomBooking")]
-        public IActionResult SingleHotel(Bundle_SingleHotelViewModel  bm)
+        public IActionResult SingleHotel(Bundle_SingleHotelViewModel bm)
         {
             int? userIdNullable = HttpContext.Session.GetInt32("UserId");
             int userId = userIdNullable.HasValue ? userIdNullable.Value : default(int); // Assigns default value (0) if userIdNullable is null
@@ -86,8 +87,8 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
                 int RoomID = RBM.RoomID;
                 DateTime CheckInDate = RBM.CheckInDate;
                 DateTime CheckOutDate = RBM.CheckOutDate;
-                
-                /* returning data*/ 
+
+                /* returning data*/
                 var hotel = HotelRepo.GetAll().Where(x => x.HotelID == HotelID).FirstOrDefault();//get hotel
                 var roomList = (new RoomRepository(context)).GetAll().Where(x => x.HotelID == HotelID).ToList();//get rooms avalible in hotel
                 var SingleHotelViewModel = new SingleHotelViewModel()
@@ -107,7 +108,7 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
                 };
                 /* returning data*/
 
-             
+
 
 
                 // Add the new guest to the database
@@ -122,43 +123,43 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
                         x.CheckOutDate.Date >= RBM.CheckInDate.Date   // Check if existing reservation check-out date is after or same as new reservation check-in date
                     );
                     if (!isGuestReserved)
-                                {
-                                    // Create a new Guest object with the guest details
-                                    Guest newGuest = new Guest()
-                                    {
-                                        FirstName = RBM.FirstName,
-                                        LastName = RBM.LastName,
-                                        Email = RBM.Email,
-                                        Phone = RBM.Phone
-                                    };
-                                    (new GuestRepository(context)).Add(newGuest);
-                                    // creating new reservation
-                                    Reservation newHotelReservation = new Reservation()
-                                    {
-                                        HotelID = HotelID,
-                                        RoomID = RoomID,
-                                        GuestID = newGuest.GuestID, // Assign the generated GuestID
-                                        CheckInDate = CheckInDate,
-                                        CheckOutDate = CheckOutDate,
-                                        Guest = newGuest ,// Assign the newly created Guest object
-                                        Hotel=(HotelRepo.GetAll().Where(x=>x.HotelID==HotelID).First()),
-                                        Room = (new RoomRepository(context).GetAll().Where(x=>x.RoomID==RoomID).First())
-                                    };
-                                    //inserting reservation in db
-                                    try
-                                    {
-                                        //tryin to insert new reservation in db
-                                        (new ReservationRepository(context)).Add(newHotelReservation);
-                                        TempData["BookingResult"] = true;//indicates that data added successfully
+                    {
+                        // Create a new Guest object with the guest details
+                        Guest newGuest = new Guest()
+                        {
+                            FirstName = RBM.FirstName,
+                            LastName = RBM.LastName,
+                            Email = RBM.Email,
+                            Phone = RBM.Phone
+                        };
+                        (new GuestRepository(context)).Add(newGuest);
+                        // creating new reservation
+                        Reservation newHotelReservation = new Reservation()
+                        {
+                            HotelID = HotelID,
+                            RoomID = RoomID,
+                            GuestID = newGuest.GuestID, // Assign the generated GuestID
+                            CheckInDate = CheckInDate,
+                            CheckOutDate = CheckOutDate,
+                            Guest = newGuest,// Assign the newly created Guest object
+                            Hotel = (HotelRepo.GetAll().Where(x => x.HotelID == HotelID).First()),
+                            Room = (new RoomRepository(context).GetAll().Where(x => x.RoomID == RoomID).First())
+                        };
+                        //inserting reservation in db
+                        try
+                        {
+                            //tryin to insert new reservation in db
+                            (new ReservationRepository(context)).Add(newHotelReservation);
+                            TempData["BookingResult"] = true;//indicates that data added successfully
 
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        TempData["BookingResult"] = false;//indicates that error occur while data inserting
-                                        TempData["errorMsg"] = ex.Message.ToString();//to show error on Front end
-                                    }
+                        }
+                        catch (Exception ex)
+                        {
+                            TempData["BookingResult"] = false;//indicates that error occur while data inserting
+                            TempData["errorMsg"] = ex.Message.ToString();//to show error on Front end
+                        }
 
-                                    return View(Data);
+                        return View(Data);
 
                     }
                     else
@@ -172,13 +173,13 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
                 catch (Exception ex)
                 {
                     TempData["BookingResult"] = false;//indicates that error occur while data inserting
-                    TempData["errorMsg"] = "TheRoom Is Already Reserved For the given Time period"+ex.Message.ToString();//to show error on Front end
+                    TempData["errorMsg"] = "TheRoom Is Already Reserved For the given Time period" + ex.Message.ToString();//to show error on Front end
                     return View(Data);
                 }
 
-               
 
-                
+
+
 
 
             }
@@ -190,15 +191,15 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
             var Location = Request.Query["Location"];
             var MaximumPrice = decimal.Parse(Request.Query["MaximumPrice"]);
 
-       
 
-            var AllHotels = (from hotel in context.Hotels 
-                            join room in context.Rooms 
-                            on  hotel.HotelID equals room.HotelID
-                            where 
-                                hotel.Location.Contains(Location) &&
-                                room.Price <= MaximumPrice
-                            select hotel
+
+            var AllHotels = (from hotel in context.Hotels
+                             join room in context.Rooms
+                             on hotel.HotelID equals room.HotelID
+                             where
+                                 hotel.Location.Contains(Location) &&
+                                 room.Price <= MaximumPrice
+                             select hotel
                             ).ToList();
 
 
@@ -216,7 +217,7 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
             }
             if (allHotels.Any())
             {
-                return View("Hotels",allHotels);
+                return View("Hotels", allHotels);
             }
             else
             {
@@ -225,6 +226,34 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
 
             }
         }
-    
+
+        [HttpPost]
+        [HttpPost]
+        [Route("/AjaxSearch_Hotels")]
+        public IActionResult AjaxSearch_Hotels()
+        {
+            string query = Request.Form["Query"];
+            List<Hotel> AllHotels;
+            AllHotels = HotelRepo.GetAll().Where(hotel => hotel.Location.Contains(query)).ToList();
+            if (!AllHotels.Any())
+            {
+                AllHotels = HotelRepo.GetAll().Where(hotel => hotel.HotelName.Contains(query)).ToList();
+            }
+            List<HotelsViewModel> allHotels = new List<HotelsViewModel>();
+            foreach (var hotel in AllHotels)
+            {
+                allHotels.Add(new HotelsViewModel()
+                {
+                    Hotelid = hotel.HotelID,
+                    HotelImg = hotel.HotelImg,
+                    HotelName = hotel.HotelName,
+                    Location = hotel.Location,
+                    Rating = hotel.Rating
+                });
+            }
+            var jsonStr = JsonConvert.SerializeObject(allHotels);
+            return Content(jsonStr, "application/json");
+        }
+
     }
 }

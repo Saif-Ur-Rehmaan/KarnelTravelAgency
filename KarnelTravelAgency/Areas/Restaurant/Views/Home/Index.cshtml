@@ -1,27 +1,158 @@
 ﻿@model List<RestaurantViewModel>
 
 
-<h1>List Of All Restaurents </h1>
- 
+<style>
+    .kingho_block__25 .image {
+        overflow: hidden;
+    }
+
+    .kingho_block__25 img {
+        transition: .5s;
+    }
+
+    .kingho_block__25:hover img {
+        transform: scale(1);
+    }
+
+    .kingho_block__25 .icon-list ul {
+        display: flex;
+        /* flex-wrap: wrap; */
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .kingho_block__25 ul li {
+        margin-right: 29px;
+    }
+
+        .kingho_block__25 ul li i {
+            color: var(--theme-color);
+        }
+
+    .kingho_block__25 h4 {
+        font-size: 14px;
+        line-height: 22px;
+        color: #111111;
+        font-weight: 500;
+        font-family: "Roboto";
+        margin-top: 10px;
+    }
+
+    .kingho_block__25 .text {
+        font-size: 14px;
+        line-height: 22px;
+        color: #777777;
+        font-weight: 400;
+        font-family: "Roboto";
+    }
+
+    .kingho_block__25 h3 {
+        font-size: 24px;
+        letter-spacing: -1px;
+        line-height: 1.2em;
+        color: #111111;
+        font-weight: 600;
+        margin-bottom: 27px;
+    }
+
+    .kingho_block__25 {
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        max-width: 410px;
+    }
+
+        .kingho_block__25 .lower-content {
+            filter: drop-shadow(0px 14px 14px rgba(0, 0, 0, 0.04));
+            background-color: #ffffff;
+            border: 2px solid #f3f3f3;
+            padding: 40px;
+        }
+
+        .kingho_block__25 .pricing {
+            position: absolute;
+            top: -15px;
+            right: 40px;
+            background-color: var(--theme-color);
+            padding: 1px 10px;
+            font-size: 14px;
+            line-height: 28px;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: "Roboto";
+            text-align: center;
+        }
+
+        .kingho_block__25 a.theme-btn.btn-style-four {
+            background-color: #ffffff;
+            border: 2px solid #eaeaea;
+            display: inline-block;
+            padding: 9px 23px;
+            font-size: 16px;
+            line-height: 30px;
+            text-decoration: underline;
+            color: var(--theme-color);
+            font-weight: 700;
+            font-family: "Roboto";
+            text-align: center;
+        }
+
+    .page-title {
+        position: relative;
+        padding: 160px 0px 130px;
+        text-align: center;
+        background-size: cover;
+        background-color: #fff;
+        margin-top: -35px;
+    }
+
+        .page-title > .theme__container > .content-box > .content-wrapper > .title > h1 {
+            color: var(--theme-color) !important;
+            text-transform: uppercase;
+            background: rgba(0,0,0,0.3);
+            width: fit-content;
+        }
+</style>
+<section class="page-title" style="background-image: url(img/blog/blog-s-1-4.jpg)">
+    <div class="theme__container">
+        <div class="content-box">
+            <div class="content-wrapper">
+                <div class="title d-flex justify-content-center"><h1>Restaurants</h1></div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="container">
-    <ul class="list-group">
+    <div class="row">
         @foreach (var restaurant in Model)
         {
-            <li class="list-group-item">
-                <div class="row">
-                    <div class="col">
-                        <h5>@restaurant.RestaurantName</h5>
-                        <p>@restaurant.Location</p>
-                        <p>Cuisine: @restaurant.CuisineType</p>
+            <div class="col-lg-4">
+                <div class="kingho_block__25">
+                    <div class="image">
+                        <img src="assets/images/resource/image-30.jpg" alt="" />
                     </div>
-                    <div class="col text-end">
-                        <p class="fw-bold">Rating: @restaurant.Rating</p>
-
-                        <a href="/SingleRestaurant/@restaurant.RestaurantID" class="btn btn-primary">View Details</a>
+                    <div class="lower-content">
+                        <div class="pricing">Rating: @restaurant.Rating</div>
+                        <div class="icon-list">
+                            <ul>
+                                <li>
+                                    <i class="flaticon-preview"></i>
+                                    <h4>Cuisine:</h4>
+                                    <div class="text">@restaurant.CuisineType</div>
+                                </li>
+                                <li>
+                                    <i class="flaticon-user"></i>
+                                    <h4>Location:</h4>
+                                    <div class="text">@restaurant.Location</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>@restaurant.RestaurantName</h3>
+                        <a href="/SingleRestaurant/@restaurant.RestaurantID" class="theme-btn btn-style-four"><span>View Restaurant</span></a>
                     </div>
                 </div>
-            </li>
+            </div>
         }
-    </ul>
+    </div>
 </div>
 

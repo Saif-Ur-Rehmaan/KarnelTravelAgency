@@ -5,62 +5,171 @@
  
 
 @section LinkStyle{
-  
+
+    <style>
+        @@media only screen and (max-width: 991px) {
+            section.section-thirty-eight .image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+                section.section-thirty-eight .image img {
+                    width: 100%;
+                }
+
+            .kingho_block__38 {
+                max-width: 500px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+
+                .kingho_block__38 .kingho_inner_content_box {
+                    position: relative;
+                    right: auto;
+                    top: auto;
+                    margin-top: 30px;
+                }
+
+                .kingho_block__38 .text-two {
+                    margin-left: 0;
+                }
+
+                .kingho_block__38 h3 {
+                    margin-left: 0;
+                }
+
+                .kingho_block__38 .icon-list ul li {
+                    margin-left: 0;
+                    margin-right: 25px;
+                }
+
+                .kingho_block__38 .kingho_inner_content_box .pricing {
+                    margin-left: 0;
+                }
+        }
+
+        .kingho_block__38 {
+            position: relative;
+            filter: drop-shadow(0px 14px 14px rgba(0, 0, 0, 0.04));
+            background-color: #ffffff;
+            border: 2px solid #f3f3f3;
+            padding: 45px 30px 46px;
+            /* margin-left: -30px; */
+            /* margin-bottom: 32px; */
+        }
+
+            .kingho_block__38 .icon-list ul li {
+                margin-left: 35px;
+            }
+
+            .kingho_block__38 h3 {
+                font-size: 24px;
+                letter-spacing: -1px;
+                line-height: 55px;
+                color: #111111;
+                font-weight: 600;
+                margin-left: 30px;
+            }
+
+            .kingho_block__38 .text-two {
+                font-size: 14px;
+                line-height: 24px;
+                color: #777777;
+                font-weight: 400;
+                font-family: "Roboto";
+                margin-left: 30px;
+            }
+
+            .kingho_block__38 .kingho_inner_content_box {
+                position: absolute;
+                right: 45px;
+                top: 76px;
+            }
+
+                .kingho_block__38 .kingho_inner_content_box .pricing {
+                    font-size: 14px;
+                    color: #ffffff;
+                    font-weight: 700;
+                    font-family: "Roboto";
+                    text-align: center;
+                    width: 100px;
+                    height: 30px;
+                    background-color: var(--theme-color);
+                    position: relative;
+                    margin-bottom: 20px;
+                    margin-left: 13px;
+                }
+
+            .kingho_block__38 a.theme-btn.btn-style-four {
+                background-color: #ffffff;
+                border: 2px solid #eaeaea;
+                display: inline-block;
+                padding: 9px 23px;
+                font-size: 16px;
+                line-height: 30px;
+                text-decoration: underline;
+                color: #777777;
+                font-weight: 700;
+                font-family: "Roboto";
+                text-align: center;
+            }
+
+            .kingho_block__38 h4 {
+                font-size: 14px;
+                line-height: 22px;
+                color: #111111;
+                font-weight: 500;
+                font-family: "Roboto";
+            }
+
+            .kingho_block__38 .text {
+                font-size: 14px;
+                line-height: 22px;
+                color: #777777;
+                font-weight: 400;
+                font-family: "Roboto";
+            }
+
+        .page-title {
+            position: relative;
+            padding: 160px 0px 130px;
+            text-align: center;
+            background-size: cover;
+            background-color: #fff;
+            margin-top: -35px;
+        }
+
+            .page-title > .theme__container > .content-box > .content-wrapper > .title > h1 {
+                color: var(--theme-color) !important;
+                text-transform: uppercase;
+                background: rgba(0,0,0,0.5);
+                width: fit-content;
+            }
+    </style>
   
 }  
 
-<div class="search-sec mt-5">
-    <div class="container">
-        <div class="search-box">
-            <form action="https://www.adivaha.com/themeforest-travon/mail.php" method="POST" class="tour-search">
-                <div class="form-group">
-                    <select name="destination" id="destinationSelect"
-                            class="form-select nice-select">
-                        <option value="" disabled="disabled" selected="selected" hidden>Destination</option>
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="Barcelona">Barcelona</option>
-                        <option value="Amsterdam">Amsterdam</option>
-                        <option value="Budapest City">Budapest City</option>
-                    </select> <i class="fas fa-location-dot"></i>
+
+
+<main class="min-vw-100">
+    <section class="page-title" style="background-image: url(img/blog/blog-s-1-4.jpg)">
+        <div class="theme__container">
+            <div class="content-box">
+                <div class="content-wrapper">
+                    <div class="title d-flex justify-content-center"><h1>Hotels</h1></div>
                 </div>
-                <div class="form-group">
-                    <select name="destination" id="tourType" class="form-select nice-select">
-                        <option value="" disabled="disabled" selected="selected" hidden>Activities</option>
-                        <option value="Travel">Travel</option>
-                        <option value="Hiking">Hiking</option>
-                        <option value="Air Ballon">Air Ballon</option>
-                        <option value="Peak Climbing">Peak Climbing</option>
-                    </select> <i class="fas fa-person-hiking"></i>
-                </div>
-                <div class="form-group">
-                    <select name="destination" id="durationselect"
-                            class="form-select nice-select">
-                        <option value="" disabled="disabled" selected="selected" hidden>Duration</option>
-                        <option value="0 - 3 Days">0 - 3 Days</option>
-                        <option value="0 - 7 Days">0 - 7 Days</option>
-                        <option value="3 - 8 Days">3 - 8 Days</option>
-                        <option value="7 - 12 Days">7 - 12 Days</option>
-                    </select> <i class="fas fa-calendar-days"></i>
-                </div>
-                <div class="form-group">
-                    <select name="destination" id="budgetSelect"
-                            class="form-select nice-select">
-                        <option value="" disabled="disabled" selected="selected" hidden>Budget</option>
-                        <option value="100$ - 300$">100$ - 300$</option>
-                        <option value="300$ - 700$">300$ - 700$</option>
-                        <option value="700 - 1000$">700 - 1000$</option>
-                        <option value="1000$ - 1500$">1000$ - 1500$</option>
-                    </select> <i class="far fa-circle-dollar"></i>
-                </div>
-                <div class="form-btn"><button class="ot-btn">Search</button></div>
-                <p class="form-messages mb-0 mt-3"></p>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-
-
-<main class="min-vw-100"> 
+    </section>
+ <div class="container">
+     <div class="row flex-row justify-content-center align-items-center my-5 py-5">
+         <div class="col ">
+             <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search By :HotelName,location" id="SearchField" />
+             </div>
+         </div>
+     </div>
+ </div>
     @* Show All Hotels here *@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
@@ -70,406 +179,126 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-xl-10 ">
-                <div class="row gap-4 flex-row">
-                    <!-- side bar -->
-                    <div class="col-3  mt-5  pt-5   d-xl-block d-none">
-                        <!-- filters -->
-                        <div class="row flex-column">
-                            <div class="col-auto p-0 mb-4">
-                                <h1 class="fs-2 fw-500">Filters</h1>
-                            </div>
-                            <div class="col p-5" style=" background-color: #f5f5f5;">
-
-                                <h2 class="fs-5 fw-bolder ">Categories</h2>
-                                <ul class="list-group">
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Technology
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Business
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Arts
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Health
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Technology
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Business
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Arts
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Health
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Technology
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Business
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Arts
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Health
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Technology
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Business
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Arts
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Health
-                                    </li>
-                                    <!-- Add more categories as needed -->
-                                </ul>
-
-                                <h2 class="fs-5 fw-bolder mt-4">Watch Time</h2>
-                                <ul class="list-group">
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Under 1
-                                        Hour
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 1-3
-                                        Hours
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 3-5
-                                        Hours
-                                    </li>
-
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 1-3
-                                        Hours
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 3-5
-                                        Hours
-                                    </li>
-                                    <!-- Add more options as needed -->
-                                </ul>
-
-                                <h2 class="fs-5 fw-bolder mt-4">Rating</h2>
-                                <ul class="list-group">
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 1
-                                        Star
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 2
-                                        Stars
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 3
-                                        Stars
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 2
-                                        Stars
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp; 3
-                                        Stars
-                                    </li>
-                                    <!-- Add more ratings as needed -->
-                                </ul>
-
-                                <h2 class="fs-5 fw-bolder mt-4">Rating</h2>
-                                <ul class="list-group">
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Basic
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Intermediate
-                                    </li>
-                                    <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"> &nbsp;
-                                        Advanced
-                                    </li>
-                                </ul>
+            <div class="col-12 col-xl-10" id="CardContainer">
+                @foreach (var hotel in Model)
+                {
+                    <div class="row mb-3">
+                        <div class="col-lg-4 col-6 m-auto pe-md-0">
+                            <div class="image">
+                                <img src="~/@hotel.HotelImg" alt="" class="w-100" />
                             </div>
                         </div>
-
-
-                    </div>
-                    <!-- results -->
-                    <div class="col">
-                        <div class="row flex-column align-items-center align-items-xl-start ">
-
-                            <div class="col-12 col-sm-10 col-xl-12 my-3">
-                                <div class="row flex-column gap-3">
-                                    <div class="col">
-                                        <h1>Search Results</h1>
-                                    </div>
-                                    <div class="col">
-                                        <div class="row gap-2 justify-content-sm-between justify-content-center">
-                                            <div class="col-xl col-12">
-                                                <div class="form-outline" data-mdb-input-init>
-                                                    <input type="search" id="form1" class="form-control  shadow py-4"
-                                                           placeholder="Mobile App Development Courses" aria-label="Search" />
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="row align-items-center justify-content-center flex-nowrap">
-                                                    <div class="col-auto">
-                                                        Sort by
-                                                    </div>
-                                                    <div class="col">
-                                                        <select class="form-select  shadow  pr-5  w-100 py-3"
-                                                                aria-label="Default select example">
-                                                            <option selected>Rating</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- hamburger -->
-                                            <div class="col-auto d-xl-none  ">
-                                                <div class="row flex-row justify-content-between align-items-center">
-                                                    <div class="col-auto fw-bold fs-3">Filter :</div>
-                                                    <div class="col">
-                                                        <button class="navbar-toggler p-3 border" type="button"
-                                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                                                                aria-controls="offcanvasExample">
-                                                            <img src="assets/images/icons/filter.png"
-                                                                 style="max-width: 30px;" alt="">
-                                                        </button>
-
-                                                        <div class="offcanvas offcanvas-start" tabindex="-1"
-                                                             id="offcanvasExample" aria-labelledby="SlidingSideBarForMobile">
-                                                            <div class="offcanvas-header">
-                                                                <h5 class="offcanvas-title" id="SlidingSideBarForMobile">
-                                                                    <a href="index.php" class="nav-link " href="#">
-                                                                        <img src="assets/images/logo.png" alt=""
-                                                                             class="img-fluid">
-                                                                    </a>
-
-                                                                </h5>
-                                                                <button type="button" class="btn-close text-reset"
-                                                                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="offcanvas-body text-start">
-
-
-                                                                <div class="row flex-column">
-                                                                    <div class="col-auto p-0">
-                                                                        <h1 class="fs-1 fw-500">Filters</h1>
-                                                                    </div>
-                                                                    <div class="col p-5"
-                                                                         style=" background-color: #f5f5f5;">
-
-                                                                        <h2 class="fs-5 fw-bolder ">Categories</h2>
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp;
-                                                                                Technology
-                                                                            </li>
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp;
-                                                                                Business
-                                                                            </li>
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp;
-                                                                                Arts
-                                                                            </li>
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp;
-                                                                                Health
-                                                                            </li>
-                                                                            <!-- Add more categories as needed -->
-                                                                        </ul>
-
-                                                                        <h2 class="fs-5 fw-bolder mt-4">Watch Time</h2>
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp;
-                                                                                Under 1
-                                                                                Hour
-                                                                            </li>
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp; 1-3
-                                                                                Hours
-                                                                            </li>
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp; 3-5
-                                                                                Hours
-                                                                            </li>
-                                                                            <!-- Add more options as needed -->
-                                                                        </ul>
-
-                                                                        <h2 class="fs-5 fw-bolder mt-4">Rating</h2>
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp; 1
-                                                                                Star
-                                                                            </li>
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp; 2
-                                                                                Stars
-                                                                            </li>
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp; 3
-                                                                                Stars
-                                                                            </li>
-                                                                            <!-- Add more ratings as needed -->
-                                                                        </ul>
-
-                                                                        <h2 class="fs-5 fw-bolder mt-4">Rating</h2>
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp;
-                                                                                Basic
-                                                                            </li>
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp;
-                                                                                Intermediate
-                                                                            </li>
-                                                                            <li class="list-group-item bg-transparent border-0 pl-4 ml-2  fw-500">
-                                                                                <input class="form-check-input"
-                                                                                       type="checkbox" value=""
-                                                                                       id="defaultCheck1"> &nbsp;
-                                                                                Advanced
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-8 kingho_block__38">
+                            <div>
+                                <h3>@hotel.HotelName</h3>
+                                <div class="text-two col-8">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                    do eiusmod
+                                    <br/>
+                                    <br/>
+                                    <span class="fw-bold">Location</span>@hotel.Location
                                 </div>
-                            </div>
-                            <div class="col-12 ">
-
-                                <div class="row gap-2 position-relative">
-                                    <div class="col-12     ">
-                                        <div class="row gap-4 flex-column justify-content-center ">
-                                            @foreach (var hotel in  Model)
-                                            {
-                                                <a class="col" href="/SingleHotel/@hotel.Hotelid">
-                                                <div class="card w-100 shadow Rounded-17  HoverEff-purpleBorder overflow-hidden">
-                                                    <div class="row flex-row flex-nowrap">
-                                                        <div class="col-3">
-                                                            <img src="~/@hotel.HotelImg" class="card-img-top" alt="...">
-                                                        </div>
-                                                        <div class="col">
-                                                            <div class="card-body">
-                                                        <h5 class="card-title fw-bold mb-3 text-dark ">
-                                                        @hotel.HotelName
-                                                        </h5>
-
-                                                        <div class="row gap-3">
-                                                            <div class="col-12">
-                                                                <div class="row justify-content-start">
-                                                                    <div class="col-auto ">
-                                                                        <small class="text-purple fs-12px">
-                                                                          Rating
-                                                                        </small>
-                                                                    </div>
-                                                                    <div class="col-auto text-gold">
-                                                                       @hotel.Rating
-                                                                    </div>
-                                                                </div>
-                                                            </div> 
-                                                            <div class="col-12">
-                                                               <button  class="See Details"></button>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                                
-                                            }
-                                            
-                                    
-                                        
-
-                                        </div>
-                                    </div>
-
-
+                                <div class="text-two col-8">
                                 </div>
-
-
+                                <div class="kingho_inner_content_box">
+                                    <div class="pricing">Rating: @hotel.Rating</div>
+                                    <a href="/SingleHotel/@hotel.Hotelid" class="theme-btn btn-style-four"><span>View Hotel</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                }
+
 
             </div>
         </div>
     </div>
- 
 
-   
-  
+
+
+
 </main>
 
  @section Scripts{ 
-   
+   <script>
+        $(document).ready(() => {
+            $("#SearchField").on("keyup", ChangeData);
+
+            function ChangeData() {
+                let query = $("#SearchField").val();
+                console.log(query);
+                $.ajax({
+                    url: "/AjaxSearch_Hotels",
+                    method: "POST",
+                    data: {
+                        Query: query
+                    },
+                    success: function (response) {
+                        try {
+                            console.log(response);
+                            let data = response;
+                            console.log(data);
+                                let c = $("#CardContainer");
+                                let html;
+                            if (data.length == 0) {
+                                html = "<h1>No Data Available</h1>";
+                                console.log("nodata available");
+                            } else {
+                                html = "";
+                                for (i = 0; i < data.length;i++){
+                                    let card = data[i];
+                                    let Hotelid = card["Hotelid"];
+                                    let HotelImg = card["HotelImg"];
+                                    let HotelName = card["HotelName"];
+                                    let Location = card["Location"];
+                                    let Rating = card["Rating"];
+                                    html += `
+
+                                                     <div class="row mb-3">
+                                                        <div class="col-lg-4 col-6 m-auto pe-md-0">
+                                                            <div class="image">
+                                                                <img src="/${HotelImg}" alt="" class="w-100" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 kingho_block__38">
+                                                            <div>
+                                                                <h3>${HotelName}</h3>
+                                                                <div class="text-two col-8">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                                    do eiusmod
+                                                                    <br/>
+                                                                            <br/>
+
+                                                                        <span class="fw-bold">Location</span>${Location}
+                                                                </div>
+                                                                <div class="kingho_inner_content_box">
+                                                                    <div class="pricing">Rating: ${Rating}</div>
+                                                                    <a href="/SingleHotel/${Hotelid}" class="theme-btn btn-style-four"><span>View Hotel</span></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                    `;
+                                }
+
+
+
+
+
+                                console.log("data available");
+                            }
+                            c.html(html);
+                        } catch (error) {
+                            console.error("Error parsing JSON:", error);
+                        }
+                    },
+                    error: function (error) {
+                        console.error("AJAX Error:", error);
+                    }
+                });
+            }
+        });
+   </script>
  }

@@ -1,4 +1,5 @@
-﻿using KarnelTravelAgency.Areas.Transport.Models;
+﻿using KarnelTravelAgency.Areas.Residence.Models;
+using KarnelTravelAgency.Areas.Transport.Models;
 using KarnelTravelAgency.Core;
 using KarnelTravelAgency.Repository.Repo;
 using KarnelTravelAgency.Repository.Transport.RepoTransport;
@@ -108,5 +109,7 @@ namespace KarnelTravelAgency.Areas.Transport.Controllers
             return View(flightViewModel);
         }
 
+
+       
     }
 }

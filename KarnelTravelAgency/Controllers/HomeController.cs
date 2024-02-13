@@ -77,9 +77,7 @@ namespace KarnelTravelAgency.Controllers
                 case "Hotel":
                     return Redirect($"/SearchHotel{queryString}");
                 case "Resort":
-                    return Redirect($"/SearchResort{queryString}");
-                case "Flight":
-                    return Redirect($"/SearchFlight{queryString}");
+                    return Redirect($"/SearchResort{queryString}"); 
                      
                 case "Restaurant":
                     return Redirect($"/SearchRestaurant{queryString}");
@@ -89,14 +87,12 @@ namespace KarnelTravelAgency.Controllers
             }          
              
         }
-
-
         [HttpPost]
         [Route("LookingFor")]
         public IActionResult WhatAreYouLookingFor()
         {
             var Query = Request.Form["Query"].ToString().Split(" ");
-            bool found = false;
+            
 
             foreach (var word in Query)
             {

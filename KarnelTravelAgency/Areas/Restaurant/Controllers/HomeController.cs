@@ -1,4 +1,5 @@
 ﻿using System.Runtime.Intrinsics.Arm;
+using KarnelTravelAgency.Areas.Residence.Models;
 using KarnelTravelAgency.Areas.Restaurant.Models;
 using KarnelTravelAgency.Core;
 using KarnelTravelAgency.Repository.Repo;
@@ -125,10 +126,6 @@ namespace KarnelTravelAgency.Areas.Restaurant.Controllers
 
             return View(getDataForSingleResturantPage(RestaurantId));
         }
-
-
-
-
         private Bundle_SingleRestaurantView getDataForSingleResturantPage(int RestaurantId)
         {
             var retFromDb = RestaurantRepo.GetAll().Where(x => x.RestaurantID == RestaurantId).First();
@@ -151,6 +148,52 @@ namespace KarnelTravelAgency.Areas.Restaurant.Controllers
             return data;
 
         }
+
+
+
+
+        [Route("/SearchRestaurant")]
+        public IActionResult SearchHotel()
+        {
+            var Location = Request.Query["Location"];
+            var MaximumPrice = decimal.Parse(Request.Query["MaximumPrice"]);
+
+
+
+            var AllRestaurant = (from restautant in context.Restaurants
+                             join restMenuPrice in context.RestaurantMenuItems
+                             on restautant.RestaurantID equals restMenuPrice.RestaurantID
+                             where
+                                 restautant.Location.Contains(Location) &&
+                                 restMenuPrice.Price <= MaximumPrice
+                             select restautant
+                            ).ToList();
+
+
+            List<RestaurantViewModel> allRestaurants = new();
+            foreach (var Restaurant in AllRestaurant)
+            {
+                allRestaurants.Add(new RestaurantViewModel()
+                {
+                    RestaurantID= Restaurant.RestaurantID,
+                    RestaurantName = Restaurant.RestaurantName,
+                    Location = Restaurant.Location,
+                    Rating = Restaurant.Rating
+                });
+            }
+            if (allRestaurants.Any())
+            {
+                return View("Index", allRestaurants);
+            }
+            else
+            {
+                TempData["NoDataAvalible"] = "no data Avalible For the given Location and price range";
+                return Redirect("/");
+
+            }
+        }
+
+
 
     }
 }

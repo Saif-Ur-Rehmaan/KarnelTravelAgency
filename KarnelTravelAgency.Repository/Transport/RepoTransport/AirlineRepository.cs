@@ -28,10 +28,8 @@ namespace KarnelTravelAgency.Repository.Repo
             return context.Airlines.AsQueryable();
         }
 
-        public async Task<Airline> GetByIdAsync(int id)
-        {
-            return await context.Airlines.FindAsync(id);
-        }
+        public async Task<Airline> GetByIdAsync(int id)=>await context.Airlines.FindAsync(id);
+        public Airline GetById(int id)=>context.Airlines.Find(id);
 
         public void Update(Airline airline)
         {

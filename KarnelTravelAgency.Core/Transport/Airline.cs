@@ -12,8 +12,8 @@ namespace KarnelTravelAgency.Core
 
         [Key]
         public int AirlineID { get; set; }
-        public string AirlineName { get; set; }
-        public string IATACode { get; set; }
-        public string ICAOCode { get; set; }
+        public string? AirlineName { get; set; }
+        public string? IATACode { get; set; }
+        public string? ICAOCode { get; set; }
     }
 }

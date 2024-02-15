@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/SaIF/Desktop/C\#/mvc/KarnelTravelAgency/KarnelTravelAgency/Areas/Admin/Views/Flight/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxpZ2h0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SaIF/Desktop/C\#/mvc/KarnelTravelAgency/KarnelTravelAgency/Areas/Admin/Views/Flight/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxpZ2h0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/SaIF/Desktop/C\#/mvc/KarnelTravelAgency/KarnelTravelAgency/Areas/Admin/Views/Flight/Flights.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxpZ2h0XEZsaWdodHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

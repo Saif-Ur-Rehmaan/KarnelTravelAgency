@@ -5,6 +5,7 @@ using KarnelTravelAgency.Core;
 using KarnelTravelAgency.Repository.Repo;
 using KarnelTravelAgency.Repository.Restaurant.RepoRestaurant;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using NuGet.Protocol;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -193,6 +194,45 @@ namespace KarnelTravelAgency.Areas.Restaurant.Controllers
             }
         }
 
+
+
+        [HttpPost]
+        [Route("/AjaxSearch_Restaurant")]
+        public IActionResult AjaxSearch_Hotels()
+        {
+            string query = Request.Form["Query"];
+            List<Core.Restaurant> AllRestaurants;
+            AllRestaurants = RestaurantRepo.GetAll().Where(hotel => hotel.Location.Contains(query)).ToList();
+            if (!AllRestaurants.Any())
+            {
+                AllRestaurants = RestaurantRepo.GetAll().Where(hotel => hotel.RestaurantName.Contains(query)).ToList();
+                if (!AllRestaurants.Any())
+                {
+                    AllRestaurants = RestaurantRepo.GetAll().Where(hotel => hotel.CuisineType.Contains(query)).ToList();
+                    
+                    if (!AllRestaurants.Any() && decimal.TryParse(query, out var a))
+                    {
+                        AllRestaurants = RestaurantRepo.GetAll().Where(resort => resort.Rating <= a).ToList();
+                    }
+                }
+            }
+
+            var resturants = new List<RestaurantViewModel>();
+            var allRestaurants = RestaurantRepo.GetAll().ToList();
+            foreach (var restaurant in allRestaurants)
+            {
+                resturants.Add(new RestaurantViewModel
+                {
+                    RestaurantID = restaurant.RestaurantID,
+                    RestaurantName = restaurant.RestaurantName,
+                    CuisineType = restaurant.CuisineType,
+                    Location = restaurant.Location,
+                    Rating = restaurant.Rating
+                });
+            }
+            var jsonStr = JsonConvert.SerializeObject(AllRestaurants);
+            return Content(jsonStr, "application/json");
+        }
 
 
     }

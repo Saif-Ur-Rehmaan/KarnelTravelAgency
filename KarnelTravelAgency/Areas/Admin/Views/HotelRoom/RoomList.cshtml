@@ -1,0 +1,43 @@
+﻿@model List<HotelRoomViewModel>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <div class="row justify-content-between">
+                <div class="col-auto">Hotel Room List</div>
+                <div class="col-auto"><a href="/HotelRoom/Create" class="btn btn-outline-primary px-3 py-2">Create</a></div>
+            </div>
+        </h4>
+        <h6 class="card-subtitle">Add class <code>.table</code></h6>
+        <div class="table-responsive">
+            <table class="table user-table">
+                <thead>
+                    <tr>
+                        <th class="border-top-0">RoomID</th>
+                        <th class="border-top-0">Hotel Id</th>
+                        <th class="border-top-0">RoomNumber</th>
+                        <th class="border-top-0">RoomType</th>
+                        <th class="border-top-0">Capacity</th>
+                        <th class="border-top-0">Price</th>
+                        <th class="border-top-0">Edit</th>
+                        <th class="border-top-0">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var room in Model)
+                    {
+                        <tr>
+                            <td>@room.RoomID</td>
+                            <td>@room.HotelID</td>
+                            <td>@room.RoomNumber</td>
+                            <td>@room.RoomType</td>
+                            <td>@room.Capacity</td>
+                            <td>@room.Price</td>
+                            <td><a href="/HotelRoom/Edit/@room.RoomID" class="btn btn-success">Edit</a></td>
+                            <td><a href="/HotelRoom/Delete/@room.RoomID" class="btn btn-danger">Delete</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

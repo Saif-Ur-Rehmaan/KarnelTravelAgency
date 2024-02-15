@@ -123,7 +123,16 @@
     </div>
 </section>
 <div class="container">
-    <div class="row">
+    <div class="row flex-row justify-content-center align-items-center my-5 py-5">
+        <div class="col ">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Advance Search  Search By : Restaurant Name , location , Rating, Restaurant Type" id="SearchField" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row" id="CardContainer">
         @foreach (var restaurant in Model)
         {
             <div class="col-lg-4">
@@ -156,3 +165,87 @@
     </div>
 </div>
 
+@section Scripts {
+    <script>
+        $(document).ready(() => {
+            $("#SearchField").on("keyup", ChangeData);
+
+            function ChangeData() {
+                let query = $("#SearchField").val();
+                console.log(query);
+                $.ajax({
+                    url: "/AjaxSearch_Restaurant",
+                    method: "POST",
+                    data: {
+                        Query: query
+                    },
+                    success: function (response) {
+                        try {
+                            console.log(response);
+                            let data = response;
+                            console.log(data);
+                            let c = $("#CardContainer");
+                            let html;
+                            if (data.length == 0) {
+                                html = "<h1>No Data Available</h1>";
+                                console.log("nodata available");
+                            } else {
+                                html = "";
+                                for (i = 0; i < data.length; i++) {
+                                    let card = data[i];
+                                    let id = card["RestaurantID"];
+                                    let Type = card["CuisineType"];
+                                    let Name = card["RestaurantName"];
+                                    let Location = card["Location"];
+                                    let Rating = card["Rating"];
+                                    html += `
+
+                                                 <div class="col-lg-4">
+                                                    <div class="kingho_block__25">
+                                                        <div class="image">
+                                                            <img src="assets/images/resource/image-30.jpg" alt="" />
+                                                        </div>
+                                                        <div class="lower-content">
+                                                            <div class="pricing">Rating:${Rating}</div>
+                                                            <div class="icon-list">
+                                                                <ul>
+                                                                    <li>
+                                                                        <i class="flaticon-preview"></i>
+                                                                        <h4>Cuisine:</h4>
+                                                                        <div class="text">${Type}</div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="flaticon-user"></i>
+                                                                        <h4>Location:</h4>
+                                                                        <div class="text">${location}</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <h3>${Name}</h3>
+                                                            <a href="/SingleRestaurant/${id}" class="theme-btn btn-style-four"><span>View Restaurant</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                    `;
+                                }
+
+
+
+
+
+                                console.log("data available");
+                            }
+                            c.html(html);
+                        } catch (error) {
+                            console.error("Error parsing JSON:", error);
+                        }
+                    },
+                    error: function (error) {
+                        console.error("AJAX Error:", error);
+                    }
+                });
+            }
+        });
+    </script>
+}

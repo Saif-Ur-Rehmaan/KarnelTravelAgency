@@ -28,6 +28,7 @@ namespace KarnelTravelAgency.Repository.Repo
             return context.Rooms.AsQueryable();
         }
 
+        public Room GetById(int id) => context.Rooms.Find(id);
         public async Task<Room> GetByIdAsync(int id)
         {
             return await context.Rooms.FindAsync(id);

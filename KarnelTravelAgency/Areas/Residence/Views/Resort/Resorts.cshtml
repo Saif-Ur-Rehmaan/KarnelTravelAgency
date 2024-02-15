@@ -159,6 +159,15 @@
             </div>
         </div>
     </section>
+    <div class="container">
+        <div class="row flex-row justify-content-center align-items-center my-5 py-5">
+            <div class="col ">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Advance Search  Search By : Resort Name , location, Rating " id="SearchField" />
+                </div>
+            </div>
+        </div>
+    </div>
     @* Show All Hotels here *@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
@@ -168,7 +177,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-xl-10">
+            <div class="col-12 col-xl-10" id="CardContainer">
                 @foreach (var Resort in Model)
                 {
                     <div class="row mb-3">
@@ -181,8 +190,7 @@
                             <div>
                                 <h3>@Resort.ResortName</h3>
                                 <div class="text-two col-8">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                    do eiusmod
+                                    <span class="fw-bold">Location</span>@Resort.Location
                                 </div>
                                 <div class="kingho_inner_content_box">
                                     <div class="pricing">Rating: @Resort.Rating</div>
@@ -202,5 +210,79 @@
 
 </main>
 @section Scripts {
+    <script>
+        $(document).ready(() => {
+            $("#SearchField").on("keyup", ChangeData);
 
+            function ChangeData() {
+                let query = $("#SearchField").val();
+                console.log(query);
+                $.ajax({
+                    url: "/AjaxSearch_Resorts",
+                    method: "POST",
+                    data: {
+                        Query: query
+                    },
+                    success: function (response) {
+                        try {
+                            console.log(response);
+                            let data = response;
+                            console.log(data);
+                            let c = $("#CardContainer");
+                            let html;
+                            if (data.length == 0) {
+                                html = "<h1>No Data Available</h1>";
+                                console.log("nodata available");
+                            } else {
+                                html = "";
+                                for (i = 0; i < data.length; i++) {
+                                    let card = data[i];
+                                    let id = card["ResortID"];
+                                    let Img = card["ResortImg"];
+                                    let Name = card["ResortName"];
+                                    let Location = card["Location"];
+                                    let Rating = card["Rating"];
+                                    html += `     
+                                    <div class="row mb-3">
+                                        <div class="col-lg-4 col-6 m-auto pe-md-0">
+                                            <div class="image">
+                                                <img src="/${Img}" alt="" class="w-100" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 kingho_block__38">
+                                            <div>
+                                                <h3>${Name}</h3>
+                                                <div class="text-two col-8">
+                                                          <span class="fw-bold">Location</span> ${Location}
+                                                </div>
+                                                <div class="kingho_inner_content_box">
+                                                    <div class="pricing">Rating: ${Rating}</div>
+                                                    <a href="/SingleResort/${id}" class="theme-btn btn-style-four"><span>View Resort</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                            `;
+                                }
+
+
+
+
+
+                                console.log("data available");
+                            }
+                            c.html(html);
+                        } catch (error) {
+                            console.error("Error parsing JSON:", error);
+                        }
+                    },
+                    error: function (error) {
+                        console.error("AJAX Error:", error);
+                    }
+                });
+            }
+        });
+    </script>
 }

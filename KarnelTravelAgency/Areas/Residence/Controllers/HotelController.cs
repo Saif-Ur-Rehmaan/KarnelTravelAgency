@@ -226,34 +226,37 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
 
             }
         }
-
-        [HttpPost]
-        [HttpPost]
-        [Route("/AjaxSearch_Hotels")]
-        public IActionResult AjaxSearch_Hotels()
-        {
-            string query = Request.Form["Query"];
-            List<Hotel> AllHotels;
-            AllHotels = HotelRepo.GetAll().Where(hotel => hotel.Location.Contains(query)).ToList();
-            if (!AllHotels.Any())
+ 
+            [HttpPost]
+            [Route("/AjaxSearch_Hotels")]
+            public IActionResult AjaxSearch_Hotels()
             {
-                AllHotels = HotelRepo.GetAll().Where(hotel => hotel.HotelName.Contains(query)).ToList();
-            }
-            List<HotelsViewModel> allHotels = new List<HotelsViewModel>();
-            foreach (var hotel in AllHotels)
-            {
-                allHotels.Add(new HotelsViewModel()
+                string query = Request.Form["Query"];
+                List<Hotel> AllHotels;
+                AllHotels = HotelRepo.GetAll().Where(hotel => hotel.Location.Contains(query)).ToList();
+                if (!AllHotels.Any())
                 {
-                    Hotelid = hotel.HotelID,
-                    HotelImg = hotel.HotelImg,
-                    HotelName = hotel.HotelName,
-                    Location = hotel.Location,
-                    Rating = hotel.Rating
-                });
+                    AllHotels = HotelRepo.GetAll().Where(hotel => hotel.HotelName.Contains(query)).ToList();
+                    if (!AllHotels.Any() && decimal.TryParse(query, out var a))
+                    {
+                        AllHotels = HotelRepo.GetAll().Where(resort => resort.Rating <= a).ToList();
+                    }
+                }
+                List<HotelsViewModel> allHotels = new List<HotelsViewModel>();
+                foreach (var hotel in AllHotels)
+                {
+                    allHotels.Add(new HotelsViewModel()
+                    {
+                        Hotelid = hotel.HotelID,
+                        HotelImg = hotel.HotelImg,
+                        HotelName = hotel.HotelName,
+                        Location = hotel.Location,
+                        Rating = hotel.Rating
+                    });
+                }
+                var jsonStr = JsonConvert.SerializeObject(allHotels);
+                return Content(jsonStr, "application/json");
             }
-            var jsonStr = JsonConvert.SerializeObject(allHotels);
-            return Content(jsonStr, "application/json");
-        }
 
-    }
+        }
 }

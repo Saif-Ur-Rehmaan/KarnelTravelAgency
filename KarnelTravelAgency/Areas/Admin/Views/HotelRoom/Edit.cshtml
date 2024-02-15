@@ -1,0 +1,51 @@
+﻿@model HotelRoomEditViewModel
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <div class="row justify-content-between">
+                <div class="col-auto">Room Edit</div>
+            </div>
+        </h4>
+        <h6 class="card-subtitle">Add class <code>.table</code></h6>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8">
+                <form method="post"   enctype="multipart/form-data">
+                    <input type="hidden" asp-for="@Model.RoomID" />
+                    <div class="mb-3">
+                        <label asp-for="@Model.RoomNumber" class="form-label">Room Number</label>
+                        <input asp-for="@Model.RoomNumber" type="text" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.RoomNumber"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.RoomType" class="form-label">Room Type</label>
+                        <input asp-for="@Model.RoomType" type="text" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.RoomType"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.Capacity" class="form-label">Capacity</label>
+                        <input asp-for="@Model.Capacity" type="number" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.Capacity"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.Price" class="form-label">Price</label>
+                        <input asp-for="@Model.Price" type="text" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.Price"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.HotelID" class="form-label">Hotel</label>
+                        <select asp-for="@Model.HotelID" class="form-select border border-dark">
+                            @foreach (var item in Model.HotelList)
+                            {
+                                <option value="@item.HotelID">@item.HotelName</option>
+                            }
+                        </select>
+                        <span class="text-danger" asp-validation-for="@Model.HotelID"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

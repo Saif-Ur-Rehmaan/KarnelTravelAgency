@@ -1,7 +1,9 @@
-﻿using KarnelTravelAgency.Areas.Residence.Models;
+﻿using KarnelTravelAgency.Areas.Admin.Models;
+using KarnelTravelAgency.Areas.Residence.Models;
 using KarnelTravelAgency.Core;
 using KarnelTravelAgency.Repository.Repo;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace KarnelTravelAgency.Areas.Residence.Controllers
 {
@@ -236,6 +238,36 @@ namespace KarnelTravelAgency.Areas.Residence.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("/AjaxSearch_Resorts")]
+        public IActionResult AjaxSearch_Hotels()
+        {
+            string query = Request.Form["Query"];
+            List<Resort> AllResorts;
+            AllResorts = ResortRepo.GetAll().Where(hotel => hotel.Location.Contains(query)).ToList();
+            if (!AllResorts.Any())
+            {
+                AllResorts =ResortRepo.GetAll().Where(hotel => hotel.ResortName.Contains(query)).ToList();
+                if (!AllResorts.Any() && decimal.TryParse(query, out var a))
+                {
+                    AllResorts = ResortRepo.GetAll().Where(resort => resort.Rating <= a).ToList();
+                }
+            }
+            List<ResortViewModel> allResorts = new();
+            foreach (var Resort in AllResorts)
+            {
+                allResorts.Add(new ResortViewModel()
+                {
+                    ResortID = Resort.ResortID,
+                    ResortImg = Resort.ResortImg,
+                    ResortName = Resort.ResortName,
+                    Location = Resort.Location,
+                    Rating = Resort.Rating
+                });
+            }
+            var jsonStr = JsonConvert.SerializeObject(allResorts);
+            return Content(jsonStr, "application/json");
+        }
 
 
 

@@ -1,0 +1,41 @@
+﻿@model List<AirLineViewModel>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <div class="row justify-content-between">
+                <div class="col-auto">Airline  List</div>
+                <div class="col-auto"><a href="/Airline/Create" class="btn btn-outline-primary px-3 py-2">Create</a></div>
+            </div>
+        </h4>
+        <h6 class="card-subtitle">Add class <code>.table</code></h6>
+        <div class="table-responsive">
+            <table class="table user-table">
+                <thead>
+                    <tr>
+                         <th class="border-top-0">AirlineID</th>
+                         <th class="border-top-0">AirlineName</th>
+                         <th class="border-top-0">IATACode</th>
+                         <th class="border-top-0">ICAOCode</th>
+                        <th class="border-top-0">Edit</th>
+                        <th class="border-top-0">Delete</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Airline in Model)
+                    {
+                        <tr>
+                            <td>@Airline.AirlineID</td>
+                            <td>@Airline.AirlineName</td>
+                            <td>@Airline.IATACode</td>
+                            <td>@Airline.ICAOCode</td>
+                            <td><a href="/Airline/Edit/@Airline.AirlineID" class="btn btn-success">Edit</a></td>
+                            <td><a href="/Airline/Delete/@Airline.AirlineID" class="btn btn-danger">Delete</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

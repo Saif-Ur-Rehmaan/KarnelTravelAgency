@@ -1,0 +1,36 @@
+﻿ @model AirlineEditViewModel
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            <div class="row justify-content-between">
+                <div class="col-auto">Airline Edit</div>
+                <div class="col-auto"><a href="/Airline/Create" class="btn btn-outline-primary px-3 py-2">Create</a></div>
+            </div>
+        </h4>
+        <h6 class="card-subtitle">Add class <code>.table</code></h6>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8">
+                <form method="post"   enctype="multipart/form-data">
+                    <input type="hidden" asp-for="@Model.AirlineID" />
+                    <div class="mb-3">
+                        <label asp-for="@Model.AirlineName" class="form-label">Airline Name</label>
+                        <input asp-for="@Model.AirlineName" type="text" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.AirlineName"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.IATACode" class="form-label">IATA Code</label>
+                        <input asp-for="@Model.IATACode" type="text" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.IATACode"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.ICAOCode" class="form-label">ICAO Code</label>
+                        <input asp-for="@Model.ICAOCode" type="text" class="form-control border border-dark">
+                        <span class="text-danger" asp-validation-for="@Model.ICAOCode"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

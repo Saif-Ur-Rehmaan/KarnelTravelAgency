@@ -526,9 +526,9 @@ C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\scopedcss\bundle\KarnelTravelAgency.styles.css
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\scopedcss\projectbundle\KarnelTravelAgency.bundle.scp.css
-C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\KarnelTravelAgency.csproj.CopyComplete
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\KarnelTravelAgency.dll
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\refint\KarnelTravelAgency.dll
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\KarnelTravelAgency.pdb
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\KarnelTravelAgency.genruntimeconfig.cache
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\ref\KarnelTravelAgency.dll
+C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency\obj\Debug\net8.0\KarnelTr.1DA36357.Up2Date

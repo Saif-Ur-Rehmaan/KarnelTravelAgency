@@ -25,8 +25,8 @@ C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\ob
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.AssemblyInfo.cs
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.csproj.CoreCompileInputs.cache
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.sourcelink.json
-C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.csproj.CopyComplete
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.dll
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\refint\KarnelTravelAgency.Repository.dll
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTravelAgency.Repository.pdb
 C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\ref\KarnelTravelAgency.Repository.dll
+C:\Users\SaIF\Desktop\C#\mvc\KarnelTravelAgency\KarnelTravelAgency.Repository\obj\Debug\net8.0\KarnelTr.560171CF.Up2Date

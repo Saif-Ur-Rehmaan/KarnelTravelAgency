@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6890AD14-D863-4733-883E-C80F2B14C24E}|KarnelTravelAgency\\KarnelTravelAgency.csproj|c:\\users\\saif\\desktop\\c#\\mvc\\karneltravelagency\\karneltravelagency\\areas\\restaurant\\views\\home\\singlerestaurant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6890AD14-D863-4733-883E-C80F2B14C24E}|KarnelTravelAgency\\KarnelTravelAgency.csproj|solutionrelative:karneltravelagency\\areas\\restaurant\\views\\home\\singlerestaurant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SingleRestaurant.cshtml",
+              "DocumentMoniker": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\Areas\\Restaurant\\Views\\Home\\SingleRestaurant.cshtml",
+              "RelativeDocumentMoniker": "KarnelTravelAgency\\Areas\\Restaurant\\Views\\Home\\SingleRestaurant.cshtml",
+              "ToolTip": "C:\\Users\\SaIF\\Desktop\\C#\\mvc\\KarnelTravelAgency\\KarnelTravelAgency\\Areas\\Restaurant\\Views\\Home\\SingleRestaurant.cshtml",
+              "RelativeToolTip": "KarnelTravelAgency\\Areas\\Restaurant\\Views\\Home\\SingleRestaurant.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAYwEsAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-16T04:54:47.617Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -15,7 +15,7 @@ namespace KarnelTravelAgency.Controllers
                 { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
                 { "DOB", "May 23, 1987" },
                 { "Lives", "Switzerland" },
-                { "Email", "michelm@travon.com" },
+                { "Email", "michelm@Travon.com" },
                 { "Phone", "+163 2254 3654" },
                 { "Education", "University of Boxon" }
             }
@@ -29,7 +29,7 @@ namespace KarnelTravelAgency.Controllers
                 { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
                 { "DOB", "May 23, 1987" },
                 { "Lives", "Switzerland" },
-                { "Email", "mishelm@travon.com" },
+                { "Email", "mishelm@Travon.com" },
                 { "Phone", "+163 2254 3654" },
                 { "Education", "University of Boxon" }
             }
@@ -43,7 +43,7 @@ namespace KarnelTravelAgency.Controllers
                 { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
                 { "DOB", "May 23, 1987" },
                 { "Lives", "Switzerland" },
-                { "Email", "famhida@travon.com" },
+                { "Email", "famhida@Travon.com" },
                 { "Phone", "+163 2254 3654" },
                 { "Education", "University of Boxon" }
             }
@@ -57,7 +57,7 @@ namespace KarnelTravelAgency.Controllers
                 { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
                 { "DOB", "May 23, 1987" },
                 { "Lives", "Switzerland" },
-                { "Email", "alex@travon.com" },
+                { "Email", "alex@Travon.com" },
                 { "Phone", "+163 2254 3654" },
                 { "Education", "University of Boxon" }
             }
@@ -71,7 +71,7 @@ namespace KarnelTravelAgency.Controllers
                 { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
                 { "DOB", "May 23, 1987" },
                 { "Lives", "Switzerland" },
-                { "Email", "joseph@travon.com" },
+                { "Email", "joseph@Travon.com" },
                 { "Phone", "+163 2254 3654" },
                 { "Education", "University of Boxon" }
             }
@@ -85,7 +85,7 @@ namespace KarnelTravelAgency.Controllers
                 { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
                 { "DOB", "May 23, 1987" },
                 { "Lives", "Switzerland" },
-                { "Email", "david@travon.com" },
+                { "Email", "david@Travon.com" },
                 { "Phone", "+163 2254 3654" },
                 { "Education", "University of Boxon" }
             }
@@ -99,7 +99,7 @@ namespace KarnelTravelAgency.Controllers
                 { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
                 { "DOB", "May 23, 1987" },
                 { "Lives", "Switzerland" },
-                { "Email", "josephk@travon.com" },
+                { "Email", "josephk@Travon.com" },
                 { "Phone", "+163 2254 3654" },
                 { "Education", "University of Boxon" }
             }
@@ -113,7 +113,7 @@ namespace KarnelTravelAgency.Controllers
                 { "About", "Compellingly myocardinate resource-leveling testing procedures before multidisciplinary customer service. Enthusiastically monetize intermandated e-tailers whereas 2.0 manufactured products. Rapidiously harness open-source leadership and client-centered niches. Conveniently customize." },
                 { "DOB", "May 23, 1987" },
                 { "Lives", "Switzerland" },
-                { "Email", "laniart@travon.com" },
+                { "Email", "laniart@Travon.com" },
                 { "Phone", "+163 2254 3654" },
                 { "Education", "University of Boxon" }
             }
